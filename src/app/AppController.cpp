@@ -45,10 +45,32 @@ bool AppController::initialize()
                      &SyncCoordinator::remoteTextReceived,
                      m_debugWindow.get(),
                      &SyncDebugWindow::appendRemoteText);
+    QObject::connect(m_coordinator.get(),
+                     &SyncCoordinator::localFilesForwarded,
+                     m_debugWindow.get(),
+                     [this](const QStringList &paths)
+                     {
+                         m_debugWindow->appendLocalText(QStringLiteral("[FileOffer] %1").arg(paths.join(QStringLiteral(" | "))));
+                     });
+    QObject::connect(m_coordinator.get(),
+                     &SyncCoordinator::remoteFileOfferReceived,
+                     m_debugWindow.get(),
+                     [this](const QStringList &names)
+                     {
+                         m_debugWindow->appendRemoteText(QStringLiteral("[FileOffer] %1").arg(names.join(QStringLiteral(" | "))));
+                     });
+    QObject::connect(m_coordinator.get(),
+                     &SyncCoordinator::fileTransferStatus,
+                     m_debugWindow.get(),
+                     &SyncDebugWindow::appendFileTransferStatus);
     QObject::connect(m_debugWindow.get(),
                      &SyncDebugWindow::manualInjectRequested,
                      m_coordinator.get(),
                      &SyncCoordinator::manualInjectAndSend);
+    QObject::connect(m_debugWindow.get(),
+                     &SyncDebugWindow::requestRemoteFilesTriggered,
+                     m_coordinator.get(),
+                     &SyncCoordinator::requestPendingRemoteFiles);
 
     m_debugWindow->show();
 

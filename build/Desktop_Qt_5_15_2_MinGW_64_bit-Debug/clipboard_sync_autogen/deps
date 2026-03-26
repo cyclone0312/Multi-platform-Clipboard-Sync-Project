@@ -1,9 +1,13 @@
 clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
@@ -17,8 +21,10 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
@@ -44,6 +50,7 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \

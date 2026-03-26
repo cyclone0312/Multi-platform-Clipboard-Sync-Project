@@ -31,6 +31,16 @@ namespace protocol
         StreamEnd = 0x0012,
         // 预留：手动注入剪贴板命令。
         ClipboardInject = 0x0020,
+        // 文件复制声明（仅元信息，不含文件字节）。
+        FileOffer = 0x0030,
+        // 文件按需读取请求（支持 offset + length）。
+        FileRequest = 0x0031,
+        // 文件分块数据帧。
+        FileChunk = 0x0032,
+        // 文件传输结束通知。
+        FileComplete = 0x0033,
+        // 文件传输中止通知。
+        FileAbort = 0x0034,
         // 正向确认。
         Ack = 0x00F0,
         // 负向确认。

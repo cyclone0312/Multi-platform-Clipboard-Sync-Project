@@ -27,9 +27,12 @@ SyncDebugWindow::SyncDebugWindow(QWidget *parent)
     m_manualInput->setPlaceholderText(QStringLiteral("输入要写入剪贴板并发送给对端的文本"));
     m_manualInput->setMaximumHeight(90);
     m_manualSendButton = new QPushButton(QStringLiteral("写入本地并发送"), manualGroup);
+    m_requestRemoteFilesButton = new QPushButton(QStringLiteral("模拟粘贴触发远端文件拉取"), manualGroup);
     manualLayout->addWidget(m_manualInput);
     manualLayout->addWidget(m_manualSendButton);
+    manualLayout->addWidget(m_requestRemoteFilesButton);
     QObject::connect(m_manualSendButton, &QPushButton::clicked, this, &SyncDebugWindow::onManualSendClicked);
+    QObject::connect(m_requestRemoteFilesButton, &QPushButton::clicked, this, &SyncDebugWindow::onRequestRemoteFilesClicked);
     root->addWidget(manualGroup);
 
     auto *localGroup = new QGroupBox(QStringLiteral("本地复制（发送侧）"), this);
@@ -60,6 +63,11 @@ void SyncDebugWindow::appendRemoteText(const QString &text)
     appendEntry(m_remoteView, text);
 }
 
+void SyncDebugWindow::appendFileTransferStatus(const QString &status)
+{
+    appendEntry(m_remoteView, QStringLiteral("[File] %1").arg(status));
+}
+
 void SyncDebugWindow::onManualSendClicked()
 {
     if (!m_manualInput)
@@ -74,6 +82,11 @@ void SyncDebugWindow::onManualSendClicked()
     }
 
     emit manualInjectRequested(text);
+}
+
+void SyncDebugWindow::onRequestRemoteFilesClicked()
+{
+    emit requestRemoteFilesTriggered();
 }
 
 void SyncDebugWindow::appendEntry(QPlainTextEdit *target, const QString &text)

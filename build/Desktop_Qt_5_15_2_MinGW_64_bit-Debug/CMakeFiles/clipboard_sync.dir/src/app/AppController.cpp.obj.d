@@ -267,6 +267,15 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \

@@ -255,6 +255,16 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QClipboard \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qclipboard.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUrl \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h

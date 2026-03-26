@@ -15,19 +15,25 @@ public:
 signals:
     // 用户点击按钮后发出，要求手动写本地并发送。
     void manualInjectRequested(const QString &text);
+    // 用户点击按钮后发出，模拟粘贴时触发远端文件请求。
+    void requestRemoteFilesTriggered();
 
 public slots:
     // 追加显示本地复制并准备发送的文本。
     void appendLocalText(const QString &text);
     // 追加显示接收到的远端文本。
     void appendRemoteText(const QString &text);
+    // 追加文件传输状态日志。
+    void appendFileTransferStatus(const QString &status);
 
 private:
     void onManualSendClicked();
+    void onRequestRemoteFilesClicked();
     void appendEntry(QPlainTextEdit *target, const QString &text);
 
     QPlainTextEdit *m_manualInput = nullptr;
     QPushButton *m_manualSendButton = nullptr;
+    QPushButton *m_requestRemoteFilesButton = nullptr;
     QPlainTextEdit *m_localView = nullptr;
     QPlainTextEdit *m_remoteView = nullptr;
     int m_maxBlocks = 400;

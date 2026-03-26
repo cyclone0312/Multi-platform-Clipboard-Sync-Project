@@ -12,6 +12,8 @@ public:
 signals:
     // 当本地剪贴板文本可读且非空时发出。
     void localTextChanged(const QString &text, quint32 textHash);
+    // 当本地剪贴板包含文件列表时发出（绝对路径）。
+    void localFilesChanged(const QStringList &paths, quint32 listHash);
 
 private:
     // QClipboard::dataChanged 的入口处理函数。

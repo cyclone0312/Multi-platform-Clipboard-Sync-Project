@@ -257,6 +257,17 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\Y7MAPSIO2O/moc_SyncCoordinator.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
@@ -276,7 +287,6 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
@@ -291,7 +301,6 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \

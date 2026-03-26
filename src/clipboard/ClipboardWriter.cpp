@@ -2,8 +2,11 @@
 
 #include <QClipboard>
 #include <QDebug>
+#include <QDir>
 #include <QGuiApplication>
+#include <QMimeData>
 #include <QThread>
+#include <QUrl>
 
 namespace
 {
@@ -12,6 +15,17 @@ namespace
         text.replace(QStringLiteral("\r\n"), QStringLiteral("\n"));
         text.replace(QChar('\r'), QChar('\n'));
         return text;
+    }
+
+    quint32 hashFileList(const QStringList &paths)
+    {
+        QStringList normalized = paths;
+        for (QString &path : normalized)
+        {
+            path = QDir::cleanPath(path).toLower();
+        }
+        normalized.sort();
+        return qHash(normalized.join(QStringLiteral("\n")));
     }
 }
 
@@ -64,10 +78,58 @@ bool ClipboardWriter::writeRemoteText(const QString &text, quint64 sessionId)
     return false;
 }
 
+bool ClipboardWriter::writeRemoteFileList(const QStringList &paths, quint64 sessionId)
+{
+    Q_UNUSED(sessionId)
+    cleanupExpired();
+    if (paths.isEmpty())
+    {
+        return false;
+    }
+
+    QClipboard *clipboard = QGuiApplication::clipboard();
+    auto *mimeData = new QMimeData();
+    QList<QUrl> urls;
+    urls.reserve(paths.size());
+    for (const QString &path : paths)
+    {
+        urls.push_back(QUrl::fromLocalFile(path));
+    }
+    mimeData->setUrls(urls);
+
+    clipboard->setMimeData(mimeData);
+
+    const QMimeData *actual = clipboard->mimeData();
+    if (!actual || !actual->hasUrls())
+    {
+        qWarning() << "failed to set clipboard file list";
+        return false;
+    }
+
+    QStringList actualPaths;
+    for (const QUrl &url : actual->urls())
+    {
+        if (url.isLocalFile())
+        {
+            actualPaths.push_back(url.toLocalFile());
+        }
+    }
+
+    const quint32 hash = hashFileList(actualPaths);
+    m_recentInjectedFileHashes.insert(hash, QDateTime::currentDateTimeUtc());
+    return true;
+}
+
 bool ClipboardWriter::isRecentlyInjected(quint32 textHash) const
 {
     cleanupExpired();
     return m_recentInjectedHashes.contains(textHash);
+}
+
+bool ClipboardWriter::isRecentlyInjectedFileList(quint32 listHash) const
+{
+    cleanupExpired();
+    return m_recentInjectedFileHashes.contains(listHash);
 }
 
 void ClipboardWriter::cleanupExpired() const
@@ -79,6 +141,18 @@ void ClipboardWriter::cleanupExpired() const
         if (it.value().msecsTo(now) > m_injectionTtlMs)
         {
             it = m_recentInjectedHashes.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+
+    for (auto it = m_recentInjectedFileHashes.begin(); it != m_recentInjectedFileHashes.end();)
+    {
+        if (it.value().msecsTo(now) > m_injectionTtlMs)
+        {
+            it = m_recentInjectedFileHashes.erase(it);
         }
         else
         {

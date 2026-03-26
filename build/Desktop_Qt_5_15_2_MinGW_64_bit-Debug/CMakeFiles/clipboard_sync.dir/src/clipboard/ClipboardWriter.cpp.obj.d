@@ -264,6 +264,11 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QGuiApplication \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
@@ -275,6 +280,8 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QThread \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qthread.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdeadlinetimer.h \
@@ -284,4 +291,6 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_mutex.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/thread \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/condition_variable \
- D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUrl \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h
