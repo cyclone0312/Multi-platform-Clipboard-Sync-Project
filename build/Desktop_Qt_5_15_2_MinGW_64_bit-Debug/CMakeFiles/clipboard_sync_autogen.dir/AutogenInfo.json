@@ -1,0 +1,276 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/clipboard_sync_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project",
+	"CMAKE_EXECUTABLE" : "D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt",
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake",
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/package-manager.cmake",
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake",
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake",
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/clipboard_sync_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "clipboard_sync_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h",
+			"MU",
+			"ISMKEKEPX5/moc_AppController.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h",
+			"MU",
+			"XNBUIEWTVA/moc_ClipboardMonitor.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h",
+			"MU",
+			"XNBUIEWTVA/moc_ClipboardWriter.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h",
+			"MU",
+			"2PZEZPHIBF/moc_Config.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h",
+			"MU",
+			"2PZEZPHIBF/moc_Logger.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h",
+			"MU",
+			"X5TIYENYS2/moc_MessageCodec.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h",
+			"MU",
+			"X5TIYENYS2/moc_ProtocolHeader.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h",
+			"MU",
+			"Y7MAPSIO2O/moc_SyncCoordinator.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h",
+			"MU",
+			"ECMMT3H3EV/moc_TransportClient.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h",
+			"MU",
+			"ECMMT3H3EV/moc_TransportServer.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h",
+			"MU",
+			"YPKJ5OE7LN/moc_SyncDebugWindow.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/clipboard_sync_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/clipboard_sync_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_QML_DEBUG",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/include",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/mkspecs/win32-g++",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtANGLE",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork",
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets",
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"D:/Tools/IDEs/QT/Tools/mingw810_64/bin/g++.exe",
+		"-std=gnu++17",
+		"-dM",
+		"-E",
+		"-c",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/clipboard_sync_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/clipboard_sync_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "D:/Tools/IDEs/QT/5.15.2/mingw81_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "D:/Tools/IDEs/QT/5.15.2/mingw81_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/clipboard_sync_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}
