@@ -298,6 +298,30 @@ src/common/Logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.s
 .PHONY : src/common/Logger.cpp.s
 
+src/input/PasteTriggerHook.obj: src/input/PasteTriggerHook.cpp.obj
+.PHONY : src/input/PasteTriggerHook.obj
+
+# target to build an object file
+src/input/PasteTriggerHook.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj
+.PHONY : src/input/PasteTriggerHook.cpp.obj
+
+src/input/PasteTriggerHook.i: src/input/PasteTriggerHook.cpp.i
+.PHONY : src/input/PasteTriggerHook.i
+
+# target to preprocess a source file
+src/input/PasteTriggerHook.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.i
+.PHONY : src/input/PasteTriggerHook.cpp.i
+
+src/input/PasteTriggerHook.s: src/input/PasteTriggerHook.cpp.s
+.PHONY : src/input/PasteTriggerHook.s
+
+# target to generate assembly for a file
+src/input/PasteTriggerHook.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.s
+.PHONY : src/input/PasteTriggerHook.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -471,6 +495,9 @@ help:
 	@echo ... src/common/Logger.obj
 	@echo ... src/common/Logger.i
 	@echo ... src/common/Logger.s
+	@echo ... src/input/PasteTriggerHook.obj
+	@echo ... src/input/PasteTriggerHook.i
+	@echo ... src/input/PasteTriggerHook.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

@@ -6,6 +6,7 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_1
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
@@ -13,6 +14,7 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_1
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
@@ -54,6 +56,7 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_1
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \

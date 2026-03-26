@@ -331,3 +331,44 @@ events:
       Running the CXX compiler's linker: "D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.30
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake:259 (find_package)"
+      - "CMakeLists.txt:12 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rhmsl9"
+      binary: "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rhmsl9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rhmsl9'
+        
+        Run Build Command(s): D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Tools/IDEs/QT/Tools/mingw810_64/bin/mingw32-make.exe -f Makefile cmTC_3d9db/fast
+        D:/Tools/IDEs/QT/Tools/mingw810_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_3d9db.dir\\build.make CMakeFiles/cmTC_3d9db.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rhmsl9'
+        Building CXX object CMakeFiles/cmTC_3d9db.dir/src.cxx.obj
+        D:\\Tools\\IDEs\\QT\\Tools\\mingw810_64\\bin\\g++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles\\cmTC_3d9db.dir\\src.cxx.obj -c D:\\Workspace\\Projects\\Multi-platform-Clipboard-Sync-Project\\build\\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rhmsl9\\src.cxx
+        Linking CXX executable cmTC_3d9db.exe
+        D:\\Tools\\IDEs\\QT\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_3d9db.dir\\link.txt --verbose=1
+        D:\\Tools\\IDEs\\QT\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_3d9db.dir/objects.a
+        D:\\Tools\\IDEs\\QT\\Tools\\mingw810_64\\bin\\ar.exe qc CMakeFiles\\cmTC_3d9db.dir/objects.a @CMakeFiles\\cmTC_3d9db.dir\\objects1.rsp
+        D:\\Tools\\IDEs\\QT\\Tools\\mingw810_64\\bin\\g++.exe -Wl,--whole-archive CMakeFiles\\cmTC_3d9db.dir/objects.a -Wl,--no-whole-archive -o cmTC_3d9db.exe -Wl,--out-implib,libcmTC_3d9db.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_3d9db.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-rhmsl9'
+        
+      exitCode: 0
+...

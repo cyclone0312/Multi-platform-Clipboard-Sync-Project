@@ -15,9 +15,17 @@ TransportClient::TransportClient(QObject *parent)
     QObject::connect(m_reconnectTimer, &QTimer::timeout, this, &TransportClient::tryConnect);
 
     QObject::connect(m_socket, &QTcpSocket::connected, this, [this]()
-                     { qInfo() << "connected to peer:" << m_host << m_port; });
+                     {
+                         qInfo() << "connected to peer:" << m_host << m_port;
+                         emit peerConnected();
+                         flushTxBuffer(); });
     QObject::connect(m_socket, &QTcpSocket::disconnected, this, [this]()
-                     { qWarning() << "peer disconnected, waiting reconnect"; });
+                     {
+                         qWarning() << "peer disconnected, waiting reconnect";
+                         m_txBuffer.clear();
+                         emit peerDisconnected(); });
+    QObject::connect(m_socket, &QTcpSocket::bytesWritten, this, [this](qint64)
+                     { flushTxBuffer(); });
     QObject::connect(m_socket,
                      QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),
                      this,
@@ -52,8 +60,20 @@ bool TransportClient::sendMessage(const protocol::ClipboardMessage &message)
     qToLittleEndian<quint32>(static_cast<quint32>(packet.size()), reinterpret_cast<uchar *>(frame.data()));
     frame.append(packet);
 
-    const qint64 written = m_socket->write(frame);
-    return written == frame.size();
+    if (m_txBuffer.size() + frame.size() > m_maxBufferedBytes)
+    {
+        qWarning() << "send buffer overflow, drop frame bytes:" << frame.size();
+        return false;
+    }
+
+    m_txBuffer.append(frame);
+    flushTxBuffer();
+    return true;
+}
+
+bool TransportClient::isConnected() const
+{
+    return m_socket->state() == QAbstractSocket::ConnectedState;
 }
 
 void TransportClient::tryConnect()
@@ -69,4 +89,27 @@ void TransportClient::tryConnect()
     }
 
     m_socket->connectToHost(m_host, m_port);
+}
+
+void TransportClient::flushTxBuffer()
+{
+    if (m_socket->state() != QAbstractSocket::ConnectedState)
+    {
+        return;
+    }
+
+    while (!m_txBuffer.isEmpty())
+    {
+        const qint64 written = m_socket->write(m_txBuffer);
+        if (written <= 0)
+        {
+            break;
+        }
+
+        m_txBuffer.remove(0, static_cast<int>(written));
+        if (m_socket->bytesToWrite() > (4 * 1024 * 1024))
+        {
+            break;
+        }
+    }
 }

@@ -12,6 +12,7 @@ class SyncCoordinator;
 class TransportClient;
 class TransportServer;
 class SyncDebugWindow;
+class PasteTriggerHook;
 
 class AppController : public QObject
 {
@@ -36,6 +37,8 @@ private:
     std::unique_ptr<TransportClient> m_client;
     // 在监听器、网络层与写入器之间做事件路由。
     std::unique_ptr<SyncCoordinator> m_coordinator;
+    // 系统级/应用级粘贴触发监听。
+    std::unique_ptr<PasteTriggerHook> m_pasteHook;
     // 调试窗口：显示本地复制与远端接收内容。
     std::unique_ptr<SyncDebugWindow> m_debugWindow;
 };

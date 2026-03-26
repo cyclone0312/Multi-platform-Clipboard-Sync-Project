@@ -3,16 +3,22 @@
 
 CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: clipboard_sync_autogen/mocs_compilation.cpp \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
@@ -20,8 +26,10 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
@@ -47,6 +55,7 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
@@ -61,6 +70,7 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
@@ -94,6 +104,34 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
@@ -239,9 +277,53 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -250,46 +332,175 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/limits.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_time.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdarg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stddef.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdint.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdlib.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/time.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
@@ -298,6 +509,7 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
   clipboard_sync_autogen/ECMMT3H3EV/moc_TransportClient.cpp \
   clipboard_sync_autogen/ECMMT3H3EV/moc_TransportServer.cpp \
   clipboard_sync_autogen/ISMKEKEPX5/moc_AppController.cpp \
+  clipboard_sync_autogen/NNGSYZYP4R/moc_PasteTriggerHook.cpp \
   clipboard_sync_autogen/XNBUIEWTVA/moc_ClipboardMonitor.cpp \
   clipboard_sync_autogen/XNBUIEWTVA/moc_ClipboardWriter.cpp \
   clipboard_sync_autogen/Y7MAPSIO2O/moc_SyncCoordinator.cpp \
@@ -305,17 +517,23 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: c
 
 CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
@@ -324,9 +542,11 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
@@ -354,6 +574,7 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
@@ -370,6 +591,7 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
@@ -404,6 +626,34 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
@@ -550,9 +800,53 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -561,47 +855,176 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/limits.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_time.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdarg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stddef.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdint.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdlib.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/time.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
@@ -609,8 +1032,11 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: D:/Workspace/Projec
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h
 
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUrl \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
@@ -626,13 +1052,18 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: D:/Workspa
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlocale.h \
@@ -640,6 +1071,7 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: D:/Workspa
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
@@ -665,6 +1097,7 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: D:/Workspa
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
@@ -870,9 +1303,12 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: D:/Workspa
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QThread \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUrl \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
@@ -891,8 +1327,12 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: D:/Workspac
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdeadlinetimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qelapsedtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
@@ -907,6 +1347,7 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: D:/Workspac
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
@@ -936,6 +1377,7 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: D:/Workspac
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qthread.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
@@ -1650,6 +2092,506 @@ CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj: D:/Workspace/Projects/M
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h
 
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QEvent \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QThread \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdeadlinetimer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qelapsedtimer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpair.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qthread.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QKeySequence \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcursor.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qevent.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/binders.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/concept_check.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ios_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/localefwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/parse_numbers.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_function.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_mutex.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_function.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_map.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/string_view.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cerrno \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/chrono \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/clocale \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/condition_variable \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstddef \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdio \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdlib \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ctime \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwctype \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/exception \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/atomicity.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/functional \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/future \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/initializer_list \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iterator \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/mutex \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ratio \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/system_error \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/thread \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/variant \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/limits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_time.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdlib.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/time.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h
+
 CMakeFiles/clipboard_sync.dir/src/main.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
@@ -2161,29 +3103,52 @@ CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj: D:/Workspace/Pr
 
 CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFile \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFileInfo \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonArray \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonDocument \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUuid \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborcommon.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborvalue.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qendian.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfloat16.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
@@ -2191,6 +3156,10 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: D:/Workspace/Pro
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonarray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsondocument.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlocale.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
@@ -2207,6 +3176,8 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: D:/Workspace/Pro
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrandom.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
@@ -2222,7 +3193,10 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: D:/Workspace/Pro
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
@@ -3323,702 +4297,6 @@ CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: D:/Workspace/Proje
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h
 
 clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpair.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qbrush.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcursor.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfont.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpalette.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QWidget \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/binders.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/c++0x_warning.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/concept_check.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ios_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/localefwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_function.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_function.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_map.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf_iterator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/string_view.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/clocale \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstddef \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdlib \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwctype \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/exception \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/atomicity.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/functional \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/initializer_list \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iterator \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt \
-  .qtcreator/cmake-helper/maintenance_tool_provider.cmake \
-  .qtcreator/cmake-helper/package-manager.cmake \
-  .qtcreator/cmake-helper/qtcreator-project.cmake \
-  CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
-  CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
-  CMakeFiles/3.30.5/CMakeSystem.cmake \
-  clipboard_sync_autogen/moc_predefs.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpair.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qbrush.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcursor.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfont.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpalette.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QWidget \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
-  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/binders.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/c++0x_warning.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/concept_check.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ios_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/localefwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_function.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_function.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_map.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf_iterator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/string_view.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/clocale \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstddef \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdlib \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwctype \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/exception \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/atomicity.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/functional \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/initializer_list \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iterator \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt \
-  .qtcreator/cmake-helper/maintenance_tool_provider.cmake \
-  .qtcreator/cmake-helper/package-manager.cmake \
-  .qtcreator/cmake-helper/qtcreator-project.cmake \
-  CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
-  CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
-  CMakeFiles/3.30.5/CMakeSystem.cmake \
-  clipboard_sync_autogen/moc_predefs.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h \
-  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
@@ -4026,6 +4304,7 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
@@ -4033,6 +4312,7 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
@@ -4084,6 +4364,7 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
@@ -4160,9 +4441,16 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
@@ -4172,6 +4460,34 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
@@ -4307,9 +4623,53 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -4317,32 +4677,161 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt \
   .qtcreator/cmake-helper/maintenance_tool_provider.cmake \
   .qtcreator/cmake-helper/package-manager.cmake \
@@ -4361,6 +4850,1144 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpair.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qbrush.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcursor.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfont.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpalette.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QWidget \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/binders.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/c++0x_warning.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/concept_check.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ios_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/localefwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_function.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_function.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_map.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/string_view.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/clocale \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstddef \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdlib \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwctype \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/exception \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/atomicity.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/functional \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/initializer_list \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iterator \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt \
+  .qtcreator/cmake-helper/maintenance_tool_provider.cmake \
+  .qtcreator/cmake-helper/package-manager.cmake \
+  .qtcreator/cmake-helper/qtcreator-project.cmake \
+  CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
+  CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
+  CMakeFiles/3.30.5/CMakeSystem.cmake \
+  clipboard_sync_autogen/moc_predefs.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpair.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qbrush.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcursor.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfont.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpalette.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QWidget \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
+  D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/binders.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/c++0x_warning.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/concept_check.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hash_bytes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ios_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/localefwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/range_access.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_abs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_function.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_function.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_map.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf_iterator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/string_view.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/clocale \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstddef \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdlib \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwctype \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/exception \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/atomicity.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/functional \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/initializer_list \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iterator \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdint.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h \
+  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt \
+  .qtcreator/cmake-helper/maintenance_tool_provider.cmake \
+  .qtcreator/cmake-helper/package-manager.cmake \
+  .qtcreator/cmake-helper/qtcreator-project.cmake \
+  CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
+  CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
+  CMakeFiles/3.30.5/CMakeSystem.cmake \
+  clipboard_sync_autogen/moc_predefs.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h \
@@ -4377,51 +6004,59 @@ clipboard_sync_autogen/timestamp: D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtC
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/synchapi.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdarg.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdarg.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h:
-
-clipboard_sync_autogen/mocs_compilation.cpp:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h:
+clipboard_sync_autogen/mocs_compilation.cpp:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal:
+clipboard_sync_autogen/ECMMT3H3EV/moc_TransportClient.cpp:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qframe.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124vnniwintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/servprov.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QKeyEvent:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject_impl.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavesintrin.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h:
 
@@ -4429,7 +6064,39 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextcursor.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winioctl.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rtmintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ptr_traits.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/debug.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qalgorithms.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_bsd_types.h:
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake:
 
@@ -4441,59 +6108,111 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextlayout.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/gamma.tcc:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/rdseedintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextlayout.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windef.h:
+
 .qtcreator/cmake-helper/qtcreator-project.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qabstracttextdocumentlayout.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h:
+clipboard_sync_autogen/NNGSYZYP4R/moc_PasteTriggerHook.cpp:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fltwinerror.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winefs.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdkddkver.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/random.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mcx.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsadata.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/system_error:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fibersapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stringapiset.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tbmintrin.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h:
 
@@ -4505,83 +6224,61 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dpapi.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cctype:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/signal.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/system_error:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/gamma.tcc:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string_view:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cerrno:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h:
-
-D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx5124fmapsintrin.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpair.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cderr.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ddeml.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/systemtopologyapi.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/libloaderapi.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qtcpserver.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/initializer_list:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm3dnow.h:
 
 .qtcreator/cmake-helper/maintenance_tool_provider.cmake:
 
@@ -4592,8 +6289,6 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringmatcher.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h:
 
@@ -4607,13 +6302,35 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmavlintrin.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream_insert.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h:
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cerrno:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleidl.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_signal.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stddef.h:
 
@@ -4624,8 +6341,6 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcursor.h:
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfont.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontinfo.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/riemann_zeta.tcc:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h:
 
@@ -4645,75 +6360,173 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpalette.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h:
 
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/basetsd.h:
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lwpintrin.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QWidget:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ole2.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stralign_s.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ctype.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidl.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_push.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypes.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qwidget.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/adxintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ammintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2intrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bitalgintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512bwintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512cdintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512dqintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512erintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/legendre_function.tcc:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512fintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdce.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512ifmaintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrawfont.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_mreq1.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512pfintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/debugapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objidlbase.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmi2vlintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/commdlg.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avxintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmiintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vbmivlintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregularexpression.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlbwintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vldqintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vlintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnniintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/propidl.h:
+
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vnnivlintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qevent.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx512vpopcntdqvlintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmi2intrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/bmiintrin.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/binders.h:
 
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h:
-
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDataStream:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/fileapi.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qelapsedtimer.h:
 
@@ -4721,19 +6534,17 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ktmtypes.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwn.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/concept_check.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functexcept.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_forced.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cxxabi_init_exception.h:
 
@@ -4741,7 +6552,11 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordin
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/gfniintrin.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception.h:
+
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/exception_defines.h:
 
@@ -4753,13 +6568,17 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dde.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ios_base.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/thread:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack4.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errhandlingapi.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_classes.h:
 
@@ -4769,6 +6588,8 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/localefwd.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/x86intrin.h:
+
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h:
@@ -4777,49 +6598,55 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/nested_exception.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bemapiset.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/parse_numbers.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/ia32intrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream:
+
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/CMakeLists.txt:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/prfchwintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/predefined_ops.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/range_access.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/lzexpand.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stdarg.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/hypergeometric.tcc:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stdarg.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h:
 
-D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wtypesbase.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_abs.h:
 
@@ -4833,51 +6660,69 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winuser.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpc.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_funcs.h:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator_base_types.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/timeb.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oaidl.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namedpipeapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnetwk.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_map.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/bcrypt.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/excpt.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_pair.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/f16cintrin.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h:
 
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdexcept:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h:
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fmaintrin.h:
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xtestintrin.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/alloc_traits.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qlayout.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/swprintf.inl:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winreg.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/streambuf.tcc:
 
@@ -4889,17 +6734,11 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/time.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/time.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash:
-
-clipboard_sync_autogen/ECMMT3H3EV/moc_TransportClient.cpp:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h:
 
@@ -4917,39 +6756,35 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpen.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstddef:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwinbase.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdint:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mwaitxintrin.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdio:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cstdlib:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_timeval.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ctime:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwctype:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/exception:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winbase.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/atomicity.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_hermite.tcc:
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h:
 
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_hermite.tcc:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h:
 
@@ -4957,13 +6792,11 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/numeric_traits.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrawfont.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/string_conversions.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_off_t.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/type_traits.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsvc.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QPlainTextEdit:
 
@@ -4971,9 +6804,9 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h:
 
@@ -4983,7 +6816,11 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qclipboard.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wnnc.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/poppack.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list:
 
@@ -4991,23 +6828,17 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qevent.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/corecrt_startup.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stdlib.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcdcep.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/streambuf:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/prsht.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/mmsystem.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple:
 
@@ -5017,37 +6848,115 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/tmmintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/reason.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/limits.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clwbintrin.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/heapapi.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/cetintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clflushoptintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/clzerointrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fma4intrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/fxsrintrin.h:
+
+clipboard_sync_autogen/Y7MAPSIO2O/moc_SyncCoordinator.cpp:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/immintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/lzcntintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/movdirintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pconfigintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pkuintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/popcntintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securityappcontainer.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/sgxintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/shaintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apiset.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/smmintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vaesintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/vpclmulqdqintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonarray.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/mutex:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wbnoinvdintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/wmmintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QGroupBox:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xopintrin.h:
+
+clipboard_sync_autogen/ISMKEKEPX5/moc_AppController.cpp:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcsal.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsavecintrin.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xsaveoptintrin.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winspool.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_secapi.h:
 
@@ -5057,69 +6966,221 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/Clipbo
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_stat64.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QLabel:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack8.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_unicode.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/apisetcconv.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/assert.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/cguid.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/combaseapi.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qloggingcategory.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/crtdefs.h:
 
+.qtcreator/cmake-helper/package-manager.cmake:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/datetimeapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/dlgs.h:
+
+clipboard_sync_autogen/XNBUIEWTVA/moc_ClipboardWriter.cpp:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/driverspecs.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/errno.h:
 
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/guiddef.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/locale.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/handleapi.h:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/imm.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/inaddr.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/interlockedapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnterr.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontdatabase.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ioapiset.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/jobapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/msxml.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qicon.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/memoryapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/minwindef.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/namespaceapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/nb30.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/ncrypt.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processenv.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/objbase.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h:
+
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/oleauto.h:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/process.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processthreadsapi.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_compat.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/processtopologyapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/profileapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_fd_types.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/_xmitfile.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack1.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pshpack2.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QKeySequence:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_time.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextoption.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_unistd.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincrypt.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoollegacyapiset.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/realtimeapiset.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcasync.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/securitybaseapi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcndr.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsi.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QLoggingCategory:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/rpcnsip.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sal.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/shellapi.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCoreApplication:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/specstrings.h:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdint.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QLoggingCategory:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdio.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/random.tcc:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stdlib.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/stralign.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qtextedit.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sysinfoapi.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sys/types.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/threadpoolapiset.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/timezoneapi.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/tvout.h:
 
-D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake:
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/unknwnbase.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/urlmon.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/utilapiset.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/virtdisk.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winapifamily.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wincon.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winerror.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wingdi.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnls.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winnt.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winperf.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winscard.h:
+
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsmcrd.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_mutex.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winsock.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/winver.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wow64apiset.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextformat.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QEvent:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h:
 
@@ -5133,47 +7194,43 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/Transp
 
 clipboard_sync_autogen/ECMMT3H3EV/moc_TransportServer.cpp:
 
-clipboard_sync_autogen/ISMKEKEPX5/moc_AppController.cpp:
-
 clipboard_sync_autogen/XNBUIEWTVA/moc_ClipboardMonitor.cpp:
 
-clipboard_sync_autogen/XNBUIEWTVA/moc_ClipboardWriter.cpp:
-
-clipboard_sync_autogen/Y7MAPSIO2O/moc_SyncCoordinator.cpp:
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake:
 
 clipboard_sync_autogen/YPKJ5OE7LN/moc_SyncDebugWindow.cpp:
-
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.cpp:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlocale.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextoption.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h:
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDataStream:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUrl:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcoreevent.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qeventloop.h:
 
-D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h:
 
-D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QClipboard:
-
-D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QGuiApplication:
 
@@ -5187,29 +7244,27 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdeadlinetimer.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qthread.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_mutex.h:
-
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/condition_variable:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h:
-
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/main.cpp:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/future:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h:
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/mutex:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCoreApplication:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/emmintrin.h:
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUuid:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h:
+
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp:
+
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaObject:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qvector2d.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qapplication.h:
 
@@ -5217,17 +7272,33 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/Message
 
 D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QRandomGenerator:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFile:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFileInfo:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/specfun.h:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonArray:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonDocument:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QRandomGenerator:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborcommon.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborvalue.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qendian.h:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfloat16.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/random:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsondocument.h:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/random.tcc:
+
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/bessel_function.tcc:
 
@@ -5235,29 +7306,17 @@ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/exp_integral.tcc:
 
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/legendre_function.tcc:
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/hypergeometric.tcc:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/modified_bessel_func.tcc:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_laguerre.tcc:
 
+D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/riemann_zeta.tcc:
+
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/special_function_util.h:
 
 D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/pmmintrin.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QGroupBox:
-
-D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/xmmintrin.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qendian.h:
-
-clipboard_sync_autogen/moc_predefs.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfloat16.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake:
 
@@ -5265,29 +7324,19 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtNetwork/QTcpServer:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontdatabase.h:
+D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qglyphrun.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qicon.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextcursor.h:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtextdocument.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qvector2d.h:
-
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QLabel:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/QPushButton:
 
@@ -5301,9 +7350,13 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qlayout.h:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtWidgets/qplaintextedit.h:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
 
@@ -5315,15 +7368,27 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake:
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake:
+
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake:
+
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake:
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake:
 
@@ -5333,13 +7398,29 @@ D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.
 
 D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake:
 
+D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake:
+
 D:/Tools/IDEs/QT/Tools/CMake_64/bin/cmake.exe:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake:
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake:
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake:
 
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake:
+
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake:
+
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake:
 
@@ -5349,9 +7430,11 @@ D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cm
 
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake:
 
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake:
+
 D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake:
 
-.qtcreator/cmake-helper/package-manager.cmake:
+D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake:
 
 CMakeFiles/3.30.5/CMakeCXXCompiler.cmake:
 
@@ -5359,6 +7442,4 @@ CMakeFiles/3.30.5/CMakeRCCompiler.cmake:
 
 CMakeFiles/3.30.5/CMakeSystem.cmake:
 
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector:
-
-D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h:
+clipboard_sync_autogen/moc_predefs.h:

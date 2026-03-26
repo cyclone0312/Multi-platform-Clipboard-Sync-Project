@@ -9,6 +9,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 find_package(Qt5 5.15.2 REQUIRED COMPONENTS Core Gui Network Widgets)
+find_package(Threads REQUIRED)
 
 add_executable(clipboard_sync
     src/main.cpp
@@ -31,6 +32,8 @@ add_executable(clipboard_sync
     src/common/Config.cpp
     src/common/Logger.h
     src/common/Logger.cpp
+    src/input/PasteTriggerHook.h
+    src/input/PasteTriggerHook.cpp
     src/ui/SyncDebugWindow.h
     src/ui/SyncDebugWindow.cpp
 )
@@ -43,8 +46,18 @@ target_link_libraries(clipboard_sync
         Qt5::Gui
         Qt5::Network
         Qt5::Widgets
+    Threads::Threads
 )
 
 if(WIN32)
     target_link_libraries(clipboard_sync PRIVATE ws2_32)
+endif()
+
+if(UNIX AND NOT APPLE)
+    find_package(X11)
+    if(X11_FOUND)
+        target_include_directories(clipboard_sync PRIVATE ${X11_INCLUDE_DIR})
+        target_link_libraries(clipboard_sync PRIVATE ${X11_LIBRARIES})
+        target_compile_definitions(clipboard_sync PRIVATE CLIPBOARD_SYNC_HAS_X11_HOOK)
+    endif()
 endif()

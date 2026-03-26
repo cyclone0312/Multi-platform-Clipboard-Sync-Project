@@ -2,6 +2,7 @@
 #include "ISMKEKEPX5/moc_AppController.cpp"
 #include "XNBUIEWTVA/moc_ClipboardMonitor.cpp"
 #include "XNBUIEWTVA/moc_ClipboardWriter.cpp"
+#include "NNGSYZYP4R/moc_PasteTriggerHook.cpp"
 #include "Y7MAPSIO2O/moc_SyncCoordinator.cpp"
 #include "ECMMT3H3EV/moc_TransportClient.cpp"
 #include "ECMMT3H3EV/moc_TransportServer.cpp"

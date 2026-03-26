@@ -97,5 +97,9 @@ void SyncDebugWindow::appendEntry(QPlainTextEdit *target, const QString &text)
     }
 
     const QString timestamp = QDateTime::currentDateTime().toString(QStringLiteral("HH:mm:ss.zzz"));
+    if (!target->document()->isEmpty())
+    {
+        target->appendPlainText(QString());
+    }
     target->appendPlainText(QStringLiteral("[%1] %2").arg(timestamp, text));
 }

@@ -5,6 +5,7 @@
 #include "clipboard/ClipboardMonitor.h"
 #include "clipboard/ClipboardWriter.h"
 #include "common/Logger.h"
+#include "input/PasteTriggerHook.h"
 #include "sync/SyncCoordinator.h"
 #include "transport/TransportClient.h"
 #include "transport/TransportServer.h"
@@ -35,6 +36,7 @@ bool AppController::initialize()
     m_server = std::make_unique<TransportServer>();
     m_client = std::make_unique<TransportClient>();
     m_coordinator = std::make_unique<SyncCoordinator>(m_monitor.get(), m_writer.get(), m_client.get(), this);
+    m_pasteHook = std::make_unique<PasteTriggerHook>(this);
     m_debugWindow = std::make_unique<SyncDebugWindow>();
 
     QObject::connect(m_coordinator.get(),
@@ -70,7 +72,11 @@ bool AppController::initialize()
     QObject::connect(m_debugWindow.get(),
                      &SyncDebugWindow::requestRemoteFilesTriggered,
                      m_coordinator.get(),
-                     &SyncCoordinator::requestPendingRemoteFiles);
+                     &SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV);
+    QObject::connect(m_pasteHook.get(),
+                     &PasteTriggerHook::ctrlShiftPasteTriggered,
+                     m_coordinator.get(),
+                     &SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV);
 
     m_debugWindow->show();
 
@@ -84,6 +90,11 @@ bool AppController::initialize()
 
     m_client->configurePeer(m_config.peerHost, m_config.peerPort);
     m_client->start();
+
+    if (!m_pasteHook->start())
+    {
+        qWarning() << "Failed to start paste trigger hook";
+    }
 
     return true;
 }

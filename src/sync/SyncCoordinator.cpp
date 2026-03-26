@@ -94,6 +94,68 @@ namespace
     {
         return QDir::tempPath() + QStringLiteral("/clipboard_sync_downloads");
     }
+
+    QString buildDownloadPath(quint64 sessionId, const QString &fileName)
+    {
+        QDir root(tempDownloadRoot());
+        root.mkpath(QStringLiteral("."));
+
+        const QString sessionDirName = QString::number(sessionId);
+        root.mkpath(sessionDirName);
+        QDir sessionDir(root.filePath(sessionDirName));
+
+        QString candidate = sessionDir.filePath(fileName);
+        if (!QFileInfo::exists(candidate))
+        {
+            return candidate;
+        }
+
+        const QFileInfo fi(fileName);
+        const QString base = fi.completeBaseName().isEmpty() ? fi.fileName() : fi.completeBaseName();
+        const QString ext = fi.completeSuffix();
+        for (int i = 1; i <= 9999; ++i)
+        {
+            const QString numberedName = ext.isEmpty()
+                                             ? QStringLiteral("%1_%2").arg(base).arg(i)
+                                             : QStringLiteral("%1_%2.%3").arg(base).arg(i).arg(ext);
+            candidate = sessionDir.filePath(numberedName);
+            if (!QFileInfo::exists(candidate))
+            {
+                return candidate;
+            }
+        }
+
+        return sessionDir.filePath(QUuid::createUuid().toString(QUuid::WithoutBraces) + QStringLiteral("_") + fileName);
+    }
+
+    QString computeFileSha256Hex(const QString &path)
+    {
+        QFile file(path);
+        if (!file.open(QIODevice::ReadOnly))
+        {
+            return QString();
+        }
+
+        QCryptographicHash hash(QCryptographicHash::Sha256);
+        QByteArray chunk;
+        chunk.resize(1024 * 1024);
+        while (true)
+        {
+            const qint64 n = file.read(chunk.data(), chunk.size());
+            if (n < 0)
+            {
+                return QString();
+            }
+            if (n == 0)
+            {
+                break;
+            }
+
+            hash.addData(chunk.constData(), n);
+        }
+
+        return QString::fromLatin1(hash.result().toHex());
+    }
 }
 
 SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
@@ -102,6 +164,10 @@ SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
                                  QObject *parent)
     : QObject(parent), m_monitor(monitor), m_writer(writer), m_client(client)
 {
+    m_requestWindowTimer.setSingleShot(true);
+    m_requestWindowTimer.setInterval(m_requestWindowTimeoutMs);
+    QObject::connect(&m_requestWindowTimer, &QTimer::timeout, this, &SyncCoordinator::handleRequestWindowTimeout);
+
     if (m_monitor)
     {
         QObject::connect(m_monitor,
@@ -112,6 +178,12 @@ SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
                          &ClipboardMonitor::localFilesChanged,
                          this,
                          &SyncCoordinator::handleLocalFilesChanged);
+    }
+
+    if (m_client)
+    {
+        QObject::connect(m_client, &TransportClient::peerConnected, this, &SyncCoordinator::handlePeerConnected);
+        QObject::connect(m_client, &TransportClient::peerDisconnected, this, &SyncCoordinator::handlePeerDisconnected);
     }
 }
 
@@ -181,9 +253,57 @@ bool SyncCoordinator::requestPendingRemoteFiles()
     state.fileIndex = 0;
     state.nextOffset = 0;
     m_activeDownload = state;
+    m_currentWindowRetryCount = 0;
+    m_downloadPausedByDisconnect = false;
+    m_requestWindowTimer.stop();
 
     emit fileTransferStatus(QStringLiteral("开始请求远端文件，总数: %1").arg(offer.files.size()));
     return requestNextWindow();
+}
+
+bool SyncCoordinator::requestPendingRemoteFilesOnPasteTrigger()
+{
+    if (m_activeDownload.has_value())
+    {
+        return false;
+    }
+
+    if (m_remoteOfferedFiles.isEmpty())
+    {
+        return false;
+    }
+
+    return requestPendingRemoteFiles();
+}
+
+bool SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV()
+{
+    if (m_activeDownload.has_value())
+    {
+        emit fileTransferStatus(QStringLiteral("已有文件传输任务在进行中"));
+        return false;
+    }
+
+    if (m_remoteOfferedFiles.isEmpty())
+    {
+        emit fileTransferStatus(QStringLiteral("Ctrl+Shift+V: 当前没有可请求的远端文件 Offer"));
+        return false;
+    }
+
+    quint64 latestSessionId = 0;
+    qint64 latestTs = std::numeric_limits<qint64>::min();
+    for (auto it = m_remoteOfferedFiles.cbegin(); it != m_remoteOfferedFiles.cend(); ++it)
+    {
+        if (it.value().receivedAtMs > latestTs)
+        {
+            latestTs = it.value().receivedAtMs;
+            latestSessionId = it.key();
+        }
+    }
+
+    const QString tempSessionDir = QDir::toNativeSeparators(QDir(tempDownloadRoot()).filePath(QString::number(latestSessionId)));
+    emit fileTransferStatus(QStringLiteral("Ctrl+Shift+V: 远端文件将暂存到 %1").arg(tempSessionDir));
+    return requestPendingRemoteFiles();
 }
 
 bool SyncCoordinator::sendTextToPeer(const QString &text, quint64 sessionId)
@@ -227,6 +347,12 @@ bool SyncCoordinator::sendFileOfferToPeer(const QStringList &paths, quint64 sess
         meta.name = info.fileName();
         meta.size = info.size();
         meta.mtimeMs = info.lastModified().toMSecsSinceEpoch();
+        meta.sha256 = computeFileSha256Hex(meta.path);
+        if (meta.sha256.isEmpty())
+        {
+            qWarning() << "skip file offer because SHA256 failed:" << meta.path;
+            continue;
+        }
 
         QJsonObject fileObj;
         fileObj.insert(QStringLiteral("fileId"), meta.fileId);
@@ -269,6 +395,7 @@ bool SyncCoordinator::requestNextWindow()
     if (!m_remoteOfferedFiles.contains(state.sessionId))
     {
         emit fileTransferStatus(QStringLiteral("下载任务找不到远端 Offer，会话失效"));
+        m_requestWindowTimer.stop();
         m_activeDownload.reset();
         m_downloadFile.reset();
         m_downloadHash.reset();
@@ -283,27 +410,33 @@ bool SyncCoordinator::requestNextWindow()
             m_writer->writeRemoteFileList(m_lastDownloadedPaths, state.sessionId);
         }
         emit fileTransferStatus(QStringLiteral("文件下载完成，已写入本地剪贴板，文件数: %1").arg(m_lastDownloadedPaths.size()));
+        m_remoteOfferedFiles.remove(state.sessionId);
+        m_requestWindowTimer.stop();
         m_activeDownload.reset();
         m_downloadFile.reset();
         m_downloadHash.reset();
+
+#if !defined(Q_OS_WIN) && !defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
+        // 非 Windows 平台继续尝试后续 Offer，避免依赖全局粘贴钩子。
+        if (!m_remoteOfferedFiles.isEmpty())
+        {
+            QMetaObject::invokeMethod(this, [this]()
+                                      { requestPendingRemoteFiles(); }, Qt::QueuedConnection);
+        }
+#endif
         return true;
     }
 
     const FileMeta &meta = offer.files[state.fileIndex];
     if (!m_downloadFile)
     {
-        QDir dir(tempDownloadRoot());
-        if (!dir.exists())
-        {
-            dir.mkpath(QStringLiteral("."));
-        }
-
-        const QString localPath = dir.absoluteFilePath(QStringLiteral("%1_%2").arg(QString::number(state.sessionId), meta.name));
+        const QString localPath = buildDownloadPath(state.sessionId, meta.name);
         state.localPath = localPath;
         m_downloadFile = std::make_unique<QSaveFile>(localPath);
         if (!m_downloadFile->open(QIODevice::WriteOnly))
         {
             emit fileTransferStatus(QStringLiteral("无法创建本地文件: %1").arg(localPath));
+            m_requestWindowTimer.stop();
             m_activeDownload.reset();
             m_downloadFile.reset();
             return false;
@@ -316,11 +449,23 @@ bool SyncCoordinator::requestNextWindow()
     const qint64 remain = meta.size - state.nextOffset;
     if (remain <= 0)
     {
+        if (meta.sha256.isEmpty())
+        {
+            emit fileTransferStatus(QStringLiteral("缺少远端 SHA256，拒绝提交文件: %1").arg(meta.name));
+            m_downloadFile->cancelWriting();
+            m_requestWindowTimer.stop();
+            m_activeDownload.reset();
+            m_downloadFile.reset();
+            m_downloadHash.reset();
+            return false;
+        }
+
         const QString finalSha = QString::fromLatin1(m_downloadHash->result().toHex());
-        if (!meta.sha256.isEmpty() && finalSha.compare(meta.sha256, Qt::CaseInsensitive) != 0)
+        if (finalSha.compare(meta.sha256, Qt::CaseInsensitive) != 0)
         {
             emit fileTransferStatus(QStringLiteral("文件校验失败: %1").arg(meta.name));
             m_downloadFile->cancelWriting();
+            m_requestWindowTimer.stop();
             m_activeDownload.reset();
             m_downloadFile.reset();
             m_downloadHash.reset();
@@ -330,6 +475,7 @@ bool SyncCoordinator::requestNextWindow()
         if (!m_downloadFile->commit())
         {
             emit fileTransferStatus(QStringLiteral("本地文件提交失败: %1").arg(meta.name));
+            m_requestWindowTimer.stop();
             m_activeDownload.reset();
             m_downloadFile.reset();
             m_downloadHash.reset();
@@ -348,9 +494,30 @@ bool SyncCoordinator::requestNextWindow()
         return requestNextWindow();
     }
 
-    state.requestId = QUuid::createUuid().toString(QUuid::WithoutBraces);
-    state.requestedLength = qMin<qint64>(remain, static_cast<qint64>(m_chunkSizeBytes) * m_windowChunks);
-    state.receivedInWindow = 0;
+    return sendFileRequestWindow(meta, false);
+}
+
+bool SyncCoordinator::sendFileRequestWindow(const FileMeta &meta, bool reuseRequestId)
+{
+    if (!m_activeDownload.has_value())
+    {
+        return false;
+    }
+
+    DownloadState &state = m_activeDownload.value();
+    const qint64 remain = meta.size - state.nextOffset;
+    if (remain <= 0)
+    {
+        return false;
+    }
+
+    if (!reuseRequestId || state.requestId.isEmpty())
+    {
+        state.requestId = QUuid::createUuid().toString(QUuid::WithoutBraces);
+        state.requestedLength = qMin<qint64>(remain, static_cast<qint64>(m_chunkSizeBytes) * m_windowChunks);
+        state.receivedInWindow = 0;
+        m_currentWindowRetryCount = 0;
+    }
 
     QJsonObject req;
     req.insert(QStringLiteral("fileId"), meta.fileId);
@@ -366,8 +533,18 @@ bool SyncCoordinator::requestNextWindow()
     message.sequence = static_cast<quint64>(state.nextOffset / qMax(1, m_chunkSizeBytes) + 1);
     message.payload = encodeJson(req);
 
-    emit fileTransferStatus(QStringLiteral("请求文件窗口: %1 offset=%2 length=%3").arg(meta.name).arg(state.nextOffset).arg(state.requestedLength));
-    return m_client->sendMessage(message);
+    if (!m_client->sendMessage(message))
+    {
+        return false;
+    }
+
+    m_requestWindowTimer.start();
+    emit fileTransferStatus(QStringLiteral("请求文件窗口: %1 offset=%2 length=%3 retry=%4")
+                                .arg(meta.name)
+                                .arg(state.nextOffset)
+                                .arg(state.requestedLength)
+                                .arg(m_currentWindowRetryCount));
+    return true;
 }
 
 void SyncCoordinator::handleLocalTextChanged(const QString &text, quint32 textHash)
@@ -484,6 +661,15 @@ void SyncCoordinator::handleRemoteFileOffer(const protocol::ClipboardMessage &me
     m_remoteOfferedFiles.insert(message.sessionId, offer);
     emit remoteFileOfferReceived(names);
     emit fileTransferStatus(QStringLiteral("收到远端文件 Offer，session=%1 文件数=%2").arg(message.sessionId).arg(offer.files.size()));
+
+#if !defined(Q_OS_WIN) && !defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
+    // 非 Windows 平台默认没有全局 Ctrl+V 监听，收到 Offer 后自动发起拉取。
+    if (!m_activeDownload.has_value())
+    {
+        QMetaObject::invokeMethod(this, [this]()
+                                  { requestPendingRemoteFiles(); }, Qt::QueuedConnection);
+    }
+#endif
 }
 
 void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &message)
@@ -571,6 +757,26 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
 
     if (offset + sent >= target->size)
     {
+        if (target->sha256.isEmpty())
+        {
+            target->sha256 = computeFileSha256Hex(target->path);
+        }
+
+        if (target->sha256.isEmpty())
+        {
+            protocol::ClipboardMessage abortMsg;
+            abortMsg.type = protocol::MessageType::FileAbort;
+            abortMsg.sessionId = message.sessionId;
+            abortMsg.sequence = static_cast<quint64>(offset + sent);
+            QJsonObject abortPayload;
+            abortPayload.insert(QStringLiteral("fileId"), fileId);
+            abortPayload.insert(QStringLiteral("requestId"), requestId);
+            abortPayload.insert(QStringLiteral("reason"), QStringLiteral("source sha256 unavailable"));
+            abortMsg.payload = encodeJson(abortPayload);
+            m_client->sendMessage(abortMsg);
+            return;
+        }
+
         protocol::ClipboardMessage complete;
         complete.type = protocol::MessageType::FileComplete;
         complete.sessionId = message.sessionId;
@@ -622,6 +828,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
     {
         emit fileTransferStatus(QStringLiteral("FileChunk 顺序不匹配，终止当前传输"));
         m_downloadFile->cancelWriting();
+        m_requestWindowTimer.stop();
         m_downloadFile.reset();
         m_downloadHash.reset();
         m_activeDownload.reset();
@@ -632,6 +839,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
     {
         emit fileTransferStatus(QStringLiteral("FileChunk CRC 校验失败，终止当前传输"));
         m_downloadFile->cancelWriting();
+        m_requestWindowTimer.stop();
         m_downloadFile.reset();
         m_downloadHash.reset();
         m_activeDownload.reset();
@@ -645,6 +853,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
         {
             m_downloadFile->cancelWriting();
         }
+        m_requestWindowTimer.stop();
         m_downloadFile.reset();
         m_downloadHash.reset();
         m_activeDownload.reset();
@@ -652,6 +861,8 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
     }
 
     m_downloadHash->addData(chunk);
+    m_requestWindowTimer.start();
+    m_currentWindowRetryCount = 0;
     state.nextOffset += chunk.size();
     state.receivedInWindow += chunk.size();
 
@@ -694,7 +905,76 @@ void SyncCoordinator::handleRemoteFileAbort(const protocol::ClipboardMessage &me
     {
         m_downloadFile->cancelWriting();
     }
+    m_requestWindowTimer.stop();
     m_downloadFile.reset();
     m_downloadHash.reset();
     m_activeDownload.reset();
+}
+
+void SyncCoordinator::handleRequestWindowTimeout()
+{
+    if (!m_activeDownload.has_value())
+    {
+        return;
+    }
+
+    if (!m_client->isConnected())
+    {
+        m_downloadPausedByDisconnect = true;
+        emit fileTransferStatus(QStringLiteral("请求窗口超时且连接断开，等待重连后续传"));
+        return;
+    }
+
+    DownloadState &state = m_activeDownload.value();
+    if (!m_remoteOfferedFiles.contains(state.sessionId))
+    {
+        return;
+    }
+
+    const FileOffer &offer = m_remoteOfferedFiles[state.sessionId];
+    if (state.fileIndex >= offer.files.size())
+    {
+        return;
+    }
+
+    if (m_currentWindowRetryCount >= m_maxRequestWindowRetries)
+    {
+        emit fileTransferStatus(QStringLiteral("请求窗口超时重试达到上限，终止当前下载"));
+        if (m_downloadFile)
+        {
+            m_downloadFile->cancelWriting();
+        }
+        m_downloadFile.reset();
+        m_downloadHash.reset();
+        m_activeDownload.reset();
+        return;
+    }
+
+    ++m_currentWindowRetryCount;
+    emit fileTransferStatus(QStringLiteral("请求窗口超时，重试第 %1 次").arg(m_currentWindowRetryCount));
+    sendFileRequestWindow(offer.files[state.fileIndex], true);
+}
+
+void SyncCoordinator::handlePeerConnected()
+{
+    if (!m_downloadPausedByDisconnect || !m_activeDownload.has_value())
+    {
+        return;
+    }
+
+    m_downloadPausedByDisconnect = false;
+    emit fileTransferStatus(QStringLiteral("连接恢复，继续文件续传"));
+    requestNextWindow();
+}
+
+void SyncCoordinator::handlePeerDisconnected()
+{
+    if (!m_activeDownload.has_value())
+    {
+        return;
+    }
+
+    m_downloadPausedByDisconnect = true;
+    m_requestWindowTimer.stop();
+    emit fileTransferStatus(QStringLiteral("连接断开，已暂停当前文件下载"));
 }

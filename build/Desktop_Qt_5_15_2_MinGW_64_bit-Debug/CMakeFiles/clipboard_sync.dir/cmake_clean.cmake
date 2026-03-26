@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj.d"
   "CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj"
   "CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj.d"
+  "CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj"
+  "CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj.d"
   "CMakeFiles/clipboard_sync.dir/src/main.cpp.obj"
   "CMakeFiles/clipboard_sync.dir/src/main.cpp.obj.d"
   "CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj"

@@ -240,11 +240,26 @@ CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.s"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\common\Logger.cpp -o CMakeFiles\clipboard_sync.dir\src\common\Logger.cpp.s
 
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: CMakeFiles/clipboard_sync.dir/flags.make
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj"
+	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\input\PasteTriggerHook.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\input\PasteTriggerHook.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\input\PasteTriggerHook.cpp
+
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.i"
+	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\input\PasteTriggerHook.cpp > CMakeFiles\clipboard_sync.dir\src\input\PasteTriggerHook.cpp.i
+
+CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.s"
+	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\input\PasteTriggerHook.cpp -o CMakeFiles\clipboard_sync.dir\src\input\PasteTriggerHook.cpp.s
+
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: CMakeFiles/clipboard_sync.dir/flags.make
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\ui\SyncDebugWindow.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\ui\SyncDebugWindow.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\ui\SyncDebugWindow.cpp
 
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.i: cmake_force
@@ -268,6 +283,7 @@ clipboard_sync_OBJECTS = \
 "CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj" \
+"CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj"
 
 # External object files for target clipboard_sync
@@ -284,6 +300,7 @@ clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj
+clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/build.make
 clipboard_sync.exe: D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/libQt5Network.a
@@ -293,7 +310,7 @@ clipboard_sync.exe: D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/libQt5Core.a
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/linkLibs.rsp
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/objects1.rsp
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable clipboard_sync.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable clipboard_sync.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\clipboard_sync.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

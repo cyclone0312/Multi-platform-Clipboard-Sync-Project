@@ -252,6 +252,9 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \

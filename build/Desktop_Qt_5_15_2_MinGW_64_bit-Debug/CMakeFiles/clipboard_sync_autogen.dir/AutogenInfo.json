@@ -76,7 +76,14 @@
 		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
 		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake",
 		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
-		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+		"D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project",
 	"CROSS_CONFIG" : false,
@@ -112,6 +119,12 @@
 			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h",
 			"MU",
 			"2PZEZPHIBF/moc_Logger.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h",
+			"MU",
+			"NNGSYZYP4R/moc_PasteTriggerHook.cpp",
 			null
 		],
 		[
@@ -233,6 +246,11 @@
 		],
 		[
 			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp",
 			"MU",
 			null
 		],

@@ -1,10 +1,10 @@
 CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\transport\TransportClient.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -77,7 +77,6 @@ CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
@@ -89,11 +88,7 @@ CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
@@ -177,6 +172,13 @@ CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
@@ -236,8 +238,6 @@ CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian \
