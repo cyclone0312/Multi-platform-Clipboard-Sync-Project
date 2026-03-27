@@ -175,6 +175,10 @@ SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
                          this,
                          &SyncCoordinator::handleLocalTextChanged);
         QObject::connect(m_monitor,
+                         &ClipboardMonitor::localImageChanged,
+                         this,
+                         &SyncCoordinator::handleLocalImageChanged);
+        QObject::connect(m_monitor,
                          &ClipboardMonitor::localFilesChanged,
                          this,
                          &SyncCoordinator::handleLocalFilesChanged);
@@ -320,6 +324,31 @@ bool SyncCoordinator::sendTextToPeer(const QString &text, quint64 sessionId)
     if (!m_client->sendMessage(message))
     {
         qWarning() << "send text failed (peer may be offline)";
+        return false;
+    }
+
+    return true;
+}
+
+bool SyncCoordinator::sendImageToPeer(const QByteArray &pngBytes, quint64 sessionId)
+{
+    if (pngBytes.isEmpty())
+    {
+        return false;
+    }
+
+    protocol::ClipboardMessage message;
+    message.type = protocol::MessageType::ImageBitmap;
+    message.flags = 0;
+    message.sessionId = sessionId;
+    message.sequence = 1;
+    message.payload = pngBytes;
+
+    qInfo() << "sending image bytes:" << message.payload.size() << "session:" << message.sessionId;
+
+    if (!m_client->sendMessage(message))
+    {
+        qWarning() << "send image failed (peer may be offline)";
         return false;
     }
 
@@ -587,6 +616,22 @@ void SyncCoordinator::handleLocalTextChanged(const QString &text, quint32 textHa
     }
 }
 
+void SyncCoordinator::handleLocalImageChanged(const QByteArray &pngBytes, quint32 imageHash)
+{
+    if (m_writer->isRecentlyInjectedImage(imageHash))
+    {
+        qInfo() << "skip local echo image hash:" << imageHash;
+        return;
+    }
+
+    const quint64 sessionId = QRandomGenerator::global()->generate64();
+    emit localImageForwarded(static_cast<qint64>(pngBytes.size()));
+    if (!sendImageToPeer(pngBytes, sessionId))
+    {
+        qWarning() << "local image forward failed";
+    }
+}
+
 void SyncCoordinator::handleLocalFilesChanged(const QStringList &paths, quint32 listHash)
 {
     if (m_writer->isRecentlyInjectedFileList(listHash))
@@ -626,6 +671,26 @@ void SyncCoordinator::handleRemoteMessage(const protocol::ClipboardMessage &mess
         else
         {
             qWarning() << "remote clipboard apply failed";
+        }
+        return;
+    }
+    case protocol::MessageType::ImageBitmap:
+    {
+        if (message.payload.isEmpty())
+        {
+            return;
+        }
+
+        qInfo() << "remote image received, bytes:" << message.payload.size() << "session:" << message.sessionId;
+
+        if (m_writer->writeRemoteImage(message.payload, message.sessionId))
+        {
+            qInfo() << "remote image applied";
+            emit remoteImageReceived(static_cast<qint64>(message.payload.size()));
+        }
+        else
+        {
+            qWarning() << "remote image apply failed";
         }
         return;
     }

@@ -247,6 +247,8 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\XNBUIEWTVA/moc_ClipboardMonitor.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\XNBUIEWTVA/moc_ClipboardWriter.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
@@ -478,8 +480,6 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\ECMMT3H3EV/moc_TransportClient.cpp \

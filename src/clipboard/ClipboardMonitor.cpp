@@ -1,14 +1,18 @@
 #include "clipboard/ClipboardMonitor.h"
 
 #include <QGuiApplication>
+#include <QBuffer>
 #include <QClipboard>
+#include <QCryptographicHash>
 #include <QDir>
+#include <QImage>
 #include <QMimeData>
+#include <QPixmap>
 #include <QTimer>
 #include <QUrl>
 
-//匿名命名空间
-//内部链接性,防止冲突,替代 static
+// 匿名命名空间
+// 内部链接性,防止冲突,替代 static
 namespace
 {
     QString canonicalClipboardText(QString text)
@@ -49,6 +53,120 @@ namespace
         normalized.sort();
         return qHash(normalized.join(QStringLiteral("\n")));
     }
+
+    quint32 hashImageContent(const QImage &image)
+    {
+        if (image.isNull())
+        {
+            return 0;
+        }
+
+        const QImage normalized = image.convertToFormat(QImage::Format_RGBA8888);
+        QCryptographicHash hash(QCryptographicHash::Sha256);
+
+        const QByteArray meta = QByteArray::number(normalized.width()) + 'x' + QByteArray::number(normalized.height()) + ':' + QByteArray::number(static_cast<int>(normalized.format()));
+        hash.addData(meta);
+        hash.addData(reinterpret_cast<const char *>(normalized.constBits()), static_cast<int>(normalized.sizeInBytes()));
+        return qHash(hash.result());
+    }
+
+    quint32 hashImagePngBytes(const QByteArray &pngBytes)
+    {
+        if (pngBytes.isEmpty())
+        {
+            return 0;
+        }
+
+        QCryptographicHash hash(QCryptographicHash::Sha256);
+        hash.addData(pngBytes);
+        return qHash(hash.result());
+    }
+
+    quint32 hashImageFingerprint(const QMimeData *mime, const QImage &image, const QByteArray &encodedPng)
+    {
+        if (mime)
+        {
+            const QByteArray mimePng = mime->data(QStringLiteral("image/png"));
+            const quint32 mimePngHash = hashImagePngBytes(mimePng);
+            if (mimePngHash != 0)
+            {
+                return mimePngHash;
+            }
+        }
+
+        const quint32 encodedHash = hashImagePngBytes(encodedPng);
+        if (encodedHash != 0)
+        {
+            return encodedHash;
+        }
+
+        return hashImageContent(image);
+    }
+
+    bool encodeImageAsPng(const QImage &image, QByteArray *outPng)
+    {
+        if (!outPng)
+        {
+            return false;
+        }
+
+        outPng->clear();
+        if (image.isNull())
+        {
+            return false;
+        }
+
+        QBuffer buffer(outPng);
+        if (!buffer.open(QIODevice::WriteOnly))
+        {
+            return false;
+        }
+
+        return image.save(&buffer, "PNG");
+    }
+
+    bool extractImage(const QMimeData *mime, QImage *outImage)
+    {
+        if (!mime || !outImage || !mime->hasImage())
+        {
+            return false;
+        }
+
+        const QVariant imageData = mime->imageData();
+        // 尝试直接提取 QImage
+        if (imageData.canConvert<QImage>())
+        {
+            const QImage image = qvariant_cast<QImage>(imageData);
+            if (!image.isNull())
+            {
+                *outImage = image;
+                return true;
+            }
+        }
+        // 尝试转换 QPixmap
+        if (imageData.canConvert<QPixmap>())
+        {
+            const QPixmap pixmap = qvariant_cast<QPixmap>(imageData);
+            if (!pixmap.isNull())
+            {
+                *outImage = pixmap.toImage();
+                return !outImage->isNull();
+            }
+        }
+        // 尝试解码原始 PNG 二进制数据
+        const QByteArray pngData = mime->data(QStringLiteral("image/png"));
+        if (!pngData.isEmpty())
+        {
+            QImage image;
+            if (image.loadFromData(pngData, "PNG"))
+            {
+                *outImage = image;
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
 
 ClipboardMonitor::ClipboardMonitor(QObject *parent)
@@ -73,6 +191,19 @@ void ClipboardMonitor::tryEmitClipboardText()
 {
     m_retryScheduled = false;
 
+    const auto scheduleRetry = [this]()
+    {
+        if (m_readRetryBudget <= 0)
+        {
+            return false;
+        }
+
+        --m_readRetryBudget;
+        m_retryScheduled = true;
+        QTimer::singleShot(m_readRetryDelayMs, this, &ClipboardMonitor::tryEmitClipboardText);
+        return true;
+    };
+
     QClipboard *clipboard = QGuiApplication::clipboard();
     const QMimeData *mime = clipboard->mimeData();
     if (mime && mime->hasUrls())
@@ -86,17 +217,33 @@ void ClipboardMonitor::tryEmitClipboardText()
         }
     }
 
-    const QString text = clipboard->text();
-    if (text.isNull() || text.isEmpty())
+    if (mime && mime->hasImage())
     {
-        if (m_readRetryBudget <= 0)
+        QImage image;
+        // 将mime转换为Qimage类
+        if (extractImage(mime, &image))
+        {
+            QByteArray pngBytes;
+            // 将Qimage转换为png格式传输
+            if (encodeImageAsPng(image, &pngBytes) && !pngBytes.isEmpty())
+            {
+                m_readRetryBudget = 0;
+                emit localImageChanged(pngBytes, hashImageFingerprint(mime, image, pngBytes));
+                return;
+            }
+        }
+
+        if (!scheduleRetry())
         {
             return;
         }
+        return;
+    }
 
-        --m_readRetryBudget;
-        m_retryScheduled = true;
-        QTimer::singleShot(m_readRetryDelayMs, this, &ClipboardMonitor::tryEmitClipboardText);
+    const QString text = clipboard->text();
+    if (text.isNull() || text.isEmpty())
+    {
+        scheduleRetry();
         return;
     }
 

@@ -48,6 +48,20 @@ bool AppController::initialize()
                      m_debugWindow.get(),
                      &SyncDebugWindow::appendRemoteText);
     QObject::connect(m_coordinator.get(),
+                     &SyncCoordinator::localImageForwarded,
+                     m_debugWindow.get(),
+                     [this](qint64 bytes)
+                     {
+                         m_debugWindow->appendLocalText(QStringLiteral("【图片】已检测到并准备发送，PNG=%1 bytes").arg(bytes));
+                     });
+    QObject::connect(m_coordinator.get(),
+                     &SyncCoordinator::remoteImageReceived,
+                     m_debugWindow.get(),
+                     [this](qint64 bytes)
+                     {
+                         m_debugWindow->appendRemoteText(QStringLiteral("【图片】已写入剪贴板，PNG=%1 bytes").arg(bytes));
+                     });
+    QObject::connect(m_coordinator.get(),
                      &SyncCoordinator::localFilesForwarded,
                      m_debugWindow.get(),
                      [this](const QStringList &paths)

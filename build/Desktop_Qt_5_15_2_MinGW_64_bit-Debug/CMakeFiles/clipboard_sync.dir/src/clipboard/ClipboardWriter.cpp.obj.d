@@ -244,6 +244,8 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtgui-config.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h \
@@ -280,8 +282,25 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QImage \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QPixmap \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QThread \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qthread.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdeadlinetimer.h \

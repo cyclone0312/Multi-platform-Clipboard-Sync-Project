@@ -260,6 +260,8 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
@@ -485,8 +487,6 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \

@@ -132,8 +132,7 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
@@ -191,6 +190,9 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
@@ -258,8 +260,6 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian \

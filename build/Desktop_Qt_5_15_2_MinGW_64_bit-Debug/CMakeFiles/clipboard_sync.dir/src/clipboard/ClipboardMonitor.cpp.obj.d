@@ -1,10 +1,10 @@
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\ClipboardMonitor.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/type_traits \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -77,7 +77,6 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
@@ -89,11 +88,7 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobalstatic.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnumeric.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qarraydata.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/string.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
@@ -177,6 +172,13 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringliteral.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringview.h \
@@ -253,16 +255,47 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qpoint.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsize.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QBuffer \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbuffer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QClipboard \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qclipboard.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QImage \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qcolor.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgb.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qrgba64.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qtransform.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qmatrix.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpolygon.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qregion.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMimeData \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmimedata.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/QPixmap \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/memory \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_raw_storage_iter.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/concurrence.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unique_ptr.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \

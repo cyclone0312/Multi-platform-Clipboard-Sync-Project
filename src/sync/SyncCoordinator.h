@@ -3,6 +3,7 @@
 #include <memory>
 #include <optional>
 
+#include <QByteArray>
 #include <QCryptographicHash>
 #include <QHash>
 #include <QObject>
@@ -37,10 +38,14 @@ public:
 signals:
     // 本地文本通过防回环校验后，准备外发时发出。
     void localTextForwarded(const QString &text);
+    // 本地图片通过防回环校验后，准备外发时发出（值为 PNG 字节数）。
+    void localImageForwarded(qint64 imageBytes);
     // 本地文件清单通过防回环校验后，准备外发时发出。
     void localFilesForwarded(const QStringList &paths);
     // 收到远端文本消息时发出。
     void remoteTextReceived(const QString &text);
+    // 收到远端图片并成功写入本地剪贴板时发出（值为 PNG 字节数）。
+    void remoteImageReceived(qint64 imageBytes);
     // 收到远端文件 Offer 时发出（尚未下载）。
     void remoteFileOfferReceived(const QStringList &fileNames);
     // 文件传输状态输出。
@@ -104,6 +109,8 @@ private:
 
     // 按统一协议编码并发送文本到对端。
     bool sendTextToPeer(const QString &text, quint64 sessionId);
+    // 按统一协议编码并发送图片（PNG）到对端。
+    bool sendImageToPeer(const QByteArray &pngBytes, quint64 sessionId);
     // 发送文件 Offer（仅元信息）。
     bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId);
     // 启动一个文件下载请求窗口。
@@ -112,6 +119,8 @@ private:
     bool sendFileRequestWindow(const FileMeta &meta, bool reuseRequestId);
     // 处理本地剪贴板更新，并在满足条件时转发到对端。
     void handleLocalTextChanged(const QString &text, quint32 textHash);
+    // 处理本地图片复制事件。
+    void handleLocalImageChanged(const QByteArray &pngBytes, quint32 imageHash);
     // 处理本地文件复制事件。
     void handleLocalFilesChanged(const QStringList &paths, quint32 listHash);
     // 处理远端消息并写入本地剪贴板。
