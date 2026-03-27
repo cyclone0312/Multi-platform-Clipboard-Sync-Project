@@ -78,6 +78,7 @@ bool ClipboardWriter::writeRemoteText(const QString &text, quint64 sessionId)
     return false;
 }
 
+// 将远端文件列表写入本地剪贴板，并记录防回环指纹。
 bool ClipboardWriter::writeRemoteFileList(const QStringList &paths, quint64 sessionId)
 {
     Q_UNUSED(sessionId)

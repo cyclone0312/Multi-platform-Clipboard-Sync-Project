@@ -347,6 +347,7 @@ bool SyncCoordinator::sendFileOfferToPeer(const QStringList &paths, quint64 sess
         meta.name = info.fileName();
         meta.size = info.size();
         meta.mtimeMs = info.lastModified().toMSecsSinceEpoch();
+        // Offer 阶段先计算整文件 SHA256，供接收端最终提交前做强一致校验。
         meta.sha256 = computeFileSha256Hex(meta.path);
         if (meta.sha256.isEmpty())
         {
@@ -384,14 +385,17 @@ bool SyncCoordinator::sendFileOfferToPeer(const QStringList &paths, quint64 sess
     return m_client->sendMessage(message);
 }
 
+// 它是“调度器/状态机核心”，负责判断当前阶段该做什么
 bool SyncCoordinator::requestNextWindow()
 {
+    // 保护条件
     if (!m_activeDownload.has_value())
     {
         return false;
     }
 
     DownloadState &state = m_activeDownload.value();
+    // 会话有效性检查
     if (!m_remoteOfferedFiles.contains(state.sessionId))
     {
         emit fileTransferStatus(QStringLiteral("下载任务找不到远端 Offer，会话失效"));
@@ -403,10 +407,12 @@ bool SyncCoordinator::requestNextWindow()
     }
 
     const FileOffer &offer = m_remoteOfferedFiles[state.sessionId];
+    // 是否已完成全部文件  如果 fileIndex 已到末尾，说明整个会话下载完成
     if (state.fileIndex >= offer.files.size())
     {
         if (!m_lastDownloadedPaths.isEmpty())
         {
+            // 将远端文件列表写入本地剪贴板，并记录防回环指纹。
             m_writer->writeRemoteFileList(m_lastDownloadedPaths, state.sessionId);
         }
         emit fileTransferStatus(QStringLiteral("文件下载完成，已写入本地剪贴板，文件数: %1").arg(m_lastDownloadedPaths.size()));
@@ -426,13 +432,15 @@ bool SyncCoordinator::requestNextWindow()
 #endif
         return true;
     }
-
+    // 当前文件初始化
+    // 如果 m_downloadFile 还没创建，说明当前文件首次进入
     const FileMeta &meta = offer.files[state.fileIndex];
     if (!m_downloadFile)
     {
         const QString localPath = buildDownloadPath(state.sessionId, meta.name);
         state.localPath = localPath;
         m_downloadFile = std::make_unique<QSaveFile>(localPath);
+        // 写入文件
         if (!m_downloadFile->open(QIODevice::WriteOnly))
         {
             emit fileTransferStatus(QStringLiteral("无法创建本地文件: %1").arg(localPath));
@@ -447,6 +455,8 @@ bool SyncCoordinator::requestNextWindow()
     }
 
     const qint64 remain = meta.size - state.nextOffset;
+    // 还剩多少字节没收完   当前文件总大小（字节） - 收端下一次期望写入的偏移量
+
     if (remain <= 0)
     {
         if (meta.sha256.isEmpty())
@@ -460,6 +470,7 @@ bool SyncCoordinator::requestNextWindow()
             return false;
         }
 
+        // 接收端把增量哈希结果与 Offer 中的 SHA256 对比，不一致则拒绝 commit。
         const QString finalSha = QString::fromLatin1(m_downloadHash->result().toHex());
         if (finalSha.compare(meta.sha256, Qt::CaseInsensitive) != 0)
         {
@@ -494,31 +505,41 @@ bool SyncCoordinator::requestNextWindow()
         return requestNextWindow();
     }
 
+    // 当还没收完时，它调用 sendFileRequestWindow(...) 发下一轮请求窗口
     return sendFileRequestWindow(meta, false);
 }
 
+// 根据当前已下载的进度，计算出下一段需要请求的数据范围，
+// 并向远程端发送一个“请给我这部分数据”的指令，同时定好闹钟等待回信
+// 理解为：从文件第 offset 字节开始，再给我 length 字节，按窗口发；如果超时我会拿同一请求单号重催一次
 bool SyncCoordinator::sendFileRequestWindow(const FileMeta &meta, bool reuseRequestId)
 {
+    // 第一件事是检查 m_activeDownload。没有活动任务就直接返回 false
     if (!m_activeDownload.has_value())
     {
         return false;
     }
 
     DownloadState &state = m_activeDownload.value();
+    // 计算还剩多少没下完
     const qint64 remain = meta.size - state.nextOffset;
     if (remain <= 0)
     {
         return false;
     }
-
+    // 决定是否生成新的 requestId  条件是“不是重用”或者“当前 requestId 为空
     if (!reuseRequestId || state.requestId.isEmpty())
     {
+        // 生成新 requestId
         state.requestId = QUuid::createUuid().toString(QUuid::WithoutBraces);
+        // 计算本窗口请求长度 requestedLength
         state.requestedLength = qMin<qint64>(remain, static_cast<qint64>(m_chunkSizeBytes) * m_windowChunks);
+        // 清零 receivedInWindow 和重试计数
         state.receivedInWindow = 0;
         m_currentWindowRetryCount = 0;
     }
 
+    // 组装 FileRequest 的 JSON 负载  这就是对端读取源文件时的参数
     QJsonObject req;
     req.insert(QStringLiteral("fileId"), meta.fileId);
     req.insert(QStringLiteral("requestId"), state.requestId);
@@ -526,6 +547,7 @@ bool SyncCoordinator::sendFileRequestWindow(const FileMeta &meta, bool reuseRequ
     req.insert(QStringLiteral("length"), static_cast<double>(state.requestedLength));
     req.insert(QStringLiteral("windowChunks"), m_windowChunks);
 
+    // 组装协议消息并发送
     protocol::ClipboardMessage message;
     message.type = protocol::MessageType::FileRequest;
     message.flags = 0;
@@ -538,6 +560,7 @@ bool SyncCoordinator::sendFileRequestWindow(const FileMeta &meta, bool reuseRequ
         return false;
     }
 
+    // 发送成功后启动超时计时器并打状态日志
     m_requestWindowTimer.start();
     emit fileTransferStatus(QStringLiteral("请求文件窗口: %1 offset=%2 length=%3 retry=%4")
                                 .arg(meta.name)
@@ -685,6 +708,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
     const qint64 offset = static_cast<qint64>(req.value(QStringLiteral("offset")).toDouble());
     const qint64 length = static_cast<qint64>(req.value(QStringLiteral("length")).toDouble());
 
+    // 参数不合法或会话不存在时直接丢弃，避免生成无效响应流量。
     if (!m_localOfferedFiles.contains(message.sessionId) || fileId.isEmpty() || requestId.isEmpty() || offset < 0 || length <= 0)
     {
         return;
@@ -723,6 +747,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
 
     qint64 sent = 0;
     const qint64 maxToSend = qMin(length, target->size - offset);
+    // 按请求窗口上限与 chunk 大小切片回传；每个 chunk 带 offset + CRC 便于接收端验序与验块。
     while (sent < maxToSend)
     {
         const qint64 thisSize = qMin<qint64>(m_chunkSizeBytes, maxToSend - sent);
@@ -778,6 +803,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
         }
 
         protocol::ClipboardMessage complete;
+        // 完成帧用于告知“发送端已发送到文件末尾”，并携带最终 SHA256。
         complete.type = protocol::MessageType::FileComplete;
         complete.sessionId = message.sessionId;
         complete.sequence = static_cast<quint64>(target->size);
@@ -824,6 +850,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
     const qint64 offset = static_cast<qint64>(chunkMeta.value(QStringLiteral("offset")).toDouble());
     const quint32 expectedCrc = static_cast<quint32>(chunkMeta.value(QStringLiteral("chunkCrc32")).toDouble());
 
+    // 这里同时做三重约束：fileId、requestId、offset，确保只接收“当前窗口期望的下一个块”。
     if (fileId != meta.fileId || requestId != state.requestId || offset != state.nextOffset)
     {
         emit fileTransferStatus(QStringLiteral("FileChunk 顺序不匹配，终止当前传输"));

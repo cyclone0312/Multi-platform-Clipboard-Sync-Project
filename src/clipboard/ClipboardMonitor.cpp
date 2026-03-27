@@ -7,6 +7,8 @@
 #include <QTimer>
 #include <QUrl>
 
+//匿名命名空间
+//内部链接性,防止冲突,替代 static
 namespace
 {
     QString canonicalClipboardText(QString text)

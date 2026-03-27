@@ -55,31 +55,50 @@ public:
     bool requestPendingRemoteFilesOnCtrlShiftV();
 
 private:
+    // 单个文件的元信息（既用于 Offer 广播，也用于传输时校验与定位）。
     struct FileMeta
     {
+        // 文件在当前会话内的逻辑编号（字符串形式，便于放入 JSON）。
         QString fileId;
+        // 发送端本地绝对路径（仅发送端使用，接收端通常为空）。
         QString path;
+        // 文件名（不含目录），用于接收端生成本地临时路径。
         QString name;
+        // 文件总字节数。
         qint64 size = 0;
+        // 文件最后修改时间（Unix 毫秒时间戳）。
         qint64 mtimeMs = 0;
+        // 文件内容 SHA256（十六进制字符串），用于最终完整性校验。
         QString sha256;
     };
 
+    // 一次复制会话对应的“文件 Offer”集合。
     struct FileOffer
     {
+        // 会话 ID：同一次复制动作的全局标识。
         quint64 sessionId = 0;
+        // 接收端记录该 Offer 到达本地的时间戳（用于选择“最新 Offer”）。
         qint64 receivedAtMs = 0;
+        // 本次会话携带的文件元信息列表。
         QVector<FileMeta> files;
     };
 
+    // 接收端下载状态机的运行时状态。
     struct DownloadState
     {
+        // 当前下载会话 ID，对应 m_remoteOfferedFiles 里的一个 Offer。
         quint64 sessionId = 0;
+        // 当前正在下载第几个文件（索引到 offer.files）。
         int fileIndex = 0;
+        // 当前文件“下一块期望偏移”，也是已成功写入的累计字节数。
         qint64 nextOffset = 0;
+        // 当前请求窗口计划拉取的总字节数（一次 FileRequest 的长度）。
         qint64 requestedLength = 0;
+        // 当前窗口已实际收到并写入的字节数。
         qint64 receivedInWindow = 0;
+        // 当前窗口的请求 ID，用于匹配回来的 FileChunk，防止串包。
         QString requestId;
+        // 当前文件在接收端临时目录中的本地落盘路径。
         QString localPath;
     };
 
@@ -121,18 +140,31 @@ private:
     // 本地到远端转发所使用的发送通道。
     TransportClient *m_client = nullptr;
 
+    // 本端已发布给对端的 Offer 缓存（作为对端 FileRequest 的数据源索引）。
     QHash<quint64, FileOffer> m_localOfferedFiles;
+    // 对端发来的 Offer 缓存（等待 Ctrl+V/Ctrl+Shift+V 或自动触发拉取）。
     QHash<quint64, FileOffer> m_remoteOfferedFiles;
+    // 当前唯一活跃下载任务；当前实现同一时刻只允许一个下载会话。
     std::optional<DownloadState> m_activeDownload;
+    // 正在写入中的目标文件，使用 QSaveFile 保证提交原子性。
     std::unique_ptr<QSaveFile> m_downloadFile;
+    // 对正在接收文件的增量哈希器，用于最终 SHA256 对比。
     std::unique_ptr<QCryptographicHash> m_downloadHash;
+    // 当前会话已下载成功的本地路径列表，完成后整体写入本地剪贴板。
     QStringList m_lastDownloadedPaths;
 
+    // 单个文件分块大小（默认 512KB）。
     int m_chunkSizeBytes = 512 * 1024;
+    // 一个请求窗口内最多期望接收的分块数。
     int m_windowChunks = 16;
+    // 请求窗口超时时间；超时后触发重试或暂停。
     int m_requestWindowTimeoutMs = 8000;
+    // 单个请求窗口允许的最大重试次数。
     int m_maxRequestWindowRetries = 3;
+    // 当前窗口已重试次数。
     int m_currentWindowRetryCount = 0;
+    // 连接断开时标记“暂停中”，重连后由协调器继续请求。
     bool m_downloadPausedByDisconnect = false;
+    // 监督 FileRequest -> FileChunk 的窗口超时计时器。
     QTimer m_requestWindowTimer;
 };

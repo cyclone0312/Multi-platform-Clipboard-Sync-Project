@@ -65,14 +65,17 @@ bool AppController::initialize()
                      &SyncCoordinator::fileTransferStatus,
                      m_debugWindow.get(),
                      &SyncDebugWindow::appendFileTransferStatus);
+    // 调试窗口“手动写入并发送”按钮 -> 协调器文本注入入口。
     QObject::connect(m_debugWindow.get(),
                      &SyncDebugWindow::manualInjectRequested,
                      m_coordinator.get(),
                      &SyncCoordinator::manualInjectAndSend);
+    // 调试窗口“请求远端文件”按钮 -> 复用 Ctrl+Shift+V 的请求入口。
     QObject::connect(m_debugWindow.get(),
                      &SyncDebugWindow::requestRemoteFilesTriggered,
                      m_coordinator.get(),
                      &SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV);
+    // 粘贴钩子监听到 Ctrl+Shift+V -> 拉取最近一次远端文件 Offer。
     QObject::connect(m_pasteHook.get(),
                      &PasteTriggerHook::ctrlShiftPasteTriggered,
                      m_coordinator.get(),

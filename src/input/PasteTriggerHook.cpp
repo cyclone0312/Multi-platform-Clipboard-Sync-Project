@@ -145,6 +145,8 @@ void PasteTriggerHook::stop()
 bool PasteTriggerHook::eventFilter(QObject *watched, QEvent *event)
 {
     Q_UNUSED(watched)
+    // 应用内按键兜底：窗口有焦点时可捕获 Ctrl+V / Ctrl+Shift+V。
+    // 注意：这不是系统全局钩子，窗口失焦时不保证触发。
     if (event->type() == QEvent::KeyPress)
     {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
@@ -193,6 +195,7 @@ void PasteTriggerHook::emitCtrlShiftPasteTriggeredDebounced()
 #ifdef Q_OS_WIN
 LRESULT CALLBACK PasteTriggerHook::keyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
+    // Windows 全局低级键盘钩子：即便应用不在前台也能捕获组合键。
     if (nCode == HC_ACTION && (wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN))
     {
         auto *kbd = reinterpret_cast<KBDLLHOOKSTRUCT *>(lParam);
