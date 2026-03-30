@@ -12,6 +12,7 @@
 #include <QTimer>
 #include <QVector>
 
+#include "clipboard/ClipboardSnapshot.h"
 #include "protocol/ProtocolHeader.h"
 
 class ClipboardMonitor;
@@ -113,13 +114,16 @@ private:
     bool sendTextToPeer(const QString &text, quint64 sessionId);
     // 按统一协议编码并发送图片（PNG）到对端。
     bool sendImageToPeer(const QByteArray &pngBytes, quint64 sessionId);
+    bool sendSnapshotToPeer(const clipboard::Snapshot &snapshot, quint64 sessionId);
     // 发送文件 Offer（仅元信息）。
     bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId);
+    bool populateSnapshotFiles(const QStringList &paths, quint64 sessionId, clipboard::Snapshot *snapshot);
     bool startPendingRemoteFilesRequest(bool replayPasteAfterDownload);
     // 启动一个文件下载请求窗口。
     bool requestNextWindow();
     // 发送文件请求窗口，支持重发同一 requestId。
     bool sendFileRequestWindow(const FileMeta &meta, bool reuseRequestId);
+    void handleLocalSnapshotChanged(const clipboard::Snapshot &snapshot);
     // 处理本地剪贴板更新，并在满足条件时转发到对端。
     void handleLocalTextChanged(const QString &text, quint32 textHash);
     // 处理本地图片复制事件。
@@ -128,6 +132,7 @@ private:
     void handleLocalFilesChanged(const QStringList &paths, quint32 listHash);
     // 处理远端消息并写入本地剪贴板。
     void handleRemoteMessage(const protocol::ClipboardMessage &message);
+    void handleRemoteSnapshot(const protocol::ClipboardMessage &message);
     // 处理远端 FileOffer。
     void handleRemoteFileOffer(const protocol::ClipboardMessage &message);
     // 处理远端 FileRequest。

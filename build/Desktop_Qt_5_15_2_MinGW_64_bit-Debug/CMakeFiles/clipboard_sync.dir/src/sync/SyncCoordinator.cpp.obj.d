@@ -259,27 +259,12 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
- D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qendian.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfloat16.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFile \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFileInfo \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonArray \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonarray.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborvalue.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborcommon.h \
@@ -296,10 +281,28 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qendian.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfloat16.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDir \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFile \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFileInfo \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonArray \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonarray.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonDocument \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsondocument.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDebug \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
@@ -333,7 +336,6 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h

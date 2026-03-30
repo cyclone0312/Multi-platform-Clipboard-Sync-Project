@@ -18,8 +18,17 @@ add_executable(clipboard_sync
     src/app/AppController.cpp
     src/clipboard/ClipboardMonitor.h
     src/clipboard/ClipboardMonitor.cpp
+    src/clipboard/IClipboardBackend.h
+    src/clipboard/ClipboardSnapshot.h
+    src/clipboard/ClipboardSnapshot.cpp
+    src/clipboard/QtClipboardBackend.h
+    src/clipboard/QtClipboardBackend.cpp
+    src/clipboard/WindowsClipboardBackend.h
+    src/clipboard/WindowsClipboardBackend.cpp
+    src/clipboard/X11ClipboardBackend.h
+    src/clipboard/X11ClipboardBackend.cpp
     src/clipboard/ClipboardWriter.h
-    src/clipboard/ClipboardWriter.cpp
+    src/clipboard/ClipboardWriterBackend.cpp
     src/sync/SyncCoordinator.h
     src/sync/SyncCoordinator.cpp
     src/transport/TransportServer.h

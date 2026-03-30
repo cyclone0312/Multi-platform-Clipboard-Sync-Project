@@ -3,6 +3,8 @@
 #include <QByteArray>
 #include <QObject>
 
+#include "clipboard/ClipboardSnapshot.h"
+
 class ClipboardMonitor : public QObject
 {
     Q_OBJECT
@@ -11,6 +13,7 @@ public:
     explicit ClipboardMonitor(QObject *parent = nullptr);
 
 signals:
+    void localSnapshotChanged(const clipboard::Snapshot &snapshot);
     // 当本地剪贴板文本可读且非空时发出。
     void localTextChanged(const QString &text, quint32 textHash);
     // 当本地剪贴板包含图片时发出（payload 为 PNG 字节）。
@@ -22,7 +25,7 @@ private:
     // QClipboard::dataChanged 的入口处理函数。
     void handleClipboardChanged();
     // 带重试读取剪贴板文本，处理延迟提供数据的场景。
-    void tryEmitClipboardText();
+    void tryEmitClipboardSnapshot();
 
     // 当前变更事件下剩余的读取重试次数。
     int m_readRetryBudget = 0;

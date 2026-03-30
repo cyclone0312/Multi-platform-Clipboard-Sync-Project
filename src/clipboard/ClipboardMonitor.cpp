@@ -172,8 +172,9 @@ namespace
 ClipboardMonitor::ClipboardMonitor(QObject *parent)
     : QObject(parent)
 {
-    QClipboard *clipboard = QGuiApplication::clipboard();
-    QObject::connect(clipboard, &QClipboard::dataChanged, this, &ClipboardMonitor::handleClipboardChanged);
+    qRegisterMetaType<clipboard::Snapshot>("clipboard::Snapshot");
+    QClipboard *systemClipboard = QGuiApplication::clipboard();
+    QObject::connect(systemClipboard, &QClipboard::dataChanged, this, &ClipboardMonitor::handleClipboardChanged);
 }
 
 void ClipboardMonitor::handleClipboardChanged()
@@ -184,10 +185,10 @@ void ClipboardMonitor::handleClipboardChanged()
         return;
     }
 
-    tryEmitClipboardText();
+    tryEmitClipboardSnapshot();
 }
 
-void ClipboardMonitor::tryEmitClipboardText()
+void ClipboardMonitor::tryEmitClipboardSnapshot()
 {
     m_retryScheduled = false;
 
@@ -200,24 +201,14 @@ void ClipboardMonitor::tryEmitClipboardText()
 
         --m_readRetryBudget;
         m_retryScheduled = true;
-        QTimer::singleShot(m_readRetryDelayMs, this, &ClipboardMonitor::tryEmitClipboardText);
+        QTimer::singleShot(m_readRetryDelayMs, this, &ClipboardMonitor::tryEmitClipboardSnapshot);
         return true;
     };
 
-    QClipboard *clipboard = QGuiApplication::clipboard();
-    const QMimeData *mime = clipboard->mimeData();
-    if (mime && mime->hasUrls())
-    {
-        const QStringList paths = canonicalLocalFilePaths(mime->urls());
-        if (!paths.isEmpty())
-        {
-            m_readRetryBudget = 0;
-            emit localFilesChanged(paths, hashFileList(paths));
-            return;
-        }
-    }
+    QClipboard *systemClipboard = QGuiApplication::clipboard();
+    const QMimeData *mime = systemClipboard->mimeData();
 
-    if (mime && mime->hasImage())
+    if (false && mime && mime->hasImage())
     {
         QImage image;
         // 将mime转换为Qimage类
@@ -240,13 +231,39 @@ void ClipboardMonitor::tryEmitClipboardText()
         return;
     }
 
-    const QString text = clipboard->text();
-    if (text.isNull() || text.isEmpty())
+    const QString text = systemClipboard->text();
+    const bool mayHaveClipboardPayload =
+        (mime && (mime->hasUrls() || mime->hasImage() || mime->hasHtml() || mime->hasText())) || !text.isEmpty();
+
+    const ::clipboard::Snapshot snapshot = ::clipboard::captureSnapshotFromMime(mime, text);
+    // 某些桌面环境下剪贴板数据会延迟可读；
+    // 这里先尝试拿完整 snapshot，拿不到再按原有策略短暂重试。
+    if (snapshot.isEmpty())
     {
-        scheduleRetry();
+        if (mayHaveClipboardPayload)
+        {
+            scheduleRetry();
+        }
         return;
     }
 
     m_readRetryBudget = 0;
-    emit localTextChanged(text, qHash(canonicalClipboardText(text)));
+    // snapshot 是新的主信号；
+    // 下面保留旧信号只是为了兼容现有 UI/调试输出。
+    emit localSnapshotChanged(snapshot);
+
+    if (snapshot.hasLocalFiles())
+    {
+        emit localFilesChanged(snapshot.localFilePaths, snapshot.localFilesHash);
+    }
+
+    if (snapshot.hasImage())
+    {
+        emit localImageChanged(snapshot.imagePng, snapshot.imageHash);
+    }
+
+    if (snapshot.hasText())
+    {
+        emit localTextChanged(snapshot.text, snapshot.textHash);
+    }
 }

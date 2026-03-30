@@ -23,6 +23,7 @@ namespace protocol
         TextRtf = 0x0003,
         // 预留：位图/图片负载。
         ImageBitmap = 0x0004,
+        ClipboardSnapshot = 0x0005,
         // 预留：流式传输开始帧。
         StreamStart = 0x0010,
         // 预留：流式传输分片帧。

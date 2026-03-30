@@ -265,11 +265,29 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborvalue.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborcommon.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
@@ -482,13 +500,7 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.h \

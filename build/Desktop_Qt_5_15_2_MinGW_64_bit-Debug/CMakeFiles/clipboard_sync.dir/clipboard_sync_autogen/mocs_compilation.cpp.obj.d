@@ -249,14 +249,43 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborvalue.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborcommon.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/variant \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\XNBUIEWTVA/moc_ClipboardWriter.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\NNGSYZYP4R/moc_PasteTriggerHook.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \
@@ -470,18 +499,10 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qobject.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\ECMMT3H3EV/moc_TransportClient.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\ECMMT3H3EV/moc_TransportServer.cpp \
@@ -515,8 +536,6 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qimage.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixelformat.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qpixmap.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfont.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtGui/qfontinfo.h \

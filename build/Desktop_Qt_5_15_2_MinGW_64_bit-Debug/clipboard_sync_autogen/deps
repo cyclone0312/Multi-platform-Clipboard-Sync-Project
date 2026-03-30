@@ -3,6 +3,7 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
@@ -18,14 +19,18 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborcommon.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcborvalue.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qchar.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcompilerdetection.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qconfig.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcryptographichash.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatastream.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdatetime.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdebug.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qflags.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h \
@@ -35,9 +40,13 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiodevice.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qiterator.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qline.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlist.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlocale.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qlogging.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmap.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmargins.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qnamespace.h \
@@ -52,8 +61,10 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrect.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qrefcount.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregexp.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsavefile.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qset.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qshareddata.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
@@ -67,8 +78,12 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsysinfo.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtcore-config.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvariant.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qversiontagging.h \
@@ -547,8 +562,17 @@ clipboard_sync_autogen/timestamp: \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/app/AppController.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.cpp \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
-	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriterBackend.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.h \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.h \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp \

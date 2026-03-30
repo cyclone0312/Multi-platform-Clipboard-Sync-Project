@@ -171,17 +171,9 @@ SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
     if (m_monitor)
     {
         QObject::connect(m_monitor,
-                         &ClipboardMonitor::localTextChanged,
+                         &ClipboardMonitor::localSnapshotChanged,
                          this,
-                         &SyncCoordinator::handleLocalTextChanged);
-        QObject::connect(m_monitor,
-                         &ClipboardMonitor::localImageChanged,
-                         this,
-                         &SyncCoordinator::handleLocalImageChanged);
-        QObject::connect(m_monitor,
-                         &ClipboardMonitor::localFilesChanged,
-                         this,
-                         &SyncCoordinator::handleLocalFilesChanged);
+                         &SyncCoordinator::handleLocalSnapshotChanged);
     }
 
     if (m_client)
@@ -209,14 +201,19 @@ bool SyncCoordinator::manualInjectAndSend(const QString &text)
     }
 
     const quint64 sessionId = QRandomGenerator::global()->generate64();
-    if (!m_writer->writeRemoteText(text, sessionId))
+    clipboard::Snapshot snapshot;
+    snapshot.text = text;
+    clipboard::refreshSnapshotFingerprint(&snapshot);
+
+    // 手动注入现在也先转成 snapshot，这样整条发送链路保持统一。
+    if (!m_writer->writeRemoteSnapshot(snapshot, sessionId))
     {
         qWarning() << "manual inject failed to write local clipboard";
         return false;
     }
 
     emit localTextForwarded(text);
-    return sendTextToPeer(text, sessionId);
+    return sendSnapshotToPeer(snapshot, sessionId);
 }
 
 bool SyncCoordinator::requestPendingRemoteFiles()
@@ -358,6 +355,91 @@ bool SyncCoordinator::sendImageToPeer(const QByteArray &pngBytes, quint64 sessio
         return false;
     }
 
+    return true;
+}
+
+bool SyncCoordinator::sendSnapshotToPeer(const clipboard::Snapshot &snapshot, quint64 sessionId)
+{
+    if (snapshot.isEmpty())
+    {
+        return false;
+    }
+
+    // Snapshot 消息负责传“这次复制有哪些格式”。
+    // 对于文件，只传元信息，不在这里传文件正文。
+    protocol::ClipboardMessage message;
+    message.type = protocol::MessageType::ClipboardSnapshot;
+    message.flags = 0;
+    message.sessionId = sessionId;
+    message.sequence = 1;
+    message.payload = encodeJson(clipboard::snapshotToJson(snapshot));
+
+    qInfo() << "sending snapshot bytes:" << message.payload.size() << "session:" << message.sessionId;
+
+    if (!m_client->sendMessage(message))
+    {
+        qWarning() << "send snapshot failed (peer may be offline)";
+        return false;
+    }
+
+    return true;
+}
+
+bool SyncCoordinator::populateSnapshotFiles(const QStringList &paths, quint64 sessionId, clipboard::Snapshot *snapshot)
+{
+    if (!snapshot)
+    {
+        return false;
+    }
+
+    FileOffer offer;
+    offer.sessionId = sessionId;
+    snapshot->files.clear();
+
+    // 这里是 snapshot 和现有文件流状态机之间的桥：
+    // 先把本地路径转成可传输的文件元信息，同时缓存到 m_localOfferedFiles，
+    // 后续远端真正拉文件时，仍然复用现有 FileRequest/FileChunk 机制。
+    int index = 0;
+    for (const QString &path : paths)
+    {
+        const QFileInfo info(path);
+        if (!info.exists() || !info.isFile())
+        {
+            continue;
+        }
+
+        FileMeta meta;
+        meta.fileId = QString::number(index++);
+        meta.path = info.absoluteFilePath();
+        meta.name = info.fileName();
+        meta.size = info.size();
+        meta.mtimeMs = info.lastModified().toMSecsSinceEpoch();
+        meta.sha256 = computeFileSha256Hex(meta.path);
+        if (meta.sha256.isEmpty())
+        {
+            qWarning() << "skip file snapshot because SHA256 failed:" << meta.path;
+            continue;
+        }
+
+        clipboard::FileDescriptor file;
+        file.fileId = meta.fileId;
+        file.path = meta.path;
+        file.name = meta.name;
+        file.size = meta.size;
+        file.mtimeMs = meta.mtimeMs;
+        file.sha256 = meta.sha256;
+
+        offer.files.push_back(meta);
+        snapshot->files.push_back(file);
+    }
+
+    if (offer.files.isEmpty())
+    {
+        return false;
+    }
+
+    m_localOfferedFiles.insert(sessionId, offer);
+    clipboard::refreshSnapshotFingerprint(snapshot);
     return true;
 }
 
@@ -629,6 +711,52 @@ bool SyncCoordinator::sendFileRequestWindow(const FileMeta &meta, bool reuseRequ
     return true;
 }
 
+void SyncCoordinator::handleLocalSnapshotChanged(const clipboard::Snapshot &snapshot)
+{
+    if (snapshot.isEmpty())
+    {
+        return;
+    }
+
+    // 本地监听器现在先看 snapshot 级指纹，
+    // 这样一次“多格式写回”不会被拆成多条本地事件再转发出去。
+    if (m_writer->isRecentlyInjectedSnapshot(snapshot.fingerprint))
+    {
+        qInfo() << "skip local echo snapshot hash:" << snapshot.fingerprint;
+        return;
+    }
+
+    const quint64 sessionId = QRandomGenerator::global()->generate64();
+    clipboard::Snapshot outbound = snapshot;
+
+    if (snapshot.hasText())
+    {
+        emit localTextForwarded(snapshot.text);
+    }
+
+    if (snapshot.hasImage())
+    {
+        emit localImageForwarded(static_cast<qint64>(snapshot.imagePng.size()));
+    }
+
+    if (snapshot.hasLocalFiles())
+    {
+        // 本机剪贴板里的 file:// 路径不能直接发给远端；
+        // 这里要先转成跨机器可理解的文件元信息。
+        if (!populateSnapshotFiles(snapshot.localFilePaths, sessionId, &outbound))
+        {
+            qWarning() << "local clipboard snapshot file offer forward failed";
+            return;
+        }
+        emit localFilesForwarded(snapshot.localFilePaths);
+    }
+
+    if (!sendSnapshotToPeer(outbound, sessionId))
+    {
+        qWarning() << "local clipboard snapshot forward failed";
+    }
+}
+
 void SyncCoordinator::handleLocalTextChanged(const QString &text, quint32 textHash)
 {
     if (m_writer->isRecentlyInjected(textHash))
@@ -724,6 +852,9 @@ void SyncCoordinator::handleRemoteMessage(const protocol::ClipboardMessage &mess
         }
         return;
     }
+    case protocol::MessageType::ClipboardSnapshot:
+        handleRemoteSnapshot(message);
+        return;
     case protocol::MessageType::FileOffer:
         handleRemoteFileOffer(message);
         return;
@@ -741,6 +872,85 @@ void SyncCoordinator::handleRemoteMessage(const protocol::ClipboardMessage &mess
         return;
     default:
         return;
+    }
+}
+
+void SyncCoordinator::handleRemoteSnapshot(const protocol::ClipboardMessage &message)
+{
+    QJsonObject root;
+    if (!decodeJson(message.payload, &root))
+    {
+        qWarning() << "received invalid clipboard snapshot payload";
+        return;
+    }
+
+    clipboard::Snapshot snapshot;
+    if (!clipboard::snapshotFromJson(root, &snapshot) || snapshot.isEmpty())
+    {
+        qWarning() << "received empty clipboard snapshot payload";
+        return;
+    }
+
+    // 如果 snapshot 里带的是文件元信息，就不要直接写回系统剪贴板。
+    // 文件仍然要先进入 offer 缓存，等待后续 Ctrl+V/自动拉取流程触发下载。
+    if (snapshot.hasTransportFiles())
+    {
+        FileOffer offer;
+        offer.sessionId = message.sessionId;
+        offer.receivedAtMs = QDateTime::currentMSecsSinceEpoch();
+
+        QStringList names;
+        for (const clipboard::FileDescriptor &file : snapshot.files)
+        {
+            FileMeta meta;
+            meta.fileId = file.fileId;
+            meta.name = file.name;
+            meta.size = file.size;
+            meta.mtimeMs = file.mtimeMs;
+            meta.sha256 = file.sha256;
+            offer.files.push_back(meta);
+            names.push_back(meta.name);
+        }
+
+        if (!offer.files.isEmpty())
+        {
+            m_remoteOfferedFiles.insert(message.sessionId, offer);
+            emit remoteFileOfferReceived(names);
+            emit fileTransferStatus(QStringLiteral("鏀跺埌杩滅 snapshot 鏂囦欢 Offer锛宻ession=%1 鏂囦欢鏁?%2")
+                                        .arg(message.sessionId)
+                                        .arg(offer.files.size()));
+
+#if !defined(Q_OS_WIN) && !defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
+            if (!m_activeDownload.has_value())
+            {
+                QMetaObject::invokeMethod(this, [this]()
+                                          { requestPendingRemoteFiles(); }, Qt::QueuedConnection);
+            }
+#endif
+        }
+
+        return;
+    }
+
+    // 非文件 snapshot 可以直接落到本地剪贴板，
+    // 例如 text/html/image 的组合会在这里一次写回。
+    qInfo() << "remote snapshot received, bytes:" << message.payload.size() << "session:" << message.sessionId;
+
+    if (m_writer->writeRemoteSnapshot(snapshot, message.sessionId))
+    {
+        if (snapshot.hasText())
+        {
+            emit remoteTextReceived(snapshot.text);
+        }
+        if (snapshot.hasImage())
+        {
+            emit remoteImageReceived(static_cast<qint64>(snapshot.imagePng.size()));
+        }
+        qInfo() << "remote snapshot applied";
+    }
+    else
+    {
+        qWarning() << "remote snapshot apply failed";
     }
 }
 

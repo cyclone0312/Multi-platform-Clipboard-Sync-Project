@@ -110,9 +110,39 @@
 			null
 		],
 		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h",
+			"MU",
+			"XNBUIEWTVA/moc_ClipboardSnapshot.cpp",
+			null
+		],
+		[
 			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h",
 			"MU",
 			"XNBUIEWTVA/moc_ClipboardWriter.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h",
+			"MU",
+			"XNBUIEWTVA/moc_IClipboardBackend.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.h",
+			"MU",
+			"XNBUIEWTVA/moc_QtClipboardBackend.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.h",
+			"MU",
+			"XNBUIEWTVA/moc_WindowsClipboardBackend.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.h",
+			"MU",
+			"XNBUIEWTVA/moc_X11ClipboardBackend.cpp",
 			null
 		],
 		[
@@ -241,7 +271,27 @@
 			null
 		],
 		[
-			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.cpp",
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriterBackend.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.cpp",
 			"MU",
 			null
 		],

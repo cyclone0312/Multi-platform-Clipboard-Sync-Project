@@ -226,29 +226,125 @@ src/clipboard/ClipboardMonitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.s
 .PHONY : src/clipboard/ClipboardMonitor.cpp.s
 
-src/clipboard/ClipboardWriter.obj: src/clipboard/ClipboardWriter.cpp.obj
-.PHONY : src/clipboard/ClipboardWriter.obj
+src/clipboard/ClipboardSnapshot.obj: src/clipboard/ClipboardSnapshot.cpp.obj
+.PHONY : src/clipboard/ClipboardSnapshot.obj
 
 # target to build an object file
-src/clipboard/ClipboardWriter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj
-.PHONY : src/clipboard/ClipboardWriter.cpp.obj
+src/clipboard/ClipboardSnapshot.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardSnapshot.cpp.obj
+.PHONY : src/clipboard/ClipboardSnapshot.cpp.obj
 
-src/clipboard/ClipboardWriter.i: src/clipboard/ClipboardWriter.cpp.i
-.PHONY : src/clipboard/ClipboardWriter.i
+src/clipboard/ClipboardSnapshot.i: src/clipboard/ClipboardSnapshot.cpp.i
+.PHONY : src/clipboard/ClipboardSnapshot.i
 
 # target to preprocess a source file
-src/clipboard/ClipboardWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.i
-.PHONY : src/clipboard/ClipboardWriter.cpp.i
+src/clipboard/ClipboardSnapshot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardSnapshot.cpp.i
+.PHONY : src/clipboard/ClipboardSnapshot.cpp.i
 
-src/clipboard/ClipboardWriter.s: src/clipboard/ClipboardWriter.cpp.s
-.PHONY : src/clipboard/ClipboardWriter.s
+src/clipboard/ClipboardSnapshot.s: src/clipboard/ClipboardSnapshot.cpp.s
+.PHONY : src/clipboard/ClipboardSnapshot.s
 
 # target to generate assembly for a file
-src/clipboard/ClipboardWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.s
-.PHONY : src/clipboard/ClipboardWriter.cpp.s
+src/clipboard/ClipboardSnapshot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardSnapshot.cpp.s
+.PHONY : src/clipboard/ClipboardSnapshot.cpp.s
+
+src/clipboard/ClipboardWriterBackend.obj: src/clipboard/ClipboardWriterBackend.cpp.obj
+.PHONY : src/clipboard/ClipboardWriterBackend.obj
+
+# target to build an object file
+src/clipboard/ClipboardWriterBackend.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj
+.PHONY : src/clipboard/ClipboardWriterBackend.cpp.obj
+
+src/clipboard/ClipboardWriterBackend.i: src/clipboard/ClipboardWriterBackend.cpp.i
+.PHONY : src/clipboard/ClipboardWriterBackend.i
+
+# target to preprocess a source file
+src/clipboard/ClipboardWriterBackend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.i
+.PHONY : src/clipboard/ClipboardWriterBackend.cpp.i
+
+src/clipboard/ClipboardWriterBackend.s: src/clipboard/ClipboardWriterBackend.cpp.s
+.PHONY : src/clipboard/ClipboardWriterBackend.s
+
+# target to generate assembly for a file
+src/clipboard/ClipboardWriterBackend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.s
+.PHONY : src/clipboard/ClipboardWriterBackend.cpp.s
+
+src/clipboard/QtClipboardBackend.obj: src/clipboard/QtClipboardBackend.cpp.obj
+.PHONY : src/clipboard/QtClipboardBackend.obj
+
+# target to build an object file
+src/clipboard/QtClipboardBackend.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/QtClipboardBackend.cpp.obj
+.PHONY : src/clipboard/QtClipboardBackend.cpp.obj
+
+src/clipboard/QtClipboardBackend.i: src/clipboard/QtClipboardBackend.cpp.i
+.PHONY : src/clipboard/QtClipboardBackend.i
+
+# target to preprocess a source file
+src/clipboard/QtClipboardBackend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/QtClipboardBackend.cpp.i
+.PHONY : src/clipboard/QtClipboardBackend.cpp.i
+
+src/clipboard/QtClipboardBackend.s: src/clipboard/QtClipboardBackend.cpp.s
+.PHONY : src/clipboard/QtClipboardBackend.s
+
+# target to generate assembly for a file
+src/clipboard/QtClipboardBackend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/QtClipboardBackend.cpp.s
+.PHONY : src/clipboard/QtClipboardBackend.cpp.s
+
+src/clipboard/WindowsClipboardBackend.obj: src/clipboard/WindowsClipboardBackend.cpp.obj
+.PHONY : src/clipboard/WindowsClipboardBackend.obj
+
+# target to build an object file
+src/clipboard/WindowsClipboardBackend.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.obj
+.PHONY : src/clipboard/WindowsClipboardBackend.cpp.obj
+
+src/clipboard/WindowsClipboardBackend.i: src/clipboard/WindowsClipboardBackend.cpp.i
+.PHONY : src/clipboard/WindowsClipboardBackend.i
+
+# target to preprocess a source file
+src/clipboard/WindowsClipboardBackend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.i
+.PHONY : src/clipboard/WindowsClipboardBackend.cpp.i
+
+src/clipboard/WindowsClipboardBackend.s: src/clipboard/WindowsClipboardBackend.cpp.s
+.PHONY : src/clipboard/WindowsClipboardBackend.s
+
+# target to generate assembly for a file
+src/clipboard/WindowsClipboardBackend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.s
+.PHONY : src/clipboard/WindowsClipboardBackend.cpp.s
+
+src/clipboard/X11ClipboardBackend.obj: src/clipboard/X11ClipboardBackend.cpp.obj
+.PHONY : src/clipboard/X11ClipboardBackend.obj
+
+# target to build an object file
+src/clipboard/X11ClipboardBackend.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj
+.PHONY : src/clipboard/X11ClipboardBackend.cpp.obj
+
+src/clipboard/X11ClipboardBackend.i: src/clipboard/X11ClipboardBackend.cpp.i
+.PHONY : src/clipboard/X11ClipboardBackend.i
+
+# target to preprocess a source file
+src/clipboard/X11ClipboardBackend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.i
+.PHONY : src/clipboard/X11ClipboardBackend.cpp.i
+
+src/clipboard/X11ClipboardBackend.s: src/clipboard/X11ClipboardBackend.cpp.s
+.PHONY : src/clipboard/X11ClipboardBackend.s
+
+# target to generate assembly for a file
+src/clipboard/X11ClipboardBackend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.s
+.PHONY : src/clipboard/X11ClipboardBackend.cpp.s
 
 src/common/Config.obj: src/common/Config.cpp.obj
 .PHONY : src/common/Config.obj
@@ -486,9 +582,21 @@ help:
 	@echo ... src/clipboard/ClipboardMonitor.obj
 	@echo ... src/clipboard/ClipboardMonitor.i
 	@echo ... src/clipboard/ClipboardMonitor.s
-	@echo ... src/clipboard/ClipboardWriter.obj
-	@echo ... src/clipboard/ClipboardWriter.i
-	@echo ... src/clipboard/ClipboardWriter.s
+	@echo ... src/clipboard/ClipboardSnapshot.obj
+	@echo ... src/clipboard/ClipboardSnapshot.i
+	@echo ... src/clipboard/ClipboardSnapshot.s
+	@echo ... src/clipboard/ClipboardWriterBackend.obj
+	@echo ... src/clipboard/ClipboardWriterBackend.i
+	@echo ... src/clipboard/ClipboardWriterBackend.s
+	@echo ... src/clipboard/QtClipboardBackend.obj
+	@echo ... src/clipboard/QtClipboardBackend.i
+	@echo ... src/clipboard/QtClipboardBackend.s
+	@echo ... src/clipboard/WindowsClipboardBackend.obj
+	@echo ... src/clipboard/WindowsClipboardBackend.i
+	@echo ... src/clipboard/WindowsClipboardBackend.s
+	@echo ... src/clipboard/X11ClipboardBackend.obj
+	@echo ... src/clipboard/X11ClipboardBackend.i
+	@echo ... src/clipboard/X11ClipboardBackend.s
 	@echo ... src/common/Config.obj
 	@echo ... src/common/Config.i
 	@echo ... src/common/Config.s
