@@ -50,6 +50,7 @@ signals:
     void remoteFileOfferReceived(const QStringList &fileNames);
     // 文件传输状态输出。
     void fileTransferStatus(const QString &status);
+    void autoPasteReplayRequested();
 
 public:
     // 粘贴 Hook 的承接入口：触发远端文件按需请求。
@@ -58,6 +59,7 @@ public:
     bool requestPendingRemoteFilesOnPasteTrigger();
     // Ctrl+Shift+V 快捷键入口：触发请求并输出本次临时目录。
     bool requestPendingRemoteFilesOnCtrlShiftV();
+    bool shouldInterceptPasteTrigger() const;
 
 private:
     // 单个文件的元信息（既用于 Offer 广播，也用于传输时校验与定位）。
@@ -113,6 +115,7 @@ private:
     bool sendImageToPeer(const QByteArray &pngBytes, quint64 sessionId);
     // 发送文件 Offer（仅元信息）。
     bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId);
+    bool startPendingRemoteFilesRequest(bool replayPasteAfterDownload);
     // 启动一个文件下载请求窗口。
     bool requestNextWindow();
     // 发送文件请求窗口，支持重发同一 requestId。
@@ -161,6 +164,7 @@ private:
     std::unique_ptr<QCryptographicHash> m_downloadHash;
     // 当前会话已下载成功的本地路径列表，完成后整体写入本地剪贴板。
     QStringList m_lastDownloadedPaths;
+    bool m_replayPasteAfterCurrentDownload = false;
 
     // 单个文件分块大小（默认 512KB）。
     int m_chunkSizeBytes = 512 * 1024;

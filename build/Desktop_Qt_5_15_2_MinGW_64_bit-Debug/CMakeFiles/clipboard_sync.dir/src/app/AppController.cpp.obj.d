@@ -259,6 +259,9 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
@@ -481,9 +484,6 @@ CMakeFiles/clipboard_sync.dir/src/app/AppController.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstringlist.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QTimer \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qtimer.h \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \

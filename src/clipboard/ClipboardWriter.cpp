@@ -251,36 +251,51 @@ bool ClipboardWriter::writeRemoteFileList(const QStringList &paths, quint64 sess
     }
 
     QClipboard *clipboard = QGuiApplication::clipboard();
-    auto *mimeData = new QMimeData();
-    QList<QUrl> urls;
-    urls.reserve(paths.size());
-    for (const QString &path : paths)
+    const quint32 expectedHash = hashFileList(paths);
+    for (int attempt = 1; attempt <= m_writeRetryCount; ++attempt)
     {
-        urls.push_back(QUrl::fromLocalFile(path));
-    }
-    mimeData->setUrls(urls);
-
-    clipboard->setMimeData(mimeData);
-
-    const QMimeData *actual = clipboard->mimeData();
-    if (!actual || !actual->hasUrls())
-    {
-        qWarning() << "failed to set clipboard file list";
-        return false;
-    }
-
-    QStringList actualPaths;
-    for (const QUrl &url : actual->urls())
-    {
-        if (url.isLocalFile())
+        auto *mimeData = new QMimeData();
+        QList<QUrl> urls;
+        urls.reserve(paths.size());
+        for (const QString &path : paths)
         {
-            actualPaths.push_back(url.toLocalFile());
+            urls.push_back(QUrl::fromLocalFile(path));
+        }
+        mimeData->setUrls(urls);
+
+        clipboard->setMimeData(mimeData);
+
+        const QMimeData *actual = clipboard->mimeData();
+        if (actual && actual->hasUrls())
+        {
+            QStringList actualPaths;
+            for (const QUrl &url : actual->urls())
+            {
+                if (url.isLocalFile())
+                {
+                    actualPaths.push_back(url.toLocalFile());
+                }
+            }
+
+            if (!actualPaths.isEmpty() && hashFileList(actualPaths) == expectedHash)
+            {
+                m_recentInjectedFileHashes.insert(hashFileList(actualPaths), QDateTime::currentDateTimeUtc());
+                if (attempt > 1)
+                {
+                    qInfo() << "clipboard file list write recovered after retries:" << attempt;
+                }
+                return true;
+            }
+        }
+
+        if (attempt < m_writeRetryCount)
+        {
+            QThread::msleep(static_cast<unsigned long>(m_writeRetryDelayMs));
         }
     }
 
-    const quint32 hash = hashFileList(actualPaths);
-    m_recentInjectedFileHashes.insert(hash, QDateTime::currentDateTimeUtc());
-    return true;
+    qWarning() << "failed to set clipboard file list after retries";
+    return false;
 }
 
 bool ClipboardWriter::isRecentlyInjected(quint32 textHash) const

@@ -221,6 +221,11 @@ bool SyncCoordinator::manualInjectAndSend(const QString &text)
 
 bool SyncCoordinator::requestPendingRemoteFiles()
 {
+    return startPendingRemoteFilesRequest(false);
+}
+
+bool SyncCoordinator::startPendingRemoteFilesRequest(bool replayPasteAfterDownload)
+{
     if (m_activeDownload.has_value())
     {
         emit fileTransferStatus(QStringLiteral("已有文件传输任务在进行中"));
@@ -257,6 +262,7 @@ bool SyncCoordinator::requestPendingRemoteFiles()
     state.fileIndex = 0;
     state.nextOffset = 0;
     m_activeDownload = state;
+    m_replayPasteAfterCurrentDownload = replayPasteAfterDownload;
     m_currentWindowRetryCount = 0;
     m_downloadPausedByDisconnect = false;
     m_requestWindowTimer.stop();
@@ -267,17 +273,12 @@ bool SyncCoordinator::requestPendingRemoteFiles()
 
 bool SyncCoordinator::requestPendingRemoteFilesOnPasteTrigger()
 {
-    if (m_activeDownload.has_value())
+    if (!shouldInterceptPasteTrigger())
     {
         return false;
     }
 
-    if (m_remoteOfferedFiles.isEmpty())
-    {
-        return false;
-    }
-
-    return requestPendingRemoteFiles();
+    return startPendingRemoteFilesRequest(true);
 }
 
 bool SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV()
@@ -307,7 +308,12 @@ bool SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV()
 
     const QString tempSessionDir = QDir::toNativeSeparators(QDir(tempDownloadRoot()).filePath(QString::number(latestSessionId)));
     emit fileTransferStatus(QStringLiteral("Ctrl+Shift+V: 远端文件将暂存到 %1").arg(tempSessionDir));
-    return requestPendingRemoteFiles();
+    return startPendingRemoteFilesRequest(false);
+}
+
+bool SyncCoordinator::shouldInterceptPasteTrigger() const
+{
+    return !m_activeDownload.has_value() && !m_remoteOfferedFiles.isEmpty();
 }
 
 bool SyncCoordinator::sendTextToPeer(const QString &text, quint64 sessionId)
@@ -429,6 +435,7 @@ bool SyncCoordinator::requestNextWindow()
     {
         emit fileTransferStatus(QStringLiteral("下载任务找不到远端 Offer，会话失效"));
         m_requestWindowTimer.stop();
+        m_replayPasteAfterCurrentDownload = false;
         m_activeDownload.reset();
         m_downloadFile.reset();
         m_downloadHash.reset();
@@ -439,17 +446,36 @@ bool SyncCoordinator::requestNextWindow()
     // 是否已完成全部文件  如果 fileIndex 已到末尾，说明整个会话下载完成
     if (state.fileIndex >= offer.files.size())
     {
-        if (!m_lastDownloadedPaths.isEmpty())
+        bool clipboardReady = !m_lastDownloadedPaths.isEmpty();
+        if (clipboardReady)
         {
             // 将远端文件列表写入本地剪贴板，并记录防回环指纹。
-            m_writer->writeRemoteFileList(m_lastDownloadedPaths, state.sessionId);
+            clipboardReady = m_writer->writeRemoteFileList(m_lastDownloadedPaths, state.sessionId);
         }
-        emit fileTransferStatus(QStringLiteral("文件下载完成，已写入本地剪贴板，文件数: %1").arg(m_lastDownloadedPaths.size()));
+        if (clipboardReady)
+        {
+            emit fileTransferStatus(QStringLiteral("文件下载完成，已写入本地剪贴板，文件数: %1").arg(m_lastDownloadedPaths.size()));
+        }
+        else
+        {
+            emit fileTransferStatus(QStringLiteral("文件下载完成，但写入本地剪贴板失败，文件数: %1").arg(m_lastDownloadedPaths.size()));
+        }
+        const bool shouldReplayPaste = m_replayPasteAfterCurrentDownload && clipboardReady;
+        if (m_replayPasteAfterCurrentDownload && !clipboardReady)
+        {
+            emit fileTransferStatus(QStringLiteral("已跳过自动补发 Ctrl+V：本地剪贴板文件列表未就绪"));
+        }
         m_remoteOfferedFiles.remove(state.sessionId);
         m_requestWindowTimer.stop();
+        m_replayPasteAfterCurrentDownload = false;
         m_activeDownload.reset();
         m_downloadFile.reset();
         m_downloadHash.reset();
+
+        if (shouldReplayPaste)
+        {
+            emit autoPasteReplayRequested();
+        }
 
 #if !defined(Q_OS_WIN) && !defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
         // 非 Windows 平台继续尝试后续 Offer，避免依赖全局粘贴钩子。
@@ -474,6 +500,7 @@ bool SyncCoordinator::requestNextWindow()
         {
             emit fileTransferStatus(QStringLiteral("无法创建本地文件: %1").arg(localPath));
             m_requestWindowTimer.stop();
+            m_replayPasteAfterCurrentDownload = false;
             m_activeDownload.reset();
             m_downloadFile.reset();
             return false;
@@ -493,6 +520,7 @@ bool SyncCoordinator::requestNextWindow()
             emit fileTransferStatus(QStringLiteral("缺少远端 SHA256，拒绝提交文件: %1").arg(meta.name));
             m_downloadFile->cancelWriting();
             m_requestWindowTimer.stop();
+            m_replayPasteAfterCurrentDownload = false;
             m_activeDownload.reset();
             m_downloadFile.reset();
             m_downloadHash.reset();
@@ -506,6 +534,7 @@ bool SyncCoordinator::requestNextWindow()
             emit fileTransferStatus(QStringLiteral("文件校验失败: %1").arg(meta.name));
             m_downloadFile->cancelWriting();
             m_requestWindowTimer.stop();
+            m_replayPasteAfterCurrentDownload = false;
             m_activeDownload.reset();
             m_downloadFile.reset();
             m_downloadHash.reset();
@@ -516,6 +545,7 @@ bool SyncCoordinator::requestNextWindow()
         {
             emit fileTransferStatus(QStringLiteral("本地文件提交失败: %1").arg(meta.name));
             m_requestWindowTimer.stop();
+            m_replayPasteAfterCurrentDownload = false;
             m_activeDownload.reset();
             m_downloadFile.reset();
             m_downloadHash.reset();
@@ -923,6 +953,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
         m_requestWindowTimer.stop();
         m_downloadFile.reset();
         m_downloadHash.reset();
+        m_replayPasteAfterCurrentDownload = false;
         m_activeDownload.reset();
         return;
     }
@@ -934,6 +965,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
         m_requestWindowTimer.stop();
         m_downloadFile.reset();
         m_downloadHash.reset();
+        m_replayPasteAfterCurrentDownload = false;
         m_activeDownload.reset();
         return;
     }
@@ -948,6 +980,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
         m_requestWindowTimer.stop();
         m_downloadFile.reset();
         m_downloadHash.reset();
+        m_replayPasteAfterCurrentDownload = false;
         m_activeDownload.reset();
         return;
     }
@@ -1000,6 +1033,7 @@ void SyncCoordinator::handleRemoteFileAbort(const protocol::ClipboardMessage &me
     m_requestWindowTimer.stop();
     m_downloadFile.reset();
     m_downloadHash.reset();
+    m_replayPasteAfterCurrentDownload = false;
     m_activeDownload.reset();
 }
 
@@ -1038,6 +1072,7 @@ void SyncCoordinator::handleRequestWindowTimeout()
         }
         m_downloadFile.reset();
         m_downloadHash.reset();
+        m_replayPasteAfterCurrentDownload = false;
         m_activeDownload.reset();
         return;
     }

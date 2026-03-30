@@ -1,5 +1,7 @@
 #pragma once
+#include <atomic>
 
+#include <QString>
 #include <QObject>
 
 #ifdef Q_OS_WIN
@@ -7,7 +9,6 @@
 #endif
 
 #if defined(Q_OS_LINUX) && defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
-#include <atomic>
 #include <thread>
 #endif
 
@@ -18,6 +19,8 @@ class PasteTriggerHook : public QObject
     Q_OBJECT
 
 public:
+    using PasteInterceptDecider = bool (*)(void *context);
+
     explicit PasteTriggerHook(QObject *parent = nullptr);
     ~PasteTriggerHook() override;
 
@@ -25,6 +28,9 @@ public:
     bool start();
     // 停止粘贴触发监听。
     void stop();
+    void setPasteInterceptDecider(PasteInterceptDecider decider, void *context);
+    bool replayPasteShortcut();
+    QString lastReplayPasteError() const;
 
 signals:
     // 检测到 Ctrl+V 粘贴触发时发出。
@@ -38,6 +44,9 @@ protected:
 private:
     void emitPasteTriggeredDebounced();
     void emitCtrlShiftPasteTriggeredDebounced();
+    bool shouldInterceptPasteShortcut() const;
+    bool shouldIgnorePasteShortcut() const;
+    void markSyntheticPasteWindow();
 
 #ifdef Q_OS_WIN
     static LRESULT CALLBACK keyboardProc(int nCode, WPARAM wParam, LPARAM lParam);
@@ -69,4 +78,8 @@ private:
     qint64 m_lastTriggeredMs = 0;
     qint64 m_lastCtrlShiftTriggeredMs = 0;
     int m_debounceMs = 120;
+    PasteInterceptDecider m_pasteInterceptDecider = nullptr;
+    void *m_pasteInterceptContext = nullptr;
+    std::atomic<qint64> m_ignorePasteUntilMs{0};
+    QString m_lastReplayPasteError;
 };

@@ -83,6 +83,12 @@
 		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake",
 		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake",
 		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPkgConfig.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPkgConfig.cmake",
+		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
 		"D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project",

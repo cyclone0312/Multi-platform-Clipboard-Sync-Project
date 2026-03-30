@@ -7,11 +7,15 @@
 #include <QKeyEvent>
 #include <QKeySequence>
 #include <QMetaObject>
+#include <QProcess>
 #include <QThread>
 
 #if defined(Q_OS_LINUX) && defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
 #include <X11/Xlib.h>
 #include <X11/keysym.h>
+#if defined(CLIPBOARD_SYNC_HAS_X11_XTEST)
+#include <X11/extensions/XTest.h>
+#endif
 
 // X11 宏会污染命名空间并与 Qt 枚举名冲突（如 QEvent::KeyPress）。
 #ifdef KeyPress
@@ -142,6 +146,153 @@ void PasteTriggerHook::stop()
     m_started = false;
 }
 
+void PasteTriggerHook::setPasteInterceptDecider(PasteInterceptDecider decider, void *context)
+{
+    m_pasteInterceptDecider = decider;
+    m_pasteInterceptContext = context;
+}
+
+bool PasteTriggerHook::replayPasteShortcut()
+{
+    markSyntheticPasteWindow();
+    m_lastReplayPasteError.clear();
+
+#ifdef Q_OS_WIN
+    INPUT inputs[4] = {};
+
+    inputs[0].type = INPUT_KEYBOARD;
+    inputs[0].ki.wVk = VK_CONTROL;
+
+    inputs[1].type = INPUT_KEYBOARD;
+    inputs[1].ki.wVk = 'V';
+
+    inputs[2].type = INPUT_KEYBOARD;
+    inputs[2].ki.wVk = 'V';
+    inputs[2].ki.dwFlags = KEYEVENTF_KEYUP;
+
+    inputs[3].type = INPUT_KEYBOARD;
+    inputs[3].ki.wVk = VK_CONTROL;
+    inputs[3].ki.dwFlags = KEYEVENTF_KEYUP;
+
+    constexpr UINT inputCount = 4;
+    const UINT sent = SendInput(inputCount, inputs, sizeof(INPUT));
+    if (sent != inputCount)
+    {
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("SendInput failed");
+        qWarning() << "failed to replay Ctrl+V via SendInput";
+        return false;
+    }
+
+    return true;
+#elif defined(Q_OS_LINUX) && defined(CLIPBOARD_SYNC_HAS_X11_HOOK) && defined(CLIPBOARD_SYNC_HAS_X11_XTEST)
+    if (!isX11Session())
+    {
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("current desktop session is not X11");
+        return false;
+    }
+
+    Display *display = XOpenDisplay(nullptr);
+    if (!display)
+    {
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("XOpenDisplay failed");
+        qWarning() << "X11 display unavailable, failed to replay Ctrl+V";
+        return false;
+    }
+
+    int eventBase = 0;
+    int errorBase = 0;
+    int major = 0;
+    int minor = 0;
+    if (!XTestQueryExtension(display, &eventBase, &errorBase, &major, &minor))
+    {
+        XCloseDisplay(display);
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("XTEST extension is unavailable on this X server");
+        qWarning() << "XTEST extension unavailable, failed to replay Ctrl+V";
+        return false;
+    }
+
+    const KeyCode ctrlKeyCode = XKeysymToKeycode(display, XK_Control_L);
+    KeyCode vKeyCode = XKeysymToKeycode(display, XK_V);
+    if (vKeyCode == 0)
+    {
+        vKeyCode = XKeysymToKeycode(display, XK_v);
+    }
+
+    if (ctrlKeyCode == 0 || vKeyCode == 0)
+    {
+        XCloseDisplay(display);
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("failed to resolve X11 keycodes for Ctrl+V");
+        qWarning() << "failed to resolve X11 keycodes for replay";
+        return false;
+    }
+
+    const bool ok = XTestFakeKeyEvent(display, ctrlKeyCode, True, CurrentTime) != 0 &&
+                    XTestFakeKeyEvent(display, vKeyCode, True, CurrentTime) != 0 &&
+                    XTestFakeKeyEvent(display, vKeyCode, False, CurrentTime) != 0 &&
+                    XTestFakeKeyEvent(display, ctrlKeyCode, False, CurrentTime) != 0;
+    XFlush(display);
+    XCloseDisplay(display);
+
+    if (!ok)
+    {
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("XTestFakeKeyEvent returned failure");
+        qWarning() << "failed to replay Ctrl+V via XTest";
+        return false;
+    }
+
+    return true;
+#elif defined(Q_OS_LINUX) && defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
+    if (!isX11Session())
+    {
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("current desktop session is not X11");
+        return false;
+    }
+
+    QProcess process;
+    process.start(QStringLiteral("xdotool"),
+                  {QStringLiteral("key"),
+                   QStringLiteral("--clearmodifiers"),
+                   QStringLiteral("ctrl+v")});
+    if (!process.waitForStarted(1000))
+    {
+        m_ignorePasteUntilMs.store(0);
+        m_lastReplayPasteError = QStringLiteral("xdotool is unavailable");
+        qWarning() << "failed to replay Ctrl+V because xdotool is unavailable";
+        return false;
+    }
+
+    if (!process.waitForFinished(2000) || process.exitStatus() != QProcess::NormalExit || process.exitCode() != 0)
+    {
+        m_ignorePasteUntilMs.store(0);
+        const QString stderrText = QString::fromLocal8Bit(process.readAllStandardError()).trimmed();
+        m_lastReplayPasteError = stderrText.isEmpty()
+                                     ? QStringLiteral("xdotool key ctrl+v failed")
+                                     : QStringLiteral("xdotool failed: %1").arg(stderrText);
+        qWarning() << "failed to replay Ctrl+V via xdotool";
+        return false;
+    }
+
+    return true;
+#else
+    m_ignorePasteUntilMs.store(0);
+    m_lastReplayPasteError = QStringLiteral("this build has no supported global paste replay backend");
+    qWarning() << "paste replay is not supported on this platform";
+    return false;
+#endif
+}
+
+QString PasteTriggerHook::lastReplayPasteError() const
+{
+    return m_lastReplayPasteError;
+}
+
 bool PasteTriggerHook::eventFilter(QObject *watched, QEvent *event)
 {
     Q_UNUSED(watched)
@@ -160,8 +311,17 @@ bool PasteTriggerHook::eventFilter(QObject *watched, QEvent *event)
 
         if (keyEvent->matches(QKeySequence::Paste))
         {
+            if (shouldIgnorePasteShortcut())
+            {
+                return QObject::eventFilter(watched, event);
+            }
+
             qInfo() << "app-level paste shortcut detected";
             emitPasteTriggeredDebounced();
+            if (shouldInterceptPasteShortcut())
+            {
+                return true;
+            }
         }
     }
 
@@ -192,6 +352,21 @@ void PasteTriggerHook::emitCtrlShiftPasteTriggeredDebounced()
     emit ctrlShiftPasteTriggered();
 }
 
+bool PasteTriggerHook::shouldInterceptPasteShortcut() const
+{
+    return m_pasteInterceptDecider && m_pasteInterceptDecider(m_pasteInterceptContext);
+}
+
+bool PasteTriggerHook::shouldIgnorePasteShortcut() const
+{
+    return QDateTime::currentMSecsSinceEpoch() < m_ignorePasteUntilMs.load();
+}
+
+void PasteTriggerHook::markSyntheticPasteWindow()
+{
+    m_ignorePasteUntilMs.store(QDateTime::currentMSecsSinceEpoch() + 500);
+}
+
 #ifdef Q_OS_WIN
 LRESULT CALLBACK PasteTriggerHook::keyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
@@ -204,6 +379,12 @@ LRESULT CALLBACK PasteTriggerHook::keyboardProc(int nCode, WPARAM wParam, LPARAM
             if (s_instance)
             {
                 const bool shiftDown = (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0;
+                if (!shiftDown && s_instance->shouldIgnorePasteShortcut())
+                {
+                    return CallNextHookEx(nullptr, nCode, wParam, lParam);
+                }
+
+                const bool interceptPaste = !shiftDown && s_instance->shouldInterceptPasteShortcut();
                 QMetaObject::invokeMethod(s_instance, [inst = s_instance, shiftDown]()
                                           {
                                               if (!inst)
@@ -219,6 +400,11 @@ LRESULT CALLBACK PasteTriggerHook::keyboardProc(int nCode, WPARAM wParam, LPARAM
                                               {
                                                   inst->emitPasteTriggeredDebounced();
                                               } }, Qt::QueuedConnection);
+
+                if (interceptPaste)
+                {
+                    return 1;
+                }
             }
         }
     }
@@ -355,6 +541,14 @@ void PasteTriggerHook::runLinuxX11EventLoop()
 
         if (comboDown && !m_x11PrevComboDown)
         {
+            if (shouldIgnorePasteShortcut())
+            {
+                m_x11PrevComboDown = comboDown;
+                m_x11PrevCtrlShiftComboDown = ctrlShiftComboDown;
+                QThread::msleep(30);
+                continue;
+            }
+
             qInfo() << "X11 global Ctrl+V detected";
             QMetaObject::invokeMethod(this, [this]()
                                       { emitPasteTriggeredDebounced(); }, Qt::QueuedConnection);

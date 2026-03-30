@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SyncCoordinator_t {
-    QByteArrayData data[14];
-    char stringdata0[197];
+    QByteArrayData data[15];
+    char stringdata0[222];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,14 +45,16 @@ QT_MOC_LITERAL(9, 117, 19), // "remoteImageReceived"
 QT_MOC_LITERAL(10, 137, 23), // "remoteFileOfferReceived"
 QT_MOC_LITERAL(11, 161, 9), // "fileNames"
 QT_MOC_LITERAL(12, 171, 18), // "fileTransferStatus"
-QT_MOC_LITERAL(13, 190, 6) // "status"
+QT_MOC_LITERAL(13, 190, 6), // "status"
+QT_MOC_LITERAL(14, 197, 24) // "autoPasteReplayRequested"
 
     },
     "SyncCoordinator\0localTextForwarded\0\0"
     "text\0localImageForwarded\0imageBytes\0"
     "localFilesForwarded\0paths\0remoteTextReceived\0"
     "remoteImageReceived\0remoteFileOfferReceived\0"
-    "fileNames\0fileTransferStatus\0status"
+    "fileNames\0fileTransferStatus\0status\0"
+    "autoPasteReplayRequested"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,21 +64,22 @@ static const uint qt_meta_data_SyncCoordinator[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       7,       // signalCount
+       8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   49,    2, 0x06 /* Public */,
-       4,    1,   52,    2, 0x06 /* Public */,
-       6,    1,   55,    2, 0x06 /* Public */,
-       8,    1,   58,    2, 0x06 /* Public */,
-       9,    1,   61,    2, 0x06 /* Public */,
-      10,    1,   64,    2, 0x06 /* Public */,
-      12,    1,   67,    2, 0x06 /* Public */,
+       1,    1,   54,    2, 0x06 /* Public */,
+       4,    1,   57,    2, 0x06 /* Public */,
+       6,    1,   60,    2, 0x06 /* Public */,
+       8,    1,   63,    2, 0x06 /* Public */,
+       9,    1,   66,    2, 0x06 /* Public */,
+      10,    1,   69,    2, 0x06 /* Public */,
+      12,    1,   72,    2, 0x06 /* Public */,
+      14,    0,   75,    2, 0x06 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -86,6 +89,7 @@ static const uint qt_meta_data_SyncCoordinator[] = {
     QMetaType::Void, QMetaType::LongLong,    5,
     QMetaType::Void, QMetaType::QStringList,   11,
     QMetaType::Void, QMetaType::QString,   13,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -103,6 +107,7 @@ void SyncCoordinator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 4: _t->remoteImageReceived((*reinterpret_cast< qint64(*)>(_a[1]))); break;
         case 5: _t->remoteFileOfferReceived((*reinterpret_cast< const QStringList(*)>(_a[1]))); break;
         case 6: _t->fileTransferStatus((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 7: _t->autoPasteReplayRequested(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -156,6 +161,13 @@ void SyncCoordinator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
                 return;
             }
         }
+        {
+            using _t = void (SyncCoordinator::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SyncCoordinator::autoPasteReplayRequested)) {
+                *result = 7;
+                return;
+            }
+        }
     }
 }
 
@@ -188,13 +200,13 @@ int SyncCoordinator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }
@@ -246,6 +258,12 @@ void SyncCoordinator::fileTransferStatus(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 6, _a);
+}
+
+// SIGNAL 7
+void SyncCoordinator::autoPasteReplayRequested()
+{
+    QMetaObject::activate(this, &staticMetaObject, 7, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

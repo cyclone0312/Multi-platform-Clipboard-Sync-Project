@@ -59,6 +59,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
   "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake"
   "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake"
+  "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindPkgConfig.cmake"
   "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake"
   "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake"
   "D:/Tools/IDEs/QT/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
