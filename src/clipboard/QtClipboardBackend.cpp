@@ -6,8 +6,9 @@
 #include <QMimeData>
 #include <QUrl>
 
-bool QtClipboardBackend::writeSnapshot(const clipboard::Snapshot &snapshot)
+bool QtClipboardBackend::writeSnapshot(const ClipboardWriteRequest &request)
 {
+    const clipboard::Snapshot &snapshot = request.snapshot;
     if (snapshot.isEmpty())
     {
         return false;

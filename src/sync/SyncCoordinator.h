@@ -13,6 +13,7 @@
 #include <QVector>
 
 #include "clipboard/ClipboardSnapshot.h"
+#include "clipboard/IVirtualFileProvider.h"
 #include "protocol/ProtocolHeader.h"
 
 class ClipboardMonitor;
@@ -20,7 +21,7 @@ class ClipboardWriter;
 class TransportClient;
 class TransportServer;
 
-class SyncCoordinator : public QObject
+class SyncCoordinator : public QObject, public IVirtualFileProvider
 {
     Q_OBJECT
 
@@ -61,6 +62,13 @@ public:
     // Ctrl+Shift+V 快捷键入口：触发请求并输出本次临时目录。
     bool requestPendingRemoteFilesOnCtrlShiftV();
     bool shouldInterceptPasteTrigger() const;
+    bool canProvideFiles(quint64 sessionId,
+                         const QVector<clipboard::FileDescriptor> &files) const override;
+    QVector<ClipboardVirtualFileInfo> describeFiles(
+        quint64 sessionId,
+        const QVector<clipboard::FileDescriptor> &files) const override;
+    QByteArray readFileRange(const ClipboardVirtualFileRangeRequest &request,
+                             bool *ok) override;
 
 private:
     // 单个文件的元信息（既用于 Offer 广播，也用于传输时校验与定位）。
@@ -169,6 +177,7 @@ private:
     std::unique_ptr<QCryptographicHash> m_downloadHash;
     // 当前会话已下载成功的本地路径列表，完成后整体写入本地剪贴板。
     QStringList m_lastDownloadedPaths;
+    QHash<quint64, QHash<QString, QString>> m_materializedRemoteFiles;
     bool m_replayPasteAfterCurrentDownload = false;
 
     // 单个文件分块大小（默认 512KB）。

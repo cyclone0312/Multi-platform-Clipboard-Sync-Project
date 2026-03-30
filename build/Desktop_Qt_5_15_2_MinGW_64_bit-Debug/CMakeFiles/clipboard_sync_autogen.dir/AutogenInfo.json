@@ -128,6 +128,12 @@
 			null
 		],
 		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IVirtualFileProvider.h",
+			"MU",
+			"XNBUIEWTVA/moc_IVirtualFileProvider.cpp",
+			null
+		],
+		[
 			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.h",
 			"MU",
 			"XNBUIEWTVA/moc_QtClipboardBackend.cpp",
@@ -137,6 +143,12 @@
 			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.h",
 			"MU",
 			"XNBUIEWTVA/moc_WindowsClipboardBackend.cpp",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsVirtualFilePublisher.h",
+			"MU",
+			"XNBUIEWTVA/moc_WindowsVirtualFilePublisher.cpp",
 			null
 		],
 		[
@@ -287,6 +299,11 @@
 		],
 		[
 			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsVirtualFilePublisher.cpp",
 			"MU",
 			null
 		],

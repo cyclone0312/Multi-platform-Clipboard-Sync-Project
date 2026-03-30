@@ -248,4 +248,5 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_1
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h \
   D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h \
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
-  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
+  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IVirtualFileProvider.h

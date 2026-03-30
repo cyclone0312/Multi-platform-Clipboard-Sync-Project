@@ -285,6 +285,7 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qstring.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtGlobal \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qglobal.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IVirtualFileProvider.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/ProtocolHeader.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QtEndian \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qendian.h \

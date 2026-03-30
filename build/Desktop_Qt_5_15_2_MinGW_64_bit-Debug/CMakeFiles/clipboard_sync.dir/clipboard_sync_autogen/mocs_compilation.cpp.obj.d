@@ -286,6 +286,7 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qhash.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
+ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IVirtualFileProvider.h \
  D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\clipboard_sync_autogen\NNGSYZYP4R/moc_PasteTriggerHook.cpp \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/windows.h \

@@ -16,6 +16,7 @@ class ClipboardWriter : public QObject
 public:
     explicit ClipboardWriter(QObject *parent = nullptr);
     ClipboardWriter(std::unique_ptr<IClipboardBackend> backend, QObject *parent = nullptr);
+    void setVirtualFileProvider(IVirtualFileProvider *provider);
     // Preferred path: the writer owns retry and anti-loop policy,
     // while the backend owns platform-specific clipboard publication.
     bool writeRemoteSnapshot(const clipboard::Snapshot &snapshot, quint64 sessionId);
@@ -41,6 +42,7 @@ private:
 
     // 哈希 -> 注入时间，用于短时间窗口内抑制回环。
     std::unique_ptr<IClipboardBackend> m_backend;
+    IVirtualFileProvider *m_virtualFileProvider = nullptr;
     mutable QHash<quint32, QDateTime> m_recentInjectedHashes;
     mutable QHash<quint32, QDateTime> m_recentInjectedSnapshotHashes;
     // 图片哈希 -> 注入时间。

@@ -322,6 +322,30 @@ src/clipboard/WindowsClipboardBackend.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.s
 .PHONY : src/clipboard/WindowsClipboardBackend.cpp.s
 
+src/clipboard/WindowsVirtualFilePublisher.obj: src/clipboard/WindowsVirtualFilePublisher.cpp.obj
+.PHONY : src/clipboard/WindowsVirtualFilePublisher.obj
+
+# target to build an object file
+src/clipboard/WindowsVirtualFilePublisher.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj
+.PHONY : src/clipboard/WindowsVirtualFilePublisher.cpp.obj
+
+src/clipboard/WindowsVirtualFilePublisher.i: src/clipboard/WindowsVirtualFilePublisher.cpp.i
+.PHONY : src/clipboard/WindowsVirtualFilePublisher.i
+
+# target to preprocess a source file
+src/clipboard/WindowsVirtualFilePublisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.i
+.PHONY : src/clipboard/WindowsVirtualFilePublisher.cpp.i
+
+src/clipboard/WindowsVirtualFilePublisher.s: src/clipboard/WindowsVirtualFilePublisher.cpp.s
+.PHONY : src/clipboard/WindowsVirtualFilePublisher.s
+
+# target to generate assembly for a file
+src/clipboard/WindowsVirtualFilePublisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clipboard_sync.dir\build.make CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.s
+.PHONY : src/clipboard/WindowsVirtualFilePublisher.cpp.s
+
 src/clipboard/X11ClipboardBackend.obj: src/clipboard/X11ClipboardBackend.cpp.obj
 .PHONY : src/clipboard/X11ClipboardBackend.obj
 
@@ -594,6 +618,9 @@ help:
 	@echo ... src/clipboard/WindowsClipboardBackend.obj
 	@echo ... src/clipboard/WindowsClipboardBackend.i
 	@echo ... src/clipboard/WindowsClipboardBackend.s
+	@echo ... src/clipboard/WindowsVirtualFilePublisher.obj
+	@echo ... src/clipboard/WindowsVirtualFilePublisher.i
+	@echo ... src/clipboard/WindowsVirtualFilePublisher.s
 	@echo ... src/clipboard/X11ClipboardBackend.obj
 	@echo ... src/clipboard/X11ClipboardBackend.i
 	@echo ... src/clipboard/X11ClipboardBackend.s

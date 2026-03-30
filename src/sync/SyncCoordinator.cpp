@@ -164,6 +164,11 @@ SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
                                  QObject *parent)
     : QObject(parent), m_monitor(monitor), m_writer(writer), m_client(client)
 {
+    if (m_writer)
+    {
+        m_writer->setVirtualFileProvider(this);
+    }
+
     m_requestWindowTimer.setSingleShot(true);
     m_requestWindowTimer.setInterval(m_requestWindowTimeoutMs);
     QObject::connect(&m_requestWindowTimer, &QTimer::timeout, this, &SyncCoordinator::handleRequestWindowTimeout);
@@ -184,6 +189,158 @@ SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
 }
 
 SyncCoordinator::~SyncCoordinator() = default;
+
+bool SyncCoordinator::canProvideFiles(quint64 sessionId,
+                                      const QVector<clipboard::FileDescriptor> &files) const
+{
+    const QVector<ClipboardVirtualFileInfo> described = describeFiles(sessionId, files);
+    if (described.size() != files.size())
+    {
+        return false;
+    }
+
+    for (const ClipboardVirtualFileInfo &file : described)
+    {
+        if (file.localPath.isEmpty())
+        {
+            return false;
+        }
+    }
+
+    return !described.isEmpty();
+}
+
+QVector<ClipboardVirtualFileInfo> SyncCoordinator::describeFiles(
+    quint64 sessionId,
+    const QVector<clipboard::FileDescriptor> &files) const
+{
+    QVector<ClipboardVirtualFileInfo> described;
+    if (files.isEmpty())
+    {
+        return described;
+    }
+
+    const auto localOfferIt = m_localOfferedFiles.constFind(sessionId);
+    const auto remoteOfferIt = m_remoteOfferedFiles.constFind(sessionId);
+    const QHash<QString, QString> materialized = m_materializedRemoteFiles.value(sessionId);
+
+    described.reserve(files.size());
+    for (const clipboard::FileDescriptor &requested : files)
+    {
+        ClipboardVirtualFileInfo info;
+        info.fileId = requested.fileId;
+        info.displayName = requested.name;
+        info.size = requested.size;
+        info.mtimeMs = requested.mtimeMs;
+        info.sha256 = requested.sha256;
+
+        if (localOfferIt != m_localOfferedFiles.cend())
+        {
+            for (const FileMeta &meta : localOfferIt.value().files)
+            {
+                if (meta.fileId == requested.fileId)
+                {
+                    info.displayName = meta.name;
+                    info.size = meta.size;
+                    info.mtimeMs = meta.mtimeMs;
+                    info.sha256 = meta.sha256;
+                    info.localPath = meta.path;
+                    break;
+                }
+            }
+        }
+
+        if (info.localPath.isEmpty() && remoteOfferIt != m_remoteOfferedFiles.cend())
+        {
+            for (const FileMeta &meta : remoteOfferIt.value().files)
+            {
+                if (meta.fileId == requested.fileId)
+                {
+                    info.displayName = meta.name;
+                    info.size = meta.size;
+                    info.mtimeMs = meta.mtimeMs;
+                    info.sha256 = meta.sha256;
+                    break;
+                }
+            }
+        }
+
+        if (info.localPath.isEmpty())
+        {
+            info.localPath = materialized.value(requested.fileId);
+        }
+
+        described.push_back(info);
+    }
+
+    return described;
+}
+
+QByteArray SyncCoordinator::readFileRange(const ClipboardVirtualFileRangeRequest &request,
+                                          bool *ok)
+{
+    if (ok)
+    {
+        *ok = false;
+    }
+
+    if (request.fileId.isEmpty() || request.offset < 0)
+    {
+        return {};
+    }
+
+    QString localPath;
+    const auto localOfferIt = m_localOfferedFiles.constFind(request.sessionId);
+    if (localOfferIt != m_localOfferedFiles.cend())
+    {
+        for (const FileMeta &meta : localOfferIt.value().files)
+        {
+            if (meta.fileId == request.fileId)
+            {
+                localPath = meta.path;
+                break;
+            }
+        }
+    }
+
+    if (localPath.isEmpty())
+    {
+        localPath = m_materializedRemoteFiles.value(request.sessionId).value(request.fileId);
+    }
+
+    if (localPath.isEmpty())
+    {
+        return {};
+    }
+
+    QFile file(localPath);
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        return {};
+    }
+
+    if (!file.seek(request.offset))
+    {
+        return {};
+    }
+
+    QByteArray data;
+    if (request.length > 0)
+    {
+        data = file.read(request.length);
+    }
+    else
+    {
+        data = file.readAll();
+    }
+
+    if (ok)
+    {
+        *ok = !data.isNull();
+    }
+
+    return data;
+}
 
 void SyncCoordinator::bindServer(TransportServer *server)
 {
@@ -635,6 +792,7 @@ bool SyncCoordinator::requestNextWindow()
         }
 
         m_lastDownloadedPaths.push_back(state.localPath);
+        m_materializedRemoteFiles[state.sessionId].insert(meta.fileId, state.localPath);
         emit fileTransferStatus(QStringLiteral("文件下载完成: %1").arg(meta.name));
         ++state.fileIndex;
         state.nextOffset = 0;

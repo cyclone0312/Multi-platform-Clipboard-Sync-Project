@@ -567,6 +567,7 @@ clipboard_sync_autogen/timestamp: \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriter.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriterBackend.cpp \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IClipboardBackend.h \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/IVirtualFileProvider.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.cpp \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.cpp \

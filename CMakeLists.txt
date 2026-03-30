@@ -19,12 +19,15 @@ add_executable(clipboard_sync
     src/clipboard/ClipboardMonitor.h
     src/clipboard/ClipboardMonitor.cpp
     src/clipboard/IClipboardBackend.h
+    src/clipboard/IVirtualFileProvider.h
     src/clipboard/ClipboardSnapshot.h
     src/clipboard/ClipboardSnapshot.cpp
     src/clipboard/QtClipboardBackend.h
     src/clipboard/QtClipboardBackend.cpp
     src/clipboard/WindowsClipboardBackend.h
     src/clipboard/WindowsClipboardBackend.cpp
+    src/clipboard/WindowsVirtualFilePublisher.h
+    src/clipboard/WindowsVirtualFilePublisher.cpp
     src/clipboard/X11ClipboardBackend.h
     src/clipboard/X11ClipboardBackend.cpp
     src/clipboard/ClipboardWriter.h
@@ -60,7 +63,7 @@ target_link_libraries(clipboard_sync
 )
 
 if(WIN32)
-    target_link_libraries(clipboard_sync PRIVATE ws2_32)
+    target_link_libraries(clipboard_sync PRIVATE ws2_32 ole32 uuid)
 endif()
 
 if(UNIX AND NOT APPLE)

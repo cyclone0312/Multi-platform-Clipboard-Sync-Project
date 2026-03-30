@@ -6,9 +6,9 @@
 class X11ClipboardBackend : public IClipboardBackend
 {
 public:
-    // Placeholder backend: keeps X11-specific selection logic isolated so a
-    // future native owner/INCR implementation can live here.
-    bool writeSnapshot(const clipboard::Snapshot &snapshot) override;
+    // Current scope: X11-aware Qt publishing to both CLIPBOARD and PRIMARY,
+    // leaving a dedicated home for future native selection-owner logic.
+    bool writeSnapshot(const ClipboardWriteRequest &request) override;
     clipboard::Snapshot readCurrentSnapshot() const override;
     bool supportsNativeVirtualFiles() const override;
     QString backendName() const override;

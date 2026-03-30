@@ -180,11 +180,26 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.s"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\WindowsClipboardBackend.cpp -o CMakeFiles\clipboard_sync.dir\src\clipboard\WindowsClipboardBackend.cpp.s
 
+CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj: CMakeFiles/clipboard_sync.dir/flags.make
+CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
+CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsVirtualFilePublisher.cpp
+CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj"
+	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\clipboard\WindowsVirtualFilePublisher.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\clipboard\WindowsVirtualFilePublisher.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\WindowsVirtualFilePublisher.cpp
+
+CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.i"
+	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\WindowsVirtualFilePublisher.cpp > CMakeFiles\clipboard_sync.dir\src\clipboard\WindowsVirtualFilePublisher.cpp.i
+
+CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.s"
+	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\WindowsVirtualFilePublisher.cpp -o CMakeFiles\clipboard_sync.dir\src\clipboard\WindowsVirtualFilePublisher.cpp.s
+
 CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj: CMakeFiles/clipboard_sync.dir/flags.make
 CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.cpp
 CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\clipboard\X11ClipboardBackend.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\clipboard\X11ClipboardBackend.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\X11ClipboardBackend.cpp
 
 CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.i: cmake_force
@@ -199,7 +214,7 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj: CMak
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardWriterBackend.cpp
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\clipboard\ClipboardWriterBackend.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\clipboard\ClipboardWriterBackend.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\clipboard\ClipboardWriterBackend.cpp
 
 CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.i: cmake_force
@@ -214,7 +229,7 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: CMakeFiles/clipb
 CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/sync/SyncCoordinator.cpp
 CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\sync\SyncCoordinator.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\sync\SyncCoordinator.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\sync\SyncCoordinator.cpp
 
 CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.i: cmake_force
@@ -229,7 +244,7 @@ CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj: CMakeFiles/
 CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportServer.cpp
 CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\transport\TransportServer.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\transport\TransportServer.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\transport\TransportServer.cpp
 
 CMakeFiles/clipboard_sync.dir/src/transport/TransportServer.cpp.i: cmake_force
@@ -244,7 +259,7 @@ CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: CMakeFiles/
 CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/transport/TransportClient.cpp
 CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\transport\TransportClient.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\transport\TransportClient.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\transport\TransportClient.cpp
 
 CMakeFiles/clipboard_sync.dir/src/transport/TransportClient.cpp.i: cmake_force
@@ -259,7 +274,7 @@ CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj: CMakeFiles/clip
 CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/protocol/MessageCodec.cpp
 CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\protocol\MessageCodec.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\protocol\MessageCodec.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\protocol\MessageCodec.cpp
 
 CMakeFiles/clipboard_sync.dir/src/protocol/MessageCodec.cpp.i: cmake_force
@@ -274,7 +289,7 @@ CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj: CMakeFiles/clipboard_sy
 CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp
 CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\common\Config.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\common\Config.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\common\Config.cpp
 
 CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.i: cmake_force
@@ -289,7 +304,7 @@ CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj: CMakeFiles/clipboard_sy
 CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Logger.cpp
 CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\common\Logger.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\common\Logger.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\common\Logger.cpp
 
 CMakeFiles/clipboard_sync.dir/src/common/Logger.cpp.i: cmake_force
@@ -304,7 +319,7 @@ CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: CMakeFiles/cli
 CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/input/PasteTriggerHook.cpp
 CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\input\PasteTriggerHook.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\input\PasteTriggerHook.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\input\PasteTriggerHook.cpp
 
 CMakeFiles/clipboard_sync.dir/src/input/PasteTriggerHook.cpp.i: cmake_force
@@ -319,7 +334,7 @@ CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: CMakeFiles/clipboa
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: CMakeFiles/clipboard_sync.dir/includes_CXX.rsp
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/ui/SyncDebugWindow.cpp
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj: CMakeFiles/clipboard_sync.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj"
 	D:\Tools\IDEs\QT\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.obj -MF CMakeFiles\clipboard_sync.dir\src\ui\SyncDebugWindow.cpp.obj.d -o CMakeFiles\clipboard_sync.dir\src\ui\SyncDebugWindow.cpp.obj -c D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\src\ui\SyncDebugWindow.cpp
 
 CMakeFiles/clipboard_sync.dir/src/ui/SyncDebugWindow.cpp.i: cmake_force
@@ -339,6 +354,7 @@ clipboard_sync_OBJECTS = \
 "CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardSnapshot.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/clipboard/QtClipboardBackend.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.obj" \
+"CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj" \
 "CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj" \
@@ -360,6 +376,7 @@ clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardSnapshot.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/QtClipboardBackend.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.obj
+clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriterBackend.cpp.obj
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj
@@ -378,7 +395,7 @@ clipboard_sync.exe: D:/Tools/IDEs/QT/5.15.2/mingw81_64/lib/libQt5Core.a
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/linkLibs.rsp
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/objects1.rsp
 clipboard_sync.exe: CMakeFiles/clipboard_sync.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable clipboard_sync.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Workspace\Projects\Multi-platform-Clipboard-Sync-Project\build\Desktop_Qt_5_15_2_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable clipboard_sync.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\clipboard_sync.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

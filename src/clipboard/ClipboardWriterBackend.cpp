@@ -11,6 +11,36 @@
 
 namespace
 {
+    QStringList localPathsFromProvider(IVirtualFileProvider *provider,
+                                       quint64 sessionId,
+                                       const QVector<clipboard::FileDescriptor> &files)
+    {
+        if (!provider || files.isEmpty() || !provider->canProvideFiles(sessionId, files))
+        {
+            return {};
+        }
+
+        const QVector<ClipboardVirtualFileInfo> described = provider->describeFiles(sessionId, files);
+        if (described.size() != files.size())
+        {
+            return {};
+        }
+
+        QStringList localPaths;
+        localPaths.reserve(described.size());
+        for (const ClipboardVirtualFileInfo &file : described)
+        {
+            if (file.localPath.isEmpty())
+            {
+                return {};
+            }
+
+            localPaths.push_back(file.localPath);
+        }
+
+        return localPaths;
+    }
+
     std::unique_ptr<IClipboardBackend> createDefaultClipboardBackend()
     {
 #if defined(Q_OS_WIN)
@@ -70,7 +100,10 @@ namespace
 
         if (expected.hasTransportFiles() && expected.transportFilesHash != actual.transportFilesHash)
         {
-            return false;
+            if (!expected.hasLocalFiles() || expected.localFilesHash != actual.localFilesHash)
+            {
+                return false;
+            }
         }
 
         return !expected.isEmpty();
@@ -91,9 +124,13 @@ ClipboardWriter::ClipboardWriter(std::unique_ptr<IClipboardBackend> backend, QOb
     }
 }
 
+void ClipboardWriter::setVirtualFileProvider(IVirtualFileProvider *provider)
+{
+    m_virtualFileProvider = provider;
+}
+
 bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, quint64 sessionId)
 {
-    Q_UNUSED(sessionId)
     cleanupExpired();
 
     if (!m_backend || snapshot.isEmpty())
@@ -102,6 +139,15 @@ bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, q
     }
 
     clipboard::Snapshot expected = snapshot;
+    if (expected.hasTransportFiles() && !expected.hasLocalFiles())
+    {
+        const QStringList materializedPaths = localPathsFromProvider(
+            m_virtualFileProvider, sessionId, expected.files);
+        if (!materializedPaths.isEmpty())
+        {
+            expected.localFilePaths = materializedPaths;
+        }
+    }
     clipboard::refreshSnapshotFingerprint(&expected);
 
     if (expected.hasTransportFiles() &&
@@ -122,7 +168,12 @@ bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, q
 
     for (int attempt = 1; attempt <= m_writeRetryCount; ++attempt)
     {
-        if (!m_backend->writeSnapshot(expected))
+        ClipboardWriteRequest request;
+        request.snapshot = expected;
+        request.sessionId = sessionId;
+        request.virtualFileProvider = m_virtualFileProvider;
+
+        if (!m_backend->writeSnapshot(request))
         {
             if (attempt < m_writeRetryCount)
             {

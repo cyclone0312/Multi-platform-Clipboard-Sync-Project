@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/clipboard_sync.dir/src/clipboard/QtClipboardBackend.cpp.obj.d"
   "CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.obj"
   "CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsClipboardBackend.cpp.obj.d"
+  "CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj"
+  "CMakeFiles/clipboard_sync.dir/src/clipboard/WindowsVirtualFilePublisher.cpp.obj.d"
   "CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj"
   "CMakeFiles/clipboard_sync.dir/src/clipboard/X11ClipboardBackend.cpp.obj.d"
   "CMakeFiles/clipboard_sync.dir/src/common/Config.cpp.obj"
