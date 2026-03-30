@@ -15,6 +15,8 @@ namespace
                                        quint64 sessionId,
                                        const QVector<clipboard::FileDescriptor> &files)
     {
+        // 当 snapshot 只有 transport files（无本地路径）时，
+        // 尝试通过 provider 把可物化路径补齐，给不支持 native virtual files 的后端兜底。
         if (!provider || files.isEmpty() || !provider->canProvideFiles(sessionId, files))
         {
             return {};
@@ -43,6 +45,7 @@ namespace
 
     std::unique_ptr<IClipboardBackend> createDefaultClipboardBackend()
     {
+        // 按平台选择默认后端：Windows 优先 native，Linux 走 X11，其他走 Qt fallback。
 #if defined(Q_OS_WIN)
         return std::make_unique<WindowsClipboardBackend>();
 #elif defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
@@ -129,6 +132,11 @@ void ClipboardWriter::setVirtualFileProvider(IVirtualFileProvider *provider)
     m_virtualFileProvider = provider;
 }
 
+bool ClipboardWriter::supportsNativeVirtualFiles() const
+{
+    return m_backend && m_backend->supportsNativeVirtualFiles();
+}
+
 bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, quint64 sessionId)
 {
     cleanupExpired();
@@ -141,6 +149,8 @@ bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, q
     clipboard::Snapshot expected = snapshot;
     if (expected.hasTransportFiles() && !expected.hasLocalFiles())
     {
+        // 新实现优化点：先尝试把 transport files 转为本地路径，
+        // 这样不支持 native virtual files 的后端也可能成功发布文件列表。
         const QStringList materializedPaths = localPathsFromProvider(
             m_virtualFileProvider, sessionId, expected.files);
         if (!materializedPaths.isEmpty())
@@ -154,6 +164,7 @@ bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, q
         !expected.hasLocalFiles() &&
         !m_backend->supportsNativeVirtualFiles())
     {
+        // 显式能力闸门：既无本地路径又无 native virtual 能力时，直接失败并给出可诊断日志。
         qWarning() << "clipboard backend cannot publish transport-only file snapshots:"
                    << m_backend->backendName();
         return false;
@@ -162,6 +173,7 @@ bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, q
     const clipboard::Snapshot current = m_backend->readCurrentSnapshot();
     if (snapshotMatchesExpected(expected, current))
     {
+        // 写前已一致时不重复 setClipboard，降低抖动并仍记录防回环指纹。
         markInjected(current);
         return true;
     }
@@ -184,6 +196,8 @@ bool ClipboardWriter::writeRemoteSnapshot(const clipboard::Snapshot &snapshot, q
             break;
         }
 
+        // 新实现关键：每次写后回读系统剪贴板做语义校验，
+        // 避免“API 调用成功但系统未按预期落地”的假阳性。
         const clipboard::Snapshot actual = m_backend->readCurrentSnapshot();
         if (snapshotMatchesExpected(expected, actual))
         {
@@ -251,6 +265,8 @@ void ClipboardWriter::markInjected(const clipboard::Snapshot &applied)
 {
     const QDateTime now = QDateTime::currentDateTimeUtc();
 
+    // 统一记录 snapshot/text/image/files 四类哈希，
+    // 保证新旧入口（writeRemoteSnapshot / writeRemoteText / writeRemoteImage）回环策略一致。
     if (applied.fingerprint != 0)
     {
         m_recentInjectedSnapshotHashes.insert(applied.fingerprint, now);
@@ -273,6 +289,7 @@ void ClipboardWriter::cleanupExpired() const
 {
     const QDateTime now = QDateTime::currentDateTimeUtc();
 
+    // TTL 清理让回环抑制窗口可控，避免哈希集合无限增长。
     for (auto it = m_recentInjectedHashes.begin(); it != m_recentInjectedHashes.end();)
     {
         if (it.value().msecsTo(now) > m_injectionTtlMs)

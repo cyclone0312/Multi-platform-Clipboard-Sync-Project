@@ -250,6 +250,8 @@ CMakeFiles/clipboard_sync.dir/clipboard_sync_autogen/mocs_compilation.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qbytearray.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaType \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \

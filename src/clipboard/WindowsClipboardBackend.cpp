@@ -21,6 +21,11 @@
 namespace
 {
 #ifdef Q_OS_WIN
+    quint32 currentClipboardSequence()
+    {
+        return static_cast<quint32>(GetClipboardSequenceNumber());
+    }
+
     class ScopedClipboard
     {
     public:
@@ -178,19 +183,22 @@ bool WindowsClipboardBackend::writeSnapshot(const ClipboardWriteRequest &request
     }
 
     if (snapshot.hasTransportFiles() &&
-        !snapshot.hasLocalFiles() &&
-        !snapshot.hasText() &&
-        !snapshot.hasHtml() &&
-        !snapshot.hasImage() &&
         publishWindowsVirtualFiles(request))
     {
         m_lastPublishedVirtualSnapshot = snapshot;
+        m_lastPublishedVirtualSequence = currentClipboardSequence();
         return true;
     }
 
     m_lastPublishedVirtualSnapshot = {};
+    m_lastPublishedVirtualSequence = 0;
 
-    // Keep richer mixed representations on the Qt path for now.
+    if (snapshot.hasTransportFiles() && !snapshot.hasLocalFiles())
+    {
+        return false;
+    }
+
+    // Non-virtual rich formats still use the Qt path for now.
     if (snapshot.hasHtml() || snapshot.hasImage())
     {
         return m_fallback.writeSnapshot(request);
@@ -208,10 +216,15 @@ bool WindowsClipboardBackend::writeSnapshot(const ClipboardWriteRequest &request
 clipboard::Snapshot WindowsClipboardBackend::readCurrentSnapshot() const
 {
 #ifdef Q_OS_WIN
-    if (!m_lastPublishedVirtualSnapshot.isEmpty())
+    if (!m_lastPublishedVirtualSnapshot.isEmpty() &&
+        m_lastPublishedVirtualSequence != 0 &&
+        currentClipboardSequence() == m_lastPublishedVirtualSequence)
     {
         return m_lastPublishedVirtualSnapshot;
     }
+
+    m_lastPublishedVirtualSnapshot = {};
+    m_lastPublishedVirtualSequence = 0;
 #endif
     return m_fallback.readCurrentSnapshot();
 }

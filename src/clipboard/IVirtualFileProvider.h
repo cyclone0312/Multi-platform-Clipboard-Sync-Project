@@ -3,6 +3,7 @@
 #include <QByteArray>
 #include <QString>
 #include <QVector>
+#include <QtGlobal>
 
 #include "clipboard/ClipboardSnapshot.h"
 

@@ -260,6 +260,8 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaType \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \
@@ -296,6 +298,8 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdir.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfileinfo.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QEventLoop \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFile \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qfile.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QFileInfo \
@@ -333,6 +337,16 @@ CMakeFiles/clipboard_sync.dir/src/sync/SyncCoordinator.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mmintrin.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/mm_malloc.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/random.tcc \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QThread \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qthread.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qdeadlinetimer.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qelapsedtimer.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/future \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/mutex \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_mutex.h \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/thread \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/condition_variable \
+ D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUuid \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/quuid.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardMonitor.h \

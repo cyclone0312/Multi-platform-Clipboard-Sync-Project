@@ -199,8 +199,7 @@ namespace clipboard
             return snapshot;
         }
 
-        // 同一次复制里，urls/html/image/text 可能是并存的；
-        // 这里不是挑一种，而是尽量全部采集进同一个 snapshot。
+        // Collect formats together instead of forcing a single-format choice.
         if (mime->hasUrls())
         {
             snapshot.localFilePaths = canonicalLocalFilePaths(mime->urls());
@@ -241,8 +240,7 @@ namespace clipboard
             return;
         }
 
-        // 这里把“原始内容 -> 可比较指纹”统一收口，
-        // 这样 Monitor/Writer/Coordinator 不需要各自重复实现一套 hash 逻辑。
+        // Canonicalize once here so every caller compares the same content.
         snapshot->text = canonicalClipboardText(snapshot->text);
         snapshot->textHash = snapshot->text.isEmpty() ? 0 : qHash(snapshot->text);
         snapshot->htmlHash = snapshot->html.isEmpty() ? 0 : qHash(snapshot->html);
@@ -273,9 +271,8 @@ namespace clipboard
     {
         QCryptographicHash hash(QCryptographicHash::Sha256);
 
-        // fingerprint 表示“整包 snapshot”的身份。
-        // 只要其中任意一种有效表示变了，最终 fingerprint 就会变，
-        // 这比单独比较 text/image/files 更适合做 snapshot 级防回环。
+        // fingerprint 琛ㄧず鈥滄暣鍖?snapshot鈥濈殑韬唤銆?        // 鍙鍏朵腑浠绘剰涓€绉嶆湁鏁堣〃绀哄彉浜嗭紝鏈€缁?fingerprint 灏变細鍙橈紝
+        // The fingerprint identifies the whole snapshot, not just one format.
         if (snapshot.textHash != 0)
         {
             hash.addData("text", 4);
@@ -327,8 +324,7 @@ namespace clipboard
     QJsonObject snapshotToJson(const Snapshot &snapshot)
     {
         QJsonObject root;
-        // 这里只序列化“可跨机器重建”的那部分内容。
-        // localFilePaths 只在本机剪贴板采集/写回时有意义，不直接上网传。
+        // Only serialize content that can be reconstructed cross-machine.
         if (snapshot.hasText())
         {
             root.insert(QStringLiteral("text"), snapshot.text);
@@ -371,8 +367,7 @@ namespace clipboard
             return false;
         }
 
-        // 反序列化后立即补齐 hash/fingerprint，
-        // 保证远端收到的 snapshot 和本地采集出来的一样都能参与去重/校验。
+        // Rebuild hashes immediately so remote snapshots behave like local ones.
         Snapshot snapshot;
         snapshot.text = canonicalClipboardText(json.value(QStringLiteral("text")).toString());
         snapshot.html = json.value(QStringLiteral("html")).toString();

@@ -2,6 +2,7 @@
 
 #ifdef Q_OS_WIN
 
+#include <QImage>
 #include <QtGlobal>
 
 #include <cstring>
@@ -22,6 +23,10 @@
 namespace
 {
     const qint64 kWindowsEpochOffset100ns = 116444736000000000LL;
+    const char kClipboardHtmlFormatName[] = "HTML Format";
+    const char kClipboardPngFormatName[] = "PNG";
+    const char kStartFragmentMarker[] = "<!--StartFragment-->";
+    const char kEndFragmentMarker[] = "<!--EndFragment-->";
 
     bool ensureOleInitialized()
     {
@@ -52,11 +57,202 @@ namespace
         return result;
     }
 
+    template <typename FillFn>
+    HGLOBAL createGlobalHandle(SIZE_T sizeBytes, FillFn fill)
+    {
+        HGLOBAL handle = GlobalAlloc(GMEM_MOVEABLE | GMEM_ZEROINIT, sizeBytes);
+        if (!handle)
+        {
+            return nullptr;
+        }
+
+        void *locked = GlobalLock(handle);
+        if (!locked)
+        {
+            GlobalFree(handle);
+            return nullptr;
+        }
+
+        fill(locked);
+        GlobalUnlock(handle);
+        return handle;
+    }
+
+    QString normalizeWindowsText(QString text)
+    {
+        text.replace(QStringLiteral("\r\n"), QStringLiteral("\n"));
+        text.replace(QChar('\r'), QChar('\n'));
+        text.replace(QStringLiteral("\n"), QStringLiteral("\r\n"));
+        return text;
+    }
+
+    int utf8ByteOffset(const QString &text, int charOffset)
+    {
+        if (charOffset <= 0)
+        {
+            return 0;
+        }
+
+        return text.left(charOffset).toUtf8().size();
+    }
+
+    QByteArray wrapHtmlFragmentForClipboard(const QByteArray &fragmentUtf8)
+    {
+        QByteArray fullHtml;
+        fullHtml.reserve(fragmentUtf8.size() + 128);
+        fullHtml += "<html><body>";
+        fullHtml += kStartFragmentMarker;
+        fullHtml += fragmentUtf8;
+        fullHtml += kEndFragmentMarker;
+        fullHtml += "</body></html>";
+        return fullHtml;
+    }
+
+    QByteArray buildClipboardHtmlDocument(const QString &html)
+    {
+        const QString startMarker = QString::fromLatin1(kStartFragmentMarker);
+        const QString endMarker = QString::fromLatin1(kEndFragmentMarker);
+        if (html.contains(startMarker) && html.contains(endMarker))
+        {
+            return html.toUtf8();
+        }
+
+        const QString lower = html.toLower();
+        const int bodyStart = lower.indexOf(QStringLiteral("<body"));
+        if (bodyStart < 0)
+        {
+            return wrapHtmlFragmentForClipboard(html.toUtf8());
+        }
+
+        const int bodyOpenEnd = lower.indexOf(QChar('>'), bodyStart);
+        if (bodyOpenEnd < 0)
+        {
+            return wrapHtmlFragmentForClipboard(html.toUtf8());
+        }
+
+        const int bodyEnd = lower.indexOf(QStringLiteral("</body"), bodyOpenEnd + 1);
+        if (bodyEnd < 0)
+        {
+            return wrapHtmlFragmentForClipboard(html.toUtf8());
+        }
+
+        QByteArray fullHtml = html.toUtf8();
+        const int fragmentStart = utf8ByteOffset(html, bodyOpenEnd + 1);
+        fullHtml.insert(fragmentStart, kStartFragmentMarker);
+
+        const int fragmentEnd = utf8ByteOffset(html, bodyEnd) +
+                                static_cast<int>(std::strlen(kStartFragmentMarker));
+        fullHtml.insert(fragmentEnd, kEndFragmentMarker);
+        return fullHtml;
+    }
+
+    QByteArray buildClipboardHtmlPayload(const QString &html)
+    {
+        const QByteArray fullHtml = buildClipboardHtmlDocument(html);
+
+        QByteArray header =
+            "Version:0.9\r\n"
+            "StartHTML:0000000000\r\n"
+            "EndHTML:0000000000\r\n"
+            "StartFragment:0000000000\r\n"
+            "EndFragment:0000000000\r\n";
+
+        const int startHtml = header.size();
+        const int endHtml = startHtml + fullHtml.size();
+        const int fragmentMarkerPos = fullHtml.indexOf(kStartFragmentMarker);
+        const int endMarkerPos = fullHtml.indexOf(kEndFragmentMarker);
+        if (fragmentMarkerPos < 0 || endMarkerPos < 0 || endMarkerPos < fragmentMarkerPos)
+        {
+            return {};
+        }
+        const int startFragment = startHtml + fragmentMarkerPos + static_cast<int>(std::strlen(kStartFragmentMarker));
+        const int endFragment = startHtml + endMarkerPos;
+
+        const auto patchOffset = [&header](const char *label, int value)
+        {
+            const int pos = header.indexOf(label);
+            if (pos < 0)
+            {
+                return;
+            }
+
+            const QByteArray digits = QByteArray::number(value).rightJustified(10, '0');
+            header.replace(pos + static_cast<int>(std::strlen(label)), 10, digits);
+        };
+
+        patchOffset("StartHTML:", startHtml);
+        patchOffset("EndHTML:", endHtml);
+        patchOffset("StartFragment:", startFragment);
+        patchOffset("EndFragment:", endFragment);
+        return header + fullHtml;
+    }
+
+    HGLOBAL createByteHandle(const QByteArray &bytes, bool appendNullTerminator = false)
+    {
+        const SIZE_T totalBytes = static_cast<SIZE_T>(bytes.size()) + (appendNullTerminator ? 1 : 0);
+        if (totalBytes == 0)
+        {
+            return nullptr;
+        }
+
+        return createGlobalHandle(totalBytes,
+                                  [&bytes, appendNullTerminator](void *dest)
+                                  {
+                                      memcpy(dest, bytes.constData(), static_cast<size_t>(bytes.size()));
+                                      if (appendNullTerminator)
+                                      {
+                                          static_cast<char *>(dest)[bytes.size()] = '\0';
+                                      }
+                                  });
+    }
+
+    HGLOBAL createUnicodeTextHandle(const QString &text)
+    {
+        std::wstring wide = normalizeWindowsText(text).toStdWString();
+        wide.push_back(L'\0');
+        return createGlobalHandle(static_cast<SIZE_T>(wide.size() * sizeof(wchar_t)),
+                                  [&wide](void *dest)
+                                  {
+                                      memcpy(dest, wide.data(), wide.size() * sizeof(wchar_t));
+                                  });
+    }
+
+    HGLOBAL createDibHandle(const QByteArray &pngBytes)
+    {
+        QImage image;
+        if ((!image.loadFromData(pngBytes, "PNG") && !image.loadFromData(pngBytes)) || image.isNull())
+        {
+            return nullptr;
+        }
+
+        const QImage dib = image.convertToFormat(QImage::Format_ARGB32);
+        const SIZE_T pixelBytes = static_cast<SIZE_T>(dib.sizeInBytes());
+        const SIZE_T totalBytes = sizeof(BITMAPINFOHEADER) + pixelBytes;
+        return createGlobalHandle(totalBytes,
+                                  [&dib, pixelBytes](void *dest)
+                                  {
+                                      BITMAPINFOHEADER header{};
+                                      header.biSize = sizeof(BITMAPINFOHEADER);
+                                      header.biWidth = dib.width();
+                                      header.biHeight = -dib.height();
+                                      header.biPlanes = 1;
+                                      header.biBitCount = 32;
+                                      header.biCompression = BI_RGB;
+                                      header.biSizeImage = static_cast<DWORD>(pixelBytes);
+                                      memcpy(dest, &header, sizeof(header));
+                                      memcpy(static_cast<unsigned char *>(dest) + sizeof(header),
+                                             dib.constBits(),
+                                             pixelBytes);
+                                  });
+    }
+
     struct ClipboardFormats
     {
-        UINT fileDescriptorW = RegisterClipboardFormatW(CFSTR_FILEDESCRIPTORW);
-        UINT fileContents = RegisterClipboardFormatW(CFSTR_FILECONTENTS);
-        UINT preferredDropEffect = RegisterClipboardFormatW(CFSTR_PREFERREDDROPEFFECT);
+        UINT fileDescriptorW = RegisterClipboardFormatA(CFSTR_FILEDESCRIPTORW);
+        UINT fileContents = RegisterClipboardFormatA(CFSTR_FILECONTENTS);
+        UINT preferredDropEffect = RegisterClipboardFormatA(CFSTR_PREFERREDDROPEFFECT);
+        UINT html = RegisterClipboardFormatA(kClipboardHtmlFormatName);
+        UINT png = RegisterClipboardFormatA(kClipboardPngFormatName);
     };
 
     const ClipboardFormats &clipboardFormats()
@@ -246,6 +442,7 @@ namespace
     {
     public:
         VirtualFileDataObject(quint64 sessionId,
+                              clipboard::Snapshot snapshot,
                               QVector<ClipboardVirtualFileInfo> files,
                               IVirtualFileProvider *provider);
 
@@ -263,10 +460,17 @@ namespace
         HRESULT STDMETHODCALLTYPE EnumDAdvise(IEnumSTATDATA **) override;
 
     private:
+        bool supportsFormat(CLIPFORMAT format) const;
+
         LONG m_refCount = 1;
         quint64 m_sessionId = 0;
+        clipboard::Snapshot m_snapshot;
         QVector<ClipboardVirtualFileInfo> m_files;
         IVirtualFileProvider *m_provider = nullptr;
+        FORMATETC m_unicodeTextFormat{};
+        FORMATETC m_htmlFormat{};
+        FORMATETC m_pngFormat{};
+        FORMATETC m_dibFormat{};
         FORMATETC m_fileDescriptorFormat{};
         FORMATETC m_fileContentsFormat{};
         FORMATETC m_dropEffectFormat{};
@@ -298,7 +502,10 @@ bool publishWindowsVirtualFiles(const ClipboardWriteRequest &request)
         }
     }
 
-    auto *dataObject = new VirtualFileDataObject(request.sessionId, files, request.virtualFileProvider);
+    auto *dataObject = new VirtualFileDataObject(request.sessionId,
+                                                 request.snapshot,
+                                                 files,
+                                                 request.virtualFileProvider);
     const HRESULT hr = OleSetClipboard(dataObject);
     dataObject->Release();
     return SUCCEEDED(hr);
@@ -551,11 +758,39 @@ namespace
     }
 
     VirtualFileDataObject::VirtualFileDataObject(quint64 sessionId,
+                                                 clipboard::Snapshot snapshot,
                                                  QVector<ClipboardVirtualFileInfo> files,
                                                  IVirtualFileProvider *provider)
-        : m_sessionId(sessionId), m_files(std::move(files)), m_provider(provider)
+        : m_sessionId(sessionId),
+          m_snapshot(std::move(snapshot)),
+          m_files(std::move(files)),
+          m_provider(provider)
     {
         const ClipboardFormats &formats = clipboardFormats();
+
+        m_unicodeTextFormat.cfFormat = CF_UNICODETEXT;
+        m_unicodeTextFormat.dwAspect = DVASPECT_CONTENT;
+        m_unicodeTextFormat.lindex = -1;
+        m_unicodeTextFormat.ptd = nullptr;
+        m_unicodeTextFormat.tymed = TYMED_HGLOBAL;
+
+        m_htmlFormat.cfFormat = static_cast<CLIPFORMAT>(formats.html);
+        m_htmlFormat.dwAspect = DVASPECT_CONTENT;
+        m_htmlFormat.lindex = -1;
+        m_htmlFormat.ptd = nullptr;
+        m_htmlFormat.tymed = TYMED_HGLOBAL;
+
+        m_pngFormat.cfFormat = static_cast<CLIPFORMAT>(formats.png);
+        m_pngFormat.dwAspect = DVASPECT_CONTENT;
+        m_pngFormat.lindex = -1;
+        m_pngFormat.ptd = nullptr;
+        m_pngFormat.tymed = TYMED_HGLOBAL;
+
+        m_dibFormat.cfFormat = CF_DIB;
+        m_dibFormat.dwAspect = DVASPECT_CONTENT;
+        m_dibFormat.lindex = -1;
+        m_dibFormat.ptd = nullptr;
+        m_dibFormat.tymed = TYMED_HGLOBAL;
 
         m_fileDescriptorFormat.cfFormat = static_cast<CLIPFORMAT>(formats.fileDescriptorW);
         m_fileDescriptorFormat.dwAspect = DVASPECT_CONTENT;
@@ -574,6 +809,34 @@ namespace
         m_dropEffectFormat.lindex = -1;
         m_dropEffectFormat.ptd = nullptr;
         m_dropEffectFormat.tymed = TYMED_HGLOBAL;
+    }
+
+    bool VirtualFileDataObject::supportsFormat(CLIPFORMAT format) const
+    {
+        if (format == m_unicodeTextFormat.cfFormat)
+        {
+            return m_snapshot.hasText();
+        }
+        if (format == m_htmlFormat.cfFormat)
+        {
+            return m_htmlFormat.cfFormat != 0 && m_snapshot.hasHtml();
+        }
+        if (format == m_pngFormat.cfFormat || format == m_dibFormat.cfFormat)
+        {
+            if (format == m_pngFormat.cfFormat)
+            {
+                return m_pngFormat.cfFormat != 0 && m_snapshot.hasImage();
+            }
+            return m_snapshot.hasImage();
+        }
+        if (format == m_fileDescriptorFormat.cfFormat ||
+            format == m_fileContentsFormat.cfFormat ||
+            format == m_dropEffectFormat.cfFormat)
+        {
+            return !m_files.isEmpty();
+        }
+
+        return false;
     }
 
     HRESULT VirtualFileDataObject::QueryInterface(REFIID riid, void **ppvObject)
@@ -617,6 +880,62 @@ namespace
         }
 
         memset(pmedium, 0, sizeof(STGMEDIUM));
+        if (pformatetcIn->cfFormat == m_unicodeTextFormat.cfFormat &&
+            (pformatetcIn->tymed & TYMED_HGLOBAL) &&
+            m_snapshot.hasText())
+        {
+            HGLOBAL handle = createUnicodeTextHandle(m_snapshot.text);
+            if (!handle)
+            {
+                return E_OUTOFMEMORY;
+            }
+            pmedium->tymed = TYMED_HGLOBAL;
+            pmedium->hGlobal = handle;
+            return S_OK;
+        }
+
+        if (pformatetcIn->cfFormat == m_htmlFormat.cfFormat &&
+            (pformatetcIn->tymed & TYMED_HGLOBAL) &&
+            m_snapshot.hasHtml())
+        {
+            HGLOBAL handle = createByteHandle(buildClipboardHtmlPayload(m_snapshot.html), true);
+            if (!handle)
+            {
+                return E_OUTOFMEMORY;
+            }
+            pmedium->tymed = TYMED_HGLOBAL;
+            pmedium->hGlobal = handle;
+            return S_OK;
+        }
+
+        if (pformatetcIn->cfFormat == m_pngFormat.cfFormat &&
+            (pformatetcIn->tymed & TYMED_HGLOBAL) &&
+            m_snapshot.hasImage())
+        {
+            HGLOBAL handle = createByteHandle(m_snapshot.imagePng);
+            if (!handle)
+            {
+                return E_OUTOFMEMORY;
+            }
+            pmedium->tymed = TYMED_HGLOBAL;
+            pmedium->hGlobal = handle;
+            return S_OK;
+        }
+
+        if (pformatetcIn->cfFormat == m_dibFormat.cfFormat &&
+            (pformatetcIn->tymed & TYMED_HGLOBAL) &&
+            m_snapshot.hasImage())
+        {
+            HGLOBAL handle = createDibHandle(m_snapshot.imagePng);
+            if (!handle)
+            {
+                return E_OUTOFMEMORY;
+            }
+            pmedium->tymed = TYMED_HGLOBAL;
+            pmedium->hGlobal = handle;
+            return S_OK;
+        }
+
         if (pformatetcIn->cfFormat == m_fileDescriptorFormat.cfFormat &&
             (pformatetcIn->tymed & TYMED_HGLOBAL))
         {
@@ -678,13 +997,17 @@ namespace
             return DV_E_DVASPECT;
         }
 
-        if (pformatetc->cfFormat == m_fileDescriptorFormat.cfFormat &&
-            (pformatetc->tymed & TYMED_HGLOBAL))
+        if (!supportsFormat(pformatetc->cfFormat))
         {
-            return S_OK;
+            return DV_E_FORMATETC;
         }
 
-        if (pformatetc->cfFormat == m_dropEffectFormat.cfFormat &&
+        if ((pformatetc->cfFormat == m_unicodeTextFormat.cfFormat ||
+             pformatetc->cfFormat == m_htmlFormat.cfFormat ||
+             pformatetc->cfFormat == m_pngFormat.cfFormat ||
+             pformatetc->cfFormat == m_dibFormat.cfFormat ||
+             pformatetc->cfFormat == m_fileDescriptorFormat.cfFormat ||
+             pformatetc->cfFormat == m_dropEffectFormat.cfFormat) &&
             (pformatetc->tymed & TYMED_HGLOBAL))
         {
             return S_OK;
@@ -729,9 +1052,31 @@ namespace
         }
 
         std::vector<FORMATETC> formats;
-        formats.push_back(m_fileDescriptorFormat);
-        formats.push_back(m_fileContentsFormat);
-        formats.push_back(m_dropEffectFormat);
+        if (m_snapshot.hasText())
+        {
+            formats.push_back(m_unicodeTextFormat);
+        }
+        if (m_snapshot.hasHtml())
+        {
+            if (m_htmlFormat.cfFormat != 0)
+            {
+                formats.push_back(m_htmlFormat);
+            }
+        }
+        if (m_snapshot.hasImage())
+        {
+            if (m_pngFormat.cfFormat != 0)
+            {
+                formats.push_back(m_pngFormat);
+            }
+            formats.push_back(m_dibFormat);
+        }
+        if (!m_files.isEmpty())
+        {
+            formats.push_back(m_fileDescriptorFormat);
+            formats.push_back(m_fileContentsFormat);
+            formats.push_back(m_dropEffectFormat);
+        }
         *ppenumFormatEtc = new FormatEtcEnumerator(std::move(formats));
         return S_OK;
     }

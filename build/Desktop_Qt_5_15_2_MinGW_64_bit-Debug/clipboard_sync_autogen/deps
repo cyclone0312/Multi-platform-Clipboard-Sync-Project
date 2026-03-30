@@ -4,6 +4,7 @@ clipboard_sync_autogen/timestamp: \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QDateTime \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
+	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaType \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
 	D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
@@ -572,6 +573,8 @@ clipboard_sync_autogen/timestamp: \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/QtClipboardBackend.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.cpp \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsClipboardBackend.h \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsVirtualFilePublisher.cpp \
+	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/WindowsVirtualFilePublisher.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.cpp \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/X11ClipboardBackend.h \
 	D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/common/Config.cpp \

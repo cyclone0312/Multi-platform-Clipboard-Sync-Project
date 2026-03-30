@@ -17,6 +17,7 @@ public:
     explicit ClipboardWriter(QObject *parent = nullptr);
     ClipboardWriter(std::unique_ptr<IClipboardBackend> backend, QObject *parent = nullptr);
     void setVirtualFileProvider(IVirtualFileProvider *provider);
+    bool supportsNativeVirtualFiles() const;
     // Preferred path: the writer owns retry and anti-loop policy,
     // while the backend owns platform-specific clipboard publication.
     bool writeRemoteSnapshot(const clipboard::Snapshot &snapshot, quint64 sessionId);

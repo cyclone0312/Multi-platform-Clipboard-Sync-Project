@@ -11,8 +11,8 @@
 #include <QTimer>
 #include <QUrl>
 
-// 匿名命名空间
-// 内部链接性,防止冲突,替代 static
+// 鍖垮悕鍛藉悕绌洪棿
+// 鍐呴儴閾炬帴鎬?闃叉鍐茬獊,鏇夸唬 static
 namespace
 {
     QString canonicalClipboardText(QString text)
@@ -133,7 +133,7 @@ namespace
         }
 
         const QVariant imageData = mime->imageData();
-        // 尝试直接提取 QImage
+        // 灏濊瘯鐩存帴鎻愬彇 QImage
         if (imageData.canConvert<QImage>())
         {
             const QImage image = qvariant_cast<QImage>(imageData);
@@ -143,7 +143,7 @@ namespace
                 return true;
             }
         }
-        // 尝试转换 QPixmap
+        // 灏濊瘯杞崲 QPixmap
         if (imageData.canConvert<QPixmap>())
         {
             const QPixmap pixmap = qvariant_cast<QPixmap>(imageData);
@@ -153,7 +153,7 @@ namespace
                 return !outImage->isNull();
             }
         }
-        // 尝试解码原始 PNG 二进制数据
+        // 灏濊瘯瑙ｇ爜鍘熷 PNG 浜岃繘鍒舵暟鎹?
         const QByteArray pngData = mime->data(QStringLiteral("image/png"));
         if (!pngData.isEmpty())
         {
@@ -211,11 +211,11 @@ void ClipboardMonitor::tryEmitClipboardSnapshot()
     if (false && mime && mime->hasImage())
     {
         QImage image;
-        // 将mime转换为Qimage类
+        // 灏唌ime杞崲涓篞image绫?
         if (extractImage(mime, &image))
         {
             QByteArray pngBytes;
-            // 将Qimage转换为png格式传输
+            // 灏哘image杞崲涓簆ng鏍煎紡浼犺緭
             if (encodeImageAsPng(image, &pngBytes) && !pngBytes.isEmpty())
             {
                 m_readRetryBudget = 0;
@@ -236,8 +236,8 @@ void ClipboardMonitor::tryEmitClipboardSnapshot()
         (mime && (mime->hasUrls() || mime->hasImage() || mime->hasHtml() || mime->hasText())) || !text.isEmpty();
 
     const ::clipboard::Snapshot snapshot = ::clipboard::captureSnapshotFromMime(mime, text);
-    // 某些桌面环境下剪贴板数据会延迟可读；
-    // 这里先尝试拿完整 snapshot，拿不到再按原有策略短暂重试。
+    // 鏌愪簺妗岄潰鐜涓嬪壀璐存澘鏁版嵁浼氬欢杩熷彲璇伙紱
+    // Some desktop environments expose clipboard payloads lazily.
     if (snapshot.isEmpty())
     {
         if (mayHaveClipboardPayload)
@@ -248,8 +248,7 @@ void ClipboardMonitor::tryEmitClipboardSnapshot()
     }
 
     m_readRetryBudget = 0;
-    // snapshot 是新的主信号；
-    // 下面保留旧信号只是为了兼容现有 UI/调试输出。
+    // Snapshot is now the primary signal; the legacy signals remain for compatibility.
     emit localSnapshotChanged(snapshot);
 
     if (snapshot.hasLocalFiles())

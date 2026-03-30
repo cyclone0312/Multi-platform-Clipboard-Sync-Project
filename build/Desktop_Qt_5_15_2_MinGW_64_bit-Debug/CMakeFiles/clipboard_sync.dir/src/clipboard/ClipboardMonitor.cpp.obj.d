@@ -236,6 +236,8 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardMonitor.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/x86_64-w64-mingw32/include/pthread_time.h \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/parse_numbers.h \
  D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/src/clipboard/ClipboardSnapshot.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaType \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qmetatype.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonobject.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qjsonvalue.h \

@@ -5,6 +5,7 @@
 #include <QCryptographicHash>
 #include <QDateTime>
 #include <QDir>
+#include <QEventLoop>
 #include <QFile>
 #include <QFileInfo>
 #include <QJsonArray>
@@ -12,6 +13,7 @@
 #include <QJsonObject>
 #include <QDebug>
 #include <QRandomGenerator>
+#include <QThread>
 #include <QUuid>
 
 #include <limits>
@@ -156,6 +158,7 @@ namespace
 
         return QString::fromLatin1(hash.result().toHex());
     }
+
 }
 
 SyncCoordinator::SyncCoordinator(ClipboardMonitor *monitor,
@@ -284,62 +287,356 @@ QByteArray SyncCoordinator::readFileRange(const ClipboardVirtualFileRangeRequest
         *ok = false;
     }
 
+    if (QThread::currentThread() != thread())
+    {
+        QByteArray data;
+        bool invokeOk = false;
+        const bool invoked = QMetaObject::invokeMethod(
+            this,
+            [this, &request, &data, &invokeOk]()
+            {
+                data = readFileRangeOnCoordinatorThread(request, &invokeOk);
+            },
+            Qt::BlockingQueuedConnection);
+        if (ok)
+        {
+            *ok = invoked && invokeOk;
+        }
+        return invoked ? data : QByteArray();
+    }
+
+    return readFileRangeOnCoordinatorThread(request, ok);
+}
+
+QString SyncCoordinator::resolveAvailableFilePath(quint64 sessionId, const QString &fileId) const
+{
+    const auto localOfferIt = m_localOfferedFiles.constFind(sessionId);
+    if (localOfferIt != m_localOfferedFiles.cend())
+    {
+        for (const FileMeta &meta : localOfferIt.value().files)
+        {
+            if (meta.fileId == fileId)
+            {
+                return meta.path;
+            }
+        }
+    }
+
+    return m_materializedRemoteFiles.value(sessionId).value(fileId);
+}
+
+std::optional<SyncCoordinator::FileMeta> SyncCoordinator::findRemoteFileMeta(quint64 sessionId,
+                                                                             const QString &fileId) const
+{
+    const auto offerIt = m_remoteOfferedFiles.constFind(sessionId);
+    if (offerIt == m_remoteOfferedFiles.cend())
+    {
+        return std::nullopt;
+    }
+
+    for (const FileMeta &meta : offerIt.value().files)
+    {
+        if (meta.fileId == fileId)
+        {
+            return meta;
+        }
+    }
+
+    return std::nullopt;
+}
+
+QByteArray SyncCoordinator::readFileRangeOnCoordinatorThread(
+    const ClipboardVirtualFileRangeRequest &request,
+    bool *ok)
+{
+    if (ok)
+    {
+        *ok = false;
+    }
+
     if (request.fileId.isEmpty() || request.offset < 0)
     {
         return {};
     }
 
-    QString localPath;
-    const auto localOfferIt = m_localOfferedFiles.constFind(request.sessionId);
-    if (localOfferIt != m_localOfferedFiles.cend())
+    const QString localPath = resolveAvailableFilePath(request.sessionId, request.fileId);
+    if (!localPath.isEmpty())
     {
-        for (const FileMeta &meta : localOfferIt.value().files)
+        QFile file(localPath);
+        if (!file.open(QIODevice::ReadOnly))
         {
-            if (meta.fileId == request.fileId)
-            {
-                localPath = meta.path;
-                break;
-            }
+            return {};
         }
+
+        if (!file.seek(request.offset))
+        {
+            return {};
+        }
+
+        QByteArray data;
+        if (request.length > 0)
+        {
+            data = file.read(request.length);
+        }
+        else
+        {
+            data = file.readAll();
+        }
+
+        if (ok)
+        {
+            *ok = !data.isNull();
+        }
+
+        return data;
     }
 
-    if (localPath.isEmpty())
-    {
-        localPath = m_materializedRemoteFiles.value(request.sessionId).value(request.fileId);
-    }
-
-    if (localPath.isEmpty())
+    const std::optional<FileMeta> remoteMeta = findRemoteFileMeta(request.sessionId, request.fileId);
+    if (!remoteMeta.has_value())
     {
         return {};
     }
 
-    QFile file(localPath);
-    if (!file.open(QIODevice::ReadOnly))
+    return requestRemoteFileRange(request, remoteMeta.value(), ok);
+}
+
+QByteArray SyncCoordinator::requestRemoteFileRange(const ClipboardVirtualFileRangeRequest &request,
+                                                   const FileMeta &meta,
+                                                   bool *ok)
+{
+    if (ok)
+    {
+        *ok = false;
+    }
+
+    if (!m_client || !m_client->isConnected())
     {
         return {};
     }
 
-    if (!file.seek(request.offset))
+    const qint64 available = qMax<qint64>(0, meta.size - request.offset);
+    const qint64 expectedLength = request.length > 0
+                                      ? qMin<qint64>(request.length, available)
+                                      : available;
+    if (expectedLength < 0 || expectedLength > std::numeric_limits<int>::max())
     {
         return {};
     }
 
-    QByteArray data;
-    if (request.length > 0)
+    if (expectedLength == 0)
     {
-        data = file.read(request.length);
+        if (ok)
+        {
+            *ok = true;
+        }
+        return {};
+    }
+
+    PendingVirtualRead pending;
+    pending.sessionId = request.sessionId;
+    pending.fileId = meta.fileId;
+    pending.requestId = QUuid::createUuid().toString(QUuid::WithoutBraces);
+    pending.offset = request.offset;
+    pending.expectedLength = expectedLength;
+    pending.nextOffset = request.offset;
+    pending.data.reserve(static_cast<int>(expectedLength));
+
+    QEventLoop waitLoop;
+    pending.waitLoop = &waitLoop;
+    m_pendingVirtualReads.insert(pending.requestId, pending);
+
+    QJsonObject req;
+    req.insert(QStringLiteral("fileId"), meta.fileId);
+    req.insert(QStringLiteral("requestId"), pending.requestId);
+    req.insert(QStringLiteral("offset"), static_cast<double>(request.offset));
+    req.insert(QStringLiteral("length"), static_cast<double>(expectedLength));
+    req.insert(QStringLiteral("windowChunks"),
+               qMax(1, static_cast<int>((expectedLength + m_chunkSizeBytes - 1) / qMax(1, m_chunkSizeBytes))));
+
+    protocol::ClipboardMessage message;
+    message.type = protocol::MessageType::FileRequest;
+    message.flags = 0;
+    message.sessionId = request.sessionId;
+    message.sequence = static_cast<quint64>(request.offset / qMax(1, m_chunkSizeBytes) + 1);
+    message.payload = encodeJson(req);
+
+    if (!m_client->sendMessage(message))
+    {
+        m_pendingVirtualReads.remove(pending.requestId);
+        return {};
+    }
+
+    QTimer timeout;
+    timeout.setSingleShot(true);
+    QObject::connect(&timeout,
+                     &QTimer::timeout,
+                     this,
+                     [this, requestId = pending.requestId]()
+                     {
+                         finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read timed out"));
+                     });
+    timeout.start(m_virtualReadTimeoutMs);
+
+    while (m_pendingVirtualReads.contains(pending.requestId) &&
+           !m_pendingVirtualReads.value(pending.requestId).finished)
+    {
+        waitLoop.exec(QEventLoop::ExcludeUserInputEvents);
+    }
+
+    timeout.stop();
+    if (!m_pendingVirtualReads.contains(pending.requestId))
+    {
+        return {};
+    }
+
+    const PendingVirtualRead completed = m_pendingVirtualReads.take(pending.requestId);
+    if (ok)
+    {
+        *ok = completed.ok;
+    }
+
+    return completed.ok ? completed.data : QByteArray();
+}
+
+void SyncCoordinator::finishPendingVirtualRead(const QString &requestId,
+                                               bool ok,
+                                               const QString &error)
+{
+    auto it = m_pendingVirtualReads.find(requestId);
+    if (it == m_pendingVirtualReads.end() || it->finished)
+    {
+        return;
+    }
+
+    it->ok = ok;
+    it->finished = true;
+    it->error = error;
+    if (it->waitLoop)
+    {
+        it->waitLoop->quit();
+    }
+}
+
+bool SyncCoordinator::handlePendingVirtualReadChunk(const protocol::ClipboardMessage &message)
+{
+    QJsonObject chunkMeta;
+    QByteArray chunk;
+    if (!parseChunkPayload(message.payload, &chunkMeta, &chunk))
+    {
+        return false;
+    }
+
+    const QString requestId = chunkMeta.value(QStringLiteral("requestId")).toString();
+    auto it = m_pendingVirtualReads.find(requestId);
+    if (it == m_pendingVirtualReads.end())
+    {
+        return false;
+    }
+
+    PendingVirtualRead &state = it.value();
+    if (state.finished)
+    {
+        return true;
+    }
+
+    const QString fileId = chunkMeta.value(QStringLiteral("fileId")).toString();
+    const qint64 offset = static_cast<qint64>(chunkMeta.value(QStringLiteral("offset")).toDouble());
+    const int declaredChunkSize = chunkMeta.value(QStringLiteral("chunkSize")).toInt(chunk.size());
+    const quint32 expectedCrc = static_cast<quint32>(chunkMeta.value(QStringLiteral("chunkCrc32")).toDouble());
+
+    if (message.sessionId != state.sessionId ||
+        fileId != state.fileId ||
+        offset != state.nextOffset ||
+        declaredChunkSize != chunk.size())
+    {
+        finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read chunk metadata mismatch"));
+        return true;
+    }
+
+    if (crc32(chunk) != expectedCrc)
+    {
+        finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read chunk CRC mismatch"));
+        return true;
+    }
+
+    const qint64 remaining = state.expectedLength - state.data.size();
+    if (remaining <= 0 || chunk.size() > remaining)
+    {
+        finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read chunk overflow"));
+        return true;
+    }
+
+    state.data.append(chunk);
+    state.nextOffset += chunk.size();
+    if (state.data.size() >= state.expectedLength)
+    {
+        finishPendingVirtualRead(requestId, true);
+    }
+
+    return true;
+}
+
+bool SyncCoordinator::handlePendingVirtualReadComplete(const protocol::ClipboardMessage &message)
+{
+    QJsonObject payload;
+    if (!decodeJson(message.payload, &payload))
+    {
+        return false;
+    }
+
+    const QString requestId = payload.value(QStringLiteral("requestId")).toString();
+    auto it = m_pendingVirtualReads.find(requestId);
+    if (it == m_pendingVirtualReads.end())
+    {
+        return false;
+    }
+
+    if (message.sessionId != it->sessionId ||
+        payload.value(QStringLiteral("fileId")).toString() != it->fileId)
+    {
+        finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read completion mismatch"));
+        return true;
+    }
+
+    if (it->data.size() >= it->expectedLength)
+    {
+        finishPendingVirtualRead(requestId, true);
     }
     else
     {
-        data = file.readAll();
+        finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read completed before requested range arrived"));
     }
 
-    if (ok)
+    return true;
+}
+
+bool SyncCoordinator::handlePendingVirtualReadAbort(const protocol::ClipboardMessage &message)
+{
+    QJsonObject payload;
+    if (!decodeJson(message.payload, &payload))
     {
-        *ok = !data.isNull();
+        return false;
     }
 
-    return data;
+    const QString requestId = payload.value(QStringLiteral("requestId")).toString();
+    auto it = m_pendingVirtualReads.find(requestId);
+    if (it == m_pendingVirtualReads.end())
+    {
+        return false;
+    }
+
+    if (message.sessionId != it->sessionId ||
+        payload.value(QStringLiteral("fileId")).toString() != it->fileId)
+    {
+        finishPendingVirtualRead(requestId, false, QStringLiteral("virtual read abort mismatch"));
+        return true;
+    }
+
+    const QString reason = payload.value(QStringLiteral("reason")).toString();
+    finishPendingVirtualRead(requestId,
+                             false,
+                             reason.isEmpty() ? QStringLiteral("virtual read aborted by remote peer") : reason);
+    return true;
 }
 
 void SyncCoordinator::bindServer(TransportServer *server)
@@ -1074,9 +1371,17 @@ void SyncCoordinator::handleRemoteSnapshot(const protocol::ClipboardMessage &mes
         {
             m_remoteOfferedFiles.insert(message.sessionId, offer);
             emit remoteFileOfferReceived(names);
-            emit fileTransferStatus(QStringLiteral("鏀跺埌杩滅 snapshot 鏂囦欢 Offer锛宻ession=%1 鏂囦欢鏁?%2")
+            emit fileTransferStatus(QStringLiteral("收到远端 snapshot 文件 Offer，session=%1 文件数=%2")
                                         .arg(message.sessionId)
                                         .arg(offer.files.size()));
+
+            if (m_writer &&
+                m_writer->supportsNativeVirtualFiles() &&
+                m_writer->writeRemoteSnapshot(snapshot, message.sessionId))
+            {
+                qInfo() << "remote transport-backed snapshot applied as native virtual files";
+                return;
+            }
 
 #if !defined(Q_OS_WIN) && !defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
             if (!m_activeDownload.has_value())
@@ -1282,6 +1587,11 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
 
 void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &message)
 {
+    if (handlePendingVirtualReadChunk(message))
+    {
+        return;
+    }
+
     if (!m_activeDownload.has_value())
     {
         return;
@@ -1373,6 +1683,11 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
 
 void SyncCoordinator::handleRemoteFileComplete(const protocol::ClipboardMessage &message)
 {
+    if (handlePendingVirtualReadComplete(message))
+    {
+        return;
+    }
+
     QJsonObject payload;
     if (!decodeJson(message.payload, &payload))
     {
@@ -1385,6 +1700,11 @@ void SyncCoordinator::handleRemoteFileComplete(const protocol::ClipboardMessage 
 
 void SyncCoordinator::handleRemoteFileAbort(const protocol::ClipboardMessage &message)
 {
+    if (handlePendingVirtualReadAbort(message))
+    {
+        return;
+    }
+
     QJsonObject payload;
     if (!decodeJson(message.payload, &payload))
     {
@@ -1464,6 +1784,12 @@ void SyncCoordinator::handlePeerConnected()
 
 void SyncCoordinator::handlePeerDisconnected()
 {
+    const QStringList pendingVirtualReadIds = m_pendingVirtualReads.keys();
+    for (const QString &requestId : pendingVirtualReadIds)
+    {
+        finishPendingVirtualRead(requestId, false, QStringLiteral("peer disconnected"));
+    }
+
     if (!m_activeDownload.has_value())
     {
         return;

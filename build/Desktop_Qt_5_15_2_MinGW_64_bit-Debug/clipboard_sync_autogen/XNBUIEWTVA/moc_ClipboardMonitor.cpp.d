@@ -2,6 +2,7 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_1
   D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/clipboard_sync_autogen/moc_predefs.h \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QByteArray \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaType \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QStringList \

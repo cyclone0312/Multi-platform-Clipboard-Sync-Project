@@ -6,8 +6,8 @@
 class WindowsClipboardBackend : public IClipboardBackend
 {
 public:
-    // Current scope: native Win32 clipboard for text and file lists, while
-    // richer formats still fall back to Qt until IDataObject lands here.
+    // Transport-backed files publish through a native IDataObject so they can
+    // coexist with richer clipboard formats on Windows.
     bool writeSnapshot(const ClipboardWriteRequest &request) override;
     clipboard::Snapshot readCurrentSnapshot() const override;
     bool supportsNativeVirtualFiles() const override;
@@ -16,4 +16,5 @@ public:
 private:
     QtClipboardBackend m_fallback;
     mutable clipboard::Snapshot m_lastPublishedVirtualSnapshot;
+    mutable quint32 m_lastPublishedVirtualSequence = 0;
 };

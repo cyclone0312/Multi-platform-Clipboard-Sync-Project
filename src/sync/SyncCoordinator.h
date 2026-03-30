@@ -20,6 +20,7 @@ class ClipboardMonitor;
 class ClipboardWriter;
 class TransportClient;
 class TransportServer;
+class QEventLoop;
 
 class SyncCoordinator : public QObject, public IVirtualFileProvider
 {
@@ -91,12 +92,12 @@ private:
     // 一次复制会话对应的“文件 Offer”集合。
     struct FileOffer
     {
-        // 会话 ID：同一次复制动作的全局标识。
+        // One clipboard-copy session's offered file descriptors.
         quint64 sessionId = 0;
-        // 接收端记录该 Offer 到达本地的时间戳（用于选择“最新 Offer”）。
+        // Used to prefer the newest remote offer when several exist.
         qint64 receivedAtMs = 0;
-        // 本次会话携带的文件元信息列表。
         QVector<FileMeta> files;
+        clipboard::Snapshot snapshot;
     };
 
     // 接收端下载状态机的运行时状态。
@@ -118,6 +119,21 @@ private:
         QString localPath;
     };
 
+    struct PendingVirtualRead
+    {
+        quint64 sessionId = 0;
+        QString fileId;
+        QString requestId;
+        qint64 offset = 0;
+        qint64 expectedLength = 0;
+        qint64 nextOffset = 0;
+        QByteArray data;
+        QString error;
+        bool ok = false;
+        bool finished = false;
+        QEventLoop *waitLoop = nullptr;
+    };
+
     // 按统一协议编码并发送文本到对端。
     bool sendTextToPeer(const QString &text, quint64 sessionId);
     // 按统一协议编码并发送图片（PNG）到对端。
@@ -127,6 +143,19 @@ private:
     bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId);
     bool populateSnapshotFiles(const QStringList &paths, quint64 sessionId, clipboard::Snapshot *snapshot);
     bool startPendingRemoteFilesRequest(bool replayPasteAfterDownload);
+    QString resolveAvailableFilePath(quint64 sessionId, const QString &fileId) const;
+    std::optional<FileMeta> findRemoteFileMeta(quint64 sessionId, const QString &fileId) const;
+    QByteArray readFileRangeOnCoordinatorThread(const ClipboardVirtualFileRangeRequest &request,
+                                                bool *ok);
+    QByteArray requestRemoteFileRange(const ClipboardVirtualFileRangeRequest &request,
+                                      const FileMeta &meta,
+                                      bool *ok);
+    bool handlePendingVirtualReadChunk(const protocol::ClipboardMessage &message);
+    bool handlePendingVirtualReadComplete(const protocol::ClipboardMessage &message);
+    bool handlePendingVirtualReadAbort(const protocol::ClipboardMessage &message);
+    void finishPendingVirtualRead(const QString &requestId,
+                                  bool ok,
+                                  const QString &error = QString());
     // 启动一个文件下载请求窗口。
     bool requestNextWindow();
     // 发送文件请求窗口，支持重发同一 requestId。
@@ -178,6 +207,7 @@ private:
     // 当前会话已下载成功的本地路径列表，完成后整体写入本地剪贴板。
     QStringList m_lastDownloadedPaths;
     QHash<quint64, QHash<QString, QString>> m_materializedRemoteFiles;
+    QHash<QString, PendingVirtualRead> m_pendingVirtualReads;
     bool m_replayPasteAfterCurrentDownload = false;
 
     // 单个文件分块大小（默认 512KB）。
@@ -186,6 +216,7 @@ private:
     int m_windowChunks = 16;
     // 请求窗口超时时间；超时后触发重试或暂停。
     int m_requestWindowTimeoutMs = 8000;
+    int m_virtualReadTimeoutMs = 15000;
     // 单个请求窗口允许的最大重试次数。
     int m_maxRequestWindowRetries = 3;
     // 当前窗口已重试次数。

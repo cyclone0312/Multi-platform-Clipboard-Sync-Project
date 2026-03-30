@@ -4,6 +4,7 @@ D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_1
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QCryptographicHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QHash \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QJsonObject \
+  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QMetaType \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QSaveFile \
   D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QString \
