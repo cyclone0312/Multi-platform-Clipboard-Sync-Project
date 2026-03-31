@@ -249,6 +249,12 @@ MultiPlatformClipboardSync_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MultiPlatformClipboardSync_SOURCE_DIR:STATIC=D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+
 //No help, variable specified on the command line.
 QT_CREATOR_ENABLE_MAINTENANCE_TOOL_PROVIDER:BOOL=ON
 
@@ -422,6 +428,10 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 QTCREATOR_CMAKE_HELPER_DIRECTORY:INTERNAL=D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE

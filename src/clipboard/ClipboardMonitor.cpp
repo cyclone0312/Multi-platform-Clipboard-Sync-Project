@@ -21,7 +21,7 @@ namespace
         text.replace(QChar('\r'), QChar('\n'));
         return text;
     }
-
+    // canonical 规范xxx
     QStringList canonicalLocalFilePaths(const QList<QUrl> &urls)
     {
         QStringList paths;
@@ -32,7 +32,7 @@ namespace
             {
                 continue;
             }
-
+            //将一个 URL 对象（通常指向本地文件）安全地转换为一个标准、跨平台、且去除了冗余字符的本地文件路径字符串
             const QString local = QDir::cleanPath(url.toLocalFile());
             if (!local.isEmpty())
             {
@@ -214,6 +214,10 @@ void ClipboardMonitor::tryEmitClipboardText()
             m_readRetryBudget = 0;
             emit localFilesChanged(paths, hashFileList(paths));
             return;
+        }
+        else
+        {
+            qInfo() << "clipboard has URLs, but no local file paths were extracted; continue checking image/text formats";
         }
     }
 

@@ -90,11 +90,12 @@ bool AppController::initialize()
                      &SyncDebugWindow::requestRemoteFilesTriggered,
                      m_coordinator.get(),
                      &SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV);
-    // 粘贴钩子监听到 Ctrl+Shift+V -> 拉取最近一次远端文件 Offer。
+
     QObject::connect(m_pasteHook.get(),
                      &PasteTriggerHook::pasteTriggered,
                      m_coordinator.get(),
                      &SyncCoordinator::requestPendingRemoteFilesOnPasteTrigger);
+    // 粘贴钩子监听到 Ctrl+Shift+V -> 拉取最近一次远端文件 Offer。
     QObject::connect(m_pasteHook.get(),
                      &PasteTriggerHook::ctrlShiftPasteTriggered,
                      m_coordinator.get(),
@@ -104,7 +105,7 @@ bool AppController::initialize()
                      this,
                      [this]()
                      {
-                        if (!m_pasteHook || m_pasteHook->replayPasteShortcut())
+                         if (!m_pasteHook || m_pasteHook->replayPasteShortcut())
                          {
                              if (m_debugWindow)
                              {
@@ -114,15 +115,15 @@ bool AppController::initialize()
                          }
 
                          const QString status = QStringLiteral("远端文件已就绪，但自动补发 Ctrl+V 失败，请手动再按一次 Ctrl+V");
-                        const QString replayReason = m_pasteHook ? m_pasteHook->lastReplayPasteError() : QString();
-                        const QString detailedStatus = replayReason.isEmpty()
-                                                           ? status
-                                                           : status + QStringLiteral(" [") + replayReason + QStringLiteral("]");
-                        qWarning().noquote() << detailedStatus;
-                        if (m_debugWindow)
-                        {
-                            m_debugWindow->appendFileTransferStatus(detailedStatus);
-                        }
+                         const QString replayReason = m_pasteHook ? m_pasteHook->lastReplayPasteError() : QString();
+                         const QString detailedStatus = replayReason.isEmpty()
+                                                            ? status
+                                                            : status + QStringLiteral(" [") + replayReason + QStringLiteral("]");
+                         qWarning().noquote() << detailedStatus;
+                         if (m_debugWindow)
+                         {
+                             m_debugWindow->appendFileTransferStatus(detailedStatus);
+                         }
                      });
 
     m_pasteHook->setPasteInterceptDecider([](void *context) -> bool
@@ -130,8 +131,7 @@ bool AppController::initialize()
                                               auto *controller = static_cast<AppController *>(context);
                                               return controller &&
                                                      controller->m_coordinator &&
-                                                     controller->m_coordinator->shouldInterceptPasteTrigger();
-                                          },
+                                                     controller->m_coordinator->shouldInterceptPasteTrigger(); },
                                           this);
 
     m_debugWindow->show();

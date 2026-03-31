@@ -224,6 +224,9 @@ bool SyncCoordinator::requestPendingRemoteFiles()
     return startPendingRemoteFilesRequest(false);
 }
 
+// 开始请求远端文件，触发下载流程。这个函数在多个入口被调用，包括粘贴热键和 Ctrl+Shift+V 快捷键。
+// 它会检查当前是否有活跃的下载任务，如果没有，就从 m_remoteOfferedFiles 里选出最新的一个 Offer，初始化下载状态，
+// 并调用 requestNextWindow() 向对端发送第一个文件请求窗口。
 bool SyncCoordinator::startPendingRemoteFilesRequest(bool replayPasteAfterDownload)
 {
     if (m_activeDownload.has_value())
@@ -744,6 +747,7 @@ void SyncCoordinator::handleRemoteMessage(const protocol::ClipboardMessage &mess
     }
 }
 
+// 记录文件清单，发出信号通知 UI 更新，准备好后续的下载请求
 void SyncCoordinator::handleRemoteFileOffer(const protocol::ClipboardMessage &message)
 {
     QJsonObject root;
@@ -776,6 +780,7 @@ void SyncCoordinator::handleRemoteFileOffer(const protocol::ClipboardMessage &me
         names.push_back(meta.name);
     }
 
+    // 只是“登记在册”，还没真正开始下载文件内容。
     m_remoteOfferedFiles.insert(message.sessionId, offer);
     emit remoteFileOfferReceived(names);
     emit fileTransferStatus(QStringLiteral("收到远端文件 Offer，session=%1 文件数=%2").arg(message.sessionId).arg(offer.files.size()));

@@ -312,4 +312,6 @@ CMakeFiles/clipboard_sync.dir/src/clipboard/ClipboardWriter.cpp.obj: \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/condition_variable \
  D:/Tools/IDEs/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h \
  D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QUrl \
- D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qurl.h \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/QVector \
+ D:/Tools/IDEs/QT/5.15.2/mingw81_64/include/QtCore/qvector.h

@@ -58,7 +58,7 @@ void TransportServer::handleSocketReadyRead(QTcpSocket *socket)
         {
             return;
         }
-
+        // 从接收缓冲区的前4个字节里，读出一个32位无符号整数，作为一帧消息的长度。  取到 QByteArray 底层只读字节指针类型是 const char
         const quint32 frameSize = qFromLittleEndian<quint32>(reinterpret_cast<const uchar *>(buffer.constData()));
         if (buffer.size() < static_cast<int>(4 + frameSize))
         {

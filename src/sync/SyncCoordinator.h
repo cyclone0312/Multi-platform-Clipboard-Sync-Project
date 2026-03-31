@@ -67,7 +67,7 @@ private:
     {
         // 文件在当前会话内的逻辑编号（字符串形式，便于放入 JSON）。
         QString fileId;
-        // 发送端本地绝对路径（仅发送端使用，接收端通常为空）。
+        // 发送端本地绝对路径（仅发送端字节读文件使用，接收端通常为空）。
         QString path;
         // 文件名（不含目录），用于接收端生成本地临时路径。
         QString name;
@@ -82,7 +82,7 @@ private:
     // 一次复制会话对应的“文件 Offer”集合。
     struct FileOffer
     {
-        // 会话 ID：同一次复制动作的全局标识。
+        // 会话 ID：同一次复制动作的全局标识。把同一批文件绑定在一起，避免和旧会话、并发会话串包。
         quint64 sessionId = 0;
         // 接收端记录该 Offer 到达本地的时间戳（用于选择“最新 Offer”）。
         qint64 receivedAtMs = 0;
