@@ -1,5 +1,0 @@
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/clipboard_sync.dir
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/clipboard_sync_autogen_timestamp_deps.dir
-D:/Workspace/Projects/Multi-platform-Clipboard-Sync-Project/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/CMakeFiles/clipboard_sync_autogen.dir
