@@ -57,9 +57,9 @@ namespace
             : QLabel(parent)
         {
             // 这个控件就是新增“拖入窗口传输”功能的明确入口。
-            setAcceptDrops(true);
+            setAcceptDrops(true); // 允许该控件接收“拖放”（Drag and Drop）事件
             setAlignment(Qt::AlignCenter);
-            setWordWrap(true);
+            setWordWrap(true); // 允许自动换行
             setMinimumHeight(84);
             setFrameStyle(QFrame::StyledPanel | QFrame::Plain);
             setText(QStringLiteral("将文件拖到这里，直接发送到对端窗口"));
@@ -79,7 +79,7 @@ namespace
                 return;
             }
 
-            event->acceptProposedAction();
+            event->acceptProposedAction(); // 告诉系统：“这个东西我要了，请把鼠标指针变成‘复制’或‘移动’的状态
         }
 
         void dropEvent(QDropEvent *event) override
@@ -92,7 +92,7 @@ namespace
             }
 
             emit filesDropped(paths);
-            event->acceptProposedAction();
+            event->acceptProposedAction(); //
         }
     };
 
@@ -116,7 +116,7 @@ namespace
             // 这里只对外声明已经真实存在于本地磁盘的文件，
             // 这样拖到资源管理器等目标时不需要再等待网络下载。
             QList<QUrl> urls;
-            const QList<QListWidgetItem *> items = selectedItems();
+            const QList<QListWidgetItem *> items = selectedItems(); // 从列表里拿到当前选中的条目 selectedItems()
             urls.reserve(items.size());
             for (QListWidgetItem *item : items)
             {
@@ -125,7 +125,7 @@ namespace
                     continue;
                 }
 
-                const QString path = item->data(Qt::UserRole).toString();
+                const QString path = item->data(Qt::UserRole).toString(); // 每个条目从 Qt::UserRole 取出真实本地路径
                 if (!QFileInfo::exists(path))
                 {
                     continue;
@@ -140,11 +140,11 @@ namespace
             }
 
             auto *mimeData = new QMimeData();
-            mimeData->setUrls(urls);
+            mimeData->setUrls(urls); // 把这些 QUrl 放进 QMimeData
 
             auto *drag = new QDrag(this);
             drag->setMimeData(mimeData);
-            drag->exec(Qt::CopyAction);
+            drag->exec(Qt::CopyAction); // drag->exec(Qt::CopyAction) 发起拖拽，告诉系统这是一个“复制”操作，系统会根据这个信息来决定拖拽的效果和目标应用的响应
         }
     };
 }
@@ -235,10 +235,12 @@ void SyncDebugWindow::appendDownloadedFiles(const QStringList &paths)
     {
         // 把绝对路径放进 UserRole，后续 startDrag() 就能直接重建标准的
         // text/uri-list 负载，而不用再从显示文本里反解析路径。
-        const QFileInfo info(path);
+        const QFileInfo info(path); // 通过它可以轻松提取出纯文件名
+        //                                  绑定父容器：第二个参数 m_readyFileList 直接将该项添加到了界面上的列表中
         auto *item = new QListWidgetItem(info.fileName().isEmpty() ? path : info.fileName(), m_readyFileList);
+        // 把完整的绝对路径保存在了该项的“后台”
         item->setData(Qt::UserRole, path);
-        item->setToolTip(path);
+        item->setToolTip(path); // 当用户的鼠标悬停在这个列表项上时，弹出一个小气泡显示完整的绝对路径
     }
 }
 

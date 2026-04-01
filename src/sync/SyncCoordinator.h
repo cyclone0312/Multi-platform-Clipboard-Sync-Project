@@ -163,8 +163,8 @@ private:
     // 对端发来的 Offer 缓存（等待 Ctrl+V/Ctrl+Shift+V 或自动触发拉取）。
     QHash<quint64, FileOffer> m_remoteOfferedFiles;
     // 当前唯一活跃下载任务；当前实现同一时刻只允许一个下载会话。
-    std::optional<DownloadState> m_activeDownload;
-    // 正在写入中的目标文件，使用 QSaveFile 保证提交原子性。
+    std::optional<DownloadState> m_activeDownload; // optional表示一个“可能存在，也可能不存在”的值 优于指针
+    // 正在写入中的目标文件，使用 QSaveFile 保证提交原子性。ownloadState 代表当前正在进行的下载任务的状态，如果没有下载任务在进行，则
     std::unique_ptr<QSaveFile> m_downloadFile;
     // 对正在接收文件的增量哈希器，用于最终 SHA256 对比。
     std::unique_ptr<QCryptographicHash> m_downloadHash;

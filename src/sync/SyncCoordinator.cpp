@@ -783,13 +783,13 @@ void SyncCoordinator::handleRemoteMessage(const protocol::ClipboardMessage &mess
         return;
     }
     case protocol::MessageType::FileOffer:
-        handleRemoteFileOffer(message);
+        handleRemoteFileOffer(message); // 接收端 收到文件清单，记录在 m_remoteOfferedFiles 里，并发信号通知 UI 更新；等待用户触发下载请求后再真正进入下载流程
         return;
     case protocol::MessageType::FileRequest:
-        handleRemoteFileRequest(message);
+        handleRemoteFileRequest(message); // 发送端 收到Request后回多个 FileChunk
         return;
     case protocol::MessageType::FileChunk:
-        handleRemoteFileChunk(message);
+        handleRemoteFileChunk(message); // 接收端  把收到的文件块按顺序、带校验地写进本地临时文件，并推动下载状态继续前进
         return;
     case protocol::MessageType::FileComplete:
         handleRemoteFileComplete(message);
@@ -848,6 +848,7 @@ void SyncCoordinator::handleRemoteFileOffer(const protocol::ClipboardMessage &me
     }
 }
 
+// 有人来向我要文件内容了，我现在按请求范围去读本地文件，然后切成多个 Chunk 发回去
 void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &message)
 {
     QJsonObject req;
@@ -856,6 +857,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
         return;
     }
 
+    // 解析出 fileId/requestId/offset/length
     const QString fileId = req.value(QStringLiteral("fileId")).toString();
     const QString requestId = req.value(QStringLiteral("requestId")).toString();
     const qint64 offset = static_cast<qint64>(req.value(QStringLiteral("offset")).toDouble());
@@ -866,7 +868,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
     {
         return;
     }
-
+    // 在本地 m_localOfferedFiles 里找到对应文件
     const FileOffer &offer = m_localOfferedFiles[message.sessionId];
     std::optional<FileMeta> target;
     for (const FileMeta &meta : offer.files)
@@ -883,6 +885,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
     }
 
     QFile file(target->path);
+    // 用只读方式打开，并跳到对端指定的偏移位置
     if (!file.open(QIODevice::ReadOnly) || !file.seek(offset))
     {
         protocol::ClipboardMessage abortMsg;
@@ -898,6 +901,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
         return;
     }
 
+    // 按块读取,每块都带上 offset 和 CRC32，接收端可以据此验序和验块，丢块时也方便重试。
     qint64 sent = 0;
     const qint64 maxToSend = qMin(length, target->size - offset);
     // 按请求窗口上限与 chunk 大小切片回传；每个 chunk 带 offset + CRC 便于接收端验序与验块。
@@ -925,6 +929,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
         chunkMsg.sequence = static_cast<quint64>(chunkOffset / qMax(1, m_chunkSizeBytes) + 1);
         chunkMsg.payload = buildChunkPayload(meta, chunk);
 
+        // FileChunk 是由“拥有原始文件的一端”产生的 产生时机是“收到对端 FileRequest 后，按要求读文件并回传
         if (!m_client->sendMessage(chunkMsg))
         {
             break;
@@ -933,6 +938,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
         sent += chunk.size();
     }
 
+    // 如果已经发到文件末尾了，就发个完成帧告诉对端，并带上最终 SHA256 供对端校验。
     if (offset + sent >= target->size)
     {
         if (target->sha256.isEmpty())
@@ -970,6 +976,7 @@ void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &
     }
 }
 
+// 处理对端送回来的文件正文块
 void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &message)
 {
     if (!m_activeDownload.has_value())
@@ -1028,6 +1035,7 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
         return;
     }
 
+    // 写入当前目标文件
     if (!m_downloadFile || m_downloadFile->write(chunk) != chunk.size())
     {
         emit fileTransferStatus(QStringLiteral("写本地文件失败，终止当前传输"));
@@ -1042,13 +1050,14 @@ void SyncCoordinator::handleRemoteFileChunk(const protocol::ClipboardMessage &me
         m_activeDownload.reset();
         return;
     }
-
+    // 更新状态机
     m_downloadHash->addData(chunk);
     m_requestWindowTimer.start();
     m_currentWindowRetryCount = 0;
     state.nextOffset += chunk.size();
     state.receivedInWindow += chunk.size();
 
+    // 判断要不要继续请求  如果整个文件写完了/当前窗口收满了 回到调度函数让它决定下一步是发下一个窗口还是发下一个文件
     if (state.nextOffset >= meta.size)
     {
         requestNextWindow();
