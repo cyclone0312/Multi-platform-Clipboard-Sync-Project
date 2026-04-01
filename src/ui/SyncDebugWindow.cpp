@@ -92,7 +92,7 @@ namespace
             }
 
             emit filesDropped(paths);
-            event->acceptProposedAction(); //
+            event->acceptProposedAction();
         }
     };
 
@@ -144,7 +144,8 @@ namespace
 
             auto *drag = new QDrag(this);
             drag->setMimeData(mimeData);
-            drag->exec(Qt::CopyAction); // drag->exec(Qt::CopyAction) 发起拖拽，告诉系统这是一个“复制”操作，系统会根据这个信息来决定拖拽的效果和目标应用的响应
+            drag->exec(Qt::CopyAction); // drag->exec(Qt::CopyAction) 发起拖拽，告诉系统这是一个“复制”操作，
+            //                             系统会根据这个信息来决定拖拽的效果和目标应用的响应
         }
     };
 }
