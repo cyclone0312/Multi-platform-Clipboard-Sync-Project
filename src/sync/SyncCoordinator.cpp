@@ -1,4 +1,4 @@
-#include "sync/SyncCoordinator.h"
+﻿#include "sync/SyncCoordinator.h"
 
 #include <QtEndian>
 
@@ -10,6 +10,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QMetaObject>
 #include <QDebug>
 #include <QRandomGenerator>
 #include <QUuid>
@@ -209,6 +210,7 @@ bool SyncCoordinator::manualInjectAndSend(const QString &text)
     }
 
     const quint64 sessionId = QRandomGenerator::global()->generate64();
+
     if (!m_writer->writeRemoteText(text, sessionId))
     {
         qWarning() << "manual inject failed to write local clipboard";
@@ -219,15 +221,36 @@ bool SyncCoordinator::manualInjectAndSend(const QString &text)
     return sendTextToPeer(text, sessionId);
 }
 
+bool SyncCoordinator::manualSendFiles(const QStringList &paths)
+{
+    if (paths.isEmpty())
+    {
+        return false;
+    }
+
+    // 把“拖入窗口”视作一次新的复制会话，这样可以直接复用现有的
+    // FileOffer / FileRequest / FileChunk 传输链路，而不用再单独设计协议。
+    const quint64 sessionId = QRandomGenerator::global()->generate64();
+    emit localFilesForwarded(paths);
+    if (!sendFileOfferToPeer(paths, sessionId))
+    {
+        emit fileTransferStatus(QStringLiteral("手动拖入的文件未能发送到对端"));
+        qWarning() << "manual file offer forward failed";
+        return false;
+    }
+
+    return true;
+}
+
 bool SyncCoordinator::requestPendingRemoteFiles()
 {
-    return startPendingRemoteFilesRequest(false);
+    return startPendingRemoteFilesRequest(false, true);
 }
 
 // 开始请求远端文件，触发下载流程。这个函数在多个入口被调用，包括粘贴热键和 Ctrl+Shift+V 快捷键。
 // 它会检查当前是否有活跃的下载任务，如果没有，就从 m_remoteOfferedFiles 里选出最新的一个 Offer，初始化下载状态，
 // 并调用 requestNextWindow() 向对端发送第一个文件请求窗口。
-bool SyncCoordinator::startPendingRemoteFilesRequest(bool replayPasteAfterDownload)
+bool SyncCoordinator::startPendingRemoteFilesRequest(bool replayPasteAfterDownload, bool publishClipboardAfterDownload)
 {
     if (m_activeDownload.has_value())
     {
@@ -266,6 +289,7 @@ bool SyncCoordinator::startPendingRemoteFilesRequest(bool replayPasteAfterDownlo
     state.nextOffset = 0;
     m_activeDownload = state;
     m_replayPasteAfterCurrentDownload = replayPasteAfterDownload;
+    m_publishClipboardAfterCurrentDownload = publishClipboardAfterDownload;
     m_currentWindowRetryCount = 0;
     m_downloadPausedByDisconnect = false;
     m_requestWindowTimer.stop();
@@ -281,7 +305,7 @@ bool SyncCoordinator::requestPendingRemoteFilesOnPasteTrigger()
         return false;
     }
 
-    return startPendingRemoteFilesRequest(true);
+    return startPendingRemoteFilesRequest(true, true);
 }
 
 bool SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV()
@@ -311,7 +335,20 @@ bool SyncCoordinator::requestPendingRemoteFilesOnCtrlShiftV()
 
     const QString tempSessionDir = QDir::toNativeSeparators(QDir(tempDownloadRoot()).filePath(QString::number(latestSessionId)));
     emit fileTransferStatus(QStringLiteral("Ctrl+Shift+V: 远端文件将暂存到 %1").arg(tempSessionDir));
-    return startPendingRemoteFilesRequest(false);
+    return startPendingRemoteFilesRequest(false, true);
+}
+
+void SyncCoordinator::scheduleNextPendingRemoteOfferRequest()
+{
+    if (m_activeDownload.has_value() || m_remoteOfferedFiles.isEmpty())
+    {
+        return;
+    }
+
+    // 这里转到事件循环里再启动下一次自动下载，避免在当前消息处理栈还没退干净时
+    // 立刻进入下一轮请求，减少重入和状态切换时序问题。
+    QMetaObject::invokeMethod(this, [this]()
+                              { startPendingRemoteFilesRequest(false, false); }, Qt::QueuedConnection);
 }
 
 bool SyncCoordinator::shouldInterceptPasteTrigger() const
@@ -449,11 +486,19 @@ bool SyncCoordinator::requestNextWindow()
     // 是否已完成全部文件  如果 fileIndex 已到末尾，说明整个会话下载完成
     if (state.fileIndex >= offer.files.size())
     {
-        bool clipboardReady = !m_lastDownloadedPaths.isEmpty();
-        if (clipboardReady)
+        const QStringList downloadedPaths = m_lastDownloadedPaths;
+        const bool hasDownloadedFiles = !downloadedPaths.isEmpty();
+        bool clipboardReady = false;
+        if (hasDownloadedFiles && m_publishClipboardAfterCurrentDownload)
         {
             // 将远端文件列表写入本地剪贴板，并记录防回环指纹。
-            clipboardReady = m_writer->writeRemoteFileList(m_lastDownloadedPaths, state.sessionId);
+            clipboardReady = m_writer->writeRemoteFileList(downloadedPaths, state.sessionId);
+        }
+        if (hasDownloadedFiles)
+        {
+            // 窗口列表里只放已经落到本地磁盘的文件，这样用户从列表拖出时
+            // 不会再依赖网络中的下载过程，拖拽体验也更稳定。
+            emit remoteFilesDownloaded(downloadedPaths);
         }
         if (clipboardReady)
         {
@@ -463,6 +508,10 @@ bool SyncCoordinator::requestNextWindow()
         {
             emit fileTransferStatus(QStringLiteral("文件下载完成，但写入本地剪贴板失败，文件数: %1").arg(m_lastDownloadedPaths.size()));
         }
+        if (hasDownloadedFiles && !m_publishClipboardAfterCurrentDownload)
+        {
+            emit fileTransferStatus(QStringLiteral("文件下载完成，已加入窗口列表，可直接拖出，文件数: %1").arg(downloadedPaths.size()));
+        }
         const bool shouldReplayPaste = m_replayPasteAfterCurrentDownload && clipboardReady;
         if (m_replayPasteAfterCurrentDownload && !clipboardReady)
         {
@@ -471,6 +520,7 @@ bool SyncCoordinator::requestNextWindow()
         m_remoteOfferedFiles.remove(state.sessionId);
         m_requestWindowTimer.stop();
         m_replayPasteAfterCurrentDownload = false;
+        m_publishClipboardAfterCurrentDownload = true;
         m_activeDownload.reset();
         m_downloadFile.reset();
         m_downloadHash.reset();
@@ -484,8 +534,13 @@ bool SyncCoordinator::requestNextWindow()
         // 非 Windows 平台继续尝试后续 Offer，避免依赖全局粘贴钩子。
         if (!m_remoteOfferedFiles.isEmpty())
         {
-            QMetaObject::invokeMethod(this, [this]()
-                                      { requestPendingRemoteFiles(); }, Qt::QueuedConnection);
+            scheduleNextPendingRemoteOfferRequest();
+        }
+#endif
+#if defined(Q_OS_WIN) || defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
+        if (!m_remoteOfferedFiles.isEmpty())
+        {
+            scheduleNextPendingRemoteOfferRequest();
         }
 #endif
         return true;
@@ -785,14 +840,12 @@ void SyncCoordinator::handleRemoteFileOffer(const protocol::ClipboardMessage &me
     emit remoteFileOfferReceived(names);
     emit fileTransferStatus(QStringLiteral("收到远端文件 Offer，session=%1 文件数=%2").arg(message.sessionId).arg(offer.files.size()));
 
-#if !defined(Q_OS_WIN) && !defined(CLIPBOARD_SYNC_HAS_X11_HOOK)
-    // 非 Windows 平台默认没有全局 Ctrl+V 监听，收到 Offer 后自动发起拉取。
+    // 窗口拖入场景希望“收到 Offer 后立即自动下载”，而不是再等待一次粘贴触发。
+    // 这里统一走调度函数，让 Windows / Linux 都使用同一套自动拉取逻辑。
     if (!m_activeDownload.has_value())
     {
-        QMetaObject::invokeMethod(this, [this]()
-                                  { requestPendingRemoteFiles(); }, Qt::QueuedConnection);
+        scheduleNextPendingRemoteOfferRequest();
     }
-#endif
 }
 
 void SyncCoordinator::handleRemoteFileRequest(const protocol::ClipboardMessage &message)

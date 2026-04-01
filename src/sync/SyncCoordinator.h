@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <memory>
 #include <optional>
@@ -34,6 +34,8 @@ public:
     void bindServer(TransportServer *server);
     // 手动写入本地剪贴板并发送到对端。
     bool manualInjectAndSend(const QString &text);
+    // 窗口拖入入口：绕过剪贴板监听器，直接向对端发布一个 FileOffer。
+    bool manualSendFiles(const QStringList &paths);
 
 signals:
     // 本地文本通过防回环校验后，准备外发时发出。
@@ -48,6 +50,8 @@ signals:
     void remoteImageReceived(qint64 imageBytes);
     // 收到远端文件 Offer 时发出（尚未下载）。
     void remoteFileOfferReceived(const QStringList &fileNames);
+    // 文件完整下载到本地临时目录后发出，此时这些文件已经可以从窗口里直接拖出。
+    void remoteFilesDownloaded(const QStringList &paths);
     // 文件传输状态输出。
     void fileTransferStatus(const QString &status);
     void autoPasteReplayRequested();
@@ -115,9 +119,11 @@ private:
     bool sendImageToPeer(const QByteArray &pngBytes, quint64 sessionId);
     // 发送文件 Offer（仅元信息）。
     bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId);
-    bool startPendingRemoteFilesRequest(bool replayPasteAfterDownload);
+    bool startPendingRemoteFilesRequest(bool replayPasteAfterDownload, bool publishClipboardAfterDownload);
     // 启动一个文件下载请求窗口。
     bool requestNextWindow();
+    // 将下一个远端 Offer 排入事件循环，这样窗口拖入场景也能自动连续拉取后续任务。
+    void scheduleNextPendingRemoteOfferRequest();
     // 发送文件请求窗口，支持重发同一 requestId。
     bool sendFileRequestWindow(const FileMeta &meta, bool reuseRequestId);
     // 处理本地剪贴板更新，并在满足条件时转发到对端。
@@ -165,6 +171,8 @@ private:
     // 当前会话已下载成功的本地路径列表，完成后整体写入本地剪贴板。
     QStringList m_lastDownloadedPaths;
     bool m_replayPasteAfterCurrentDownload = false;
+    // 为 false 时，下载结果只进入窗口列表，不再主动写回系统剪贴板。
+    bool m_publishClipboardAfterCurrentDownload = true;
 
     // 单个文件分块大小（默认 512KB）。
     int m_chunkSizeBytes = 512 * 1024;

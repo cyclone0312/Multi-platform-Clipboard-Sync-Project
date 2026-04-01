@@ -38,5 +38,5 @@ private:
     // 写剪贴板失败时的重试次数。
     int m_writeRetryCount = 6;
     // 写剪贴板重试间隔（毫秒）。
-    int m_writeRetryDelayMs = 40;
+    int m_writeRetryDelayMs = 50;
 };

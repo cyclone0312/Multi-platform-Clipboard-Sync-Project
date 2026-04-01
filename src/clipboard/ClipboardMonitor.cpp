@@ -4,6 +4,7 @@
 #include <QBuffer>
 #include <QClipboard>
 #include <QCryptographicHash>
+#include <QDebug>
 #include <QDir>
 #include <QImage>
 #include <QMimeData>
