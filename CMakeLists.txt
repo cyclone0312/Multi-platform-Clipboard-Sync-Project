@@ -75,3 +75,21 @@ if(UNIX AND NOT APPLE)
         endif()
     endif()
 endif()
+
+add_library(file_transfer_core
+    src/core/file_transfer_types.h
+    src/core/file_transfer_actions.h
+    src/core/file_transfer_hash.h
+    src/core/file_transfer_hash.cpp
+    src/core/file_transfer_state_machine.h
+    src/core/file_transfer_state_machine.cpp
+)
+
+target_include_directories(file_transfer_core PUBLIC src)
+target_compile_features(file_transfer_core PUBLIC cxx_std_17)
+
+add_executable(pure_cpp_file_transfer_demo
+    src/demo/pure_cpp_file_transfer_demo.cpp
+)
+
+target_link_libraries(pure_cpp_file_transfer_demo PRIVATE file_transfer_core)
