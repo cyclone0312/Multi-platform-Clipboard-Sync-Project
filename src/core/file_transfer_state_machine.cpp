@@ -176,7 +176,11 @@ StepResult FileTransferStateMachine::onRemoteFileRequest(const IncomingFileReque
     const std::int64_t maxToSend = std::min<std::int64_t>(request.length, target->size - request.offset);
     std::int64_t sent = 0;
 
-    // sender 端按 chunkSize 连续切块；每个块都作为一个 SendFileChunk 动作交给外层发送。
+    // Sender (发送端) 处理请求窗口 (Window)：
+    // 接收端会发来例如请求读取 3MB 数据的窗口请求 [offset, offset+length) 。
+    // 发送端的状态机基于事先配置的 chunk size (分块大小)，把这长段请求切分为多个小的 SendFileChunk 动作，
+    // 每个动作包含实际数据字节和 CRC 校验，发往网络模块。
+    // 这避免了单次产生超大网络包（容易引发丢包），也使应用层有能力实现自主流控和包速率控制。
     while (sent < maxToSend)
     {
         const std::size_t chunkSize = static_cast<std::size_t>(
@@ -262,8 +266,12 @@ StepResult FileTransferStateMachine::onRemoteFileChunk(const IncomingFileChunk &
     }
 
     const FileMeta &meta = offer.files[state.fileIndex];
-    // 这里只接受“当前文件 + 当前 requestId + 当前 nextOffset”的那个块，
-    // 这样能把串包、乱序和旧窗口的残留块都挡掉。
+    // ==== 严格的数据块匹配与乱序丢弃逻辑 ====
+    // 只有当 Chunk 的各项属性：所属文件 ID、对应当前窗口唯一的 requestId，
+    // 以及严格符合当前期待的偏移量 (nextOffset) 完全一致时，该数据块才会被接收。
+    // 这种机制天然免疫以下网络问题：
+    // 1. 网络延迟导致过期的、重试时产生的老数据块造成的脏数据 (Stale Chunks)。
+    // 2. UDP 等不可靠传输层造成的包乱序、重复和串包。
     if (chunk.fileId != meta.fileId || chunk.requestId != state.requestId || chunk.offset != state.nextOffset)
     {
         return failActiveDownload("Abort download: FileChunk order mismatch", true);
@@ -303,7 +311,8 @@ StepResult FileTransferStateMachine::onRemoteFileChunk(const IncomingFileChunk &
 
     if (state.nextOffset >= meta.size)
     {
-        // 当前文件收满后重新进入调度器，由它统一决定“提交文件还是继续下一文件”。
+        // 当前文件收满后，不直接写死处理下一个，而是递归进入本状态机的核心调度器 requestNextWindow，
+        // 由它统一决定是“提交当前文件（Commit），还是规划再请求下一个文件”。
         result.merge(requestNextWindow(nowMs));
         return result;
     }
@@ -462,7 +471,9 @@ StepResult FileTransferStateMachine::requestNextWindow(const std::int64_t nowMs)
     const FileMeta &meta = offer.files[state.fileIndex];
     if (m_activeTempPath.empty())
     {
-        // 第一次进入某个文件时，先分配最终路径和临时路径，并要求外层打开临时文件。
+        // ==== 单个文件下载初始化阶段 ====
+        // 当刚刚进入一个新文件时，分配“最终落盘路径”和“后缀加上 .part 的临时下载路径”。
+        // 通过产生 OpenTempFile 的动作指令，让外层的 Actuator/执行器 去底层操作系统里把文件 IO 句柄打开，并准备就绪。
         state.localPath = buildFinalPath(state.sessionId, state.fileIndex, meta);
         m_activeTempPath = buildTempPath(state.sessionId, state.fileIndex, meta);
         state.nextOffset = 0;
@@ -500,7 +511,8 @@ StepResult FileTransferStateMachine::requestNextWindow(const std::int64_t nowMs)
             return result;
         }
 
-        // 文件完整且哈希匹配，通知外层把 .part 提交成最终文件。
+        // 全部接收到并确认文件完整且 SHA256 可信。
+        // 通知外层系统（Actuator），将之前不断追加的 .part 临时文件，移动或重命名并替换为真正的目标路径文件 (Target Path)。
         Action commitAction;
         commitAction.type = ActionType::CommitTempFile;
         commitAction.sessionId = state.sessionId;

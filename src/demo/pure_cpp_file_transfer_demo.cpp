@@ -33,7 +33,8 @@ using file_transfer::TransferConfig;
 class DemoDataSource : public IFileTransferDataSource
 {
 public:
-    // sender 侧通过这个接口按 offset/length 从源文件读数据。
+    // Sender (发送端) 侧通过这个接口，根据请求窗口给出的 offset(起始位置) 和 length(长度) 
+    // 直接从源文件读取要发送的数据块。这样状态机本身就不需要直接管理文件流的开启和关闭。
     bool readSourceBytes(const FileMeta &meta,
                          const std::int64_t offset,
                          const std::size_t length,
@@ -156,12 +157,13 @@ public:
         }
         offer.files.push_back(meta);
 
-        // 这三步就是整个 demo 的起点：
-        // 1. sender 登记本地可发送文件
-        // 2. receiver 收到远端 offer
-        // 3. receiver 主动开始下载
+        // ==== 文件传输核心流程 ====
+        // 1. 发送端 (Sender)：登记本地可发送文件（告诉它自己的状态机“我准备好被拉取了”）。
+        // 2. 接收端 (Receiver)：收到远端发来的 FileOffer 元数据信令（通常通过外部信道传输）。
+        // 3. 接收端 (Receiver)：主动发起文件拉取任务，状态机开始规划滑动窗口请求。
         processSender(m_sender.registerLocalOffer(offer));
         processReceiver(m_receiver.onRemoteFileOffer(offer));
+        // 开始下载后，状态机会产出 ActionType::SendFileRequest，通过 processActions 喂给 Sender，从而启动传输流水线。
         processReceiver(m_receiver.beginLatestDownload(m_nowMs, receiverDir));
 
         if (m_publishedPaths.size() != 1)
@@ -289,8 +291,11 @@ private:
         processActions(result, false);
     }
 
-    // 这是 demo 的“执行器”：
-    // 状态机只产出 Action，这里才真正执行文件写入、消息转发和完成提交。
+    // 核心执行器 (Actuator / Side-Effect Handler)：
+    // 状态机（FileTransferStateMachine）被设计为纯逻辑的无副作用（Side-Effect Free）组件。
+    // 它只产出明确的 Action（动作指令），比如打开文件、写入数据、发送网络包等，它本身不调用操作系统 API。
+    // processActions 负责统一解释并“执行”这些动作，从而完成如磁盘 IO 和网络传输等实际产生副作用的操作。
+    // 这种设计使得状态机的单元测试可以做到完全脱离底层依赖。
     void processActions(const StepResult &result, const bool fromSender)
     {
         for (const Action &action : result.actions)

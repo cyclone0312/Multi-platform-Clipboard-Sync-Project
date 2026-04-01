@@ -28,28 +28,37 @@ public:
     virtual std::string makeRequestId() = 0;
 };
 
+// 纯逻辑无副作用状态机核心 (Side-Effect Free State Machine Core)
+// 该类不会直接涉及网络发送、定时器或者文件 I/O 读写，而是通过传入的事件和状态，
+// 产出对应的 `StepResult` (包含了一组 Action 动作集供外层系统执行)。
 class FileTransferStateMachine
 {
 public:
     explicit FileTransferStateMachine(IFileTransferDataSource *dataSource, TransferConfig config = {});
 
-    // sender 端登记“我本地有哪些文件可以被请求”。
+    // Sender (发送端) 端登记“我本地有哪些文件可以被请求” (FileOffer)。
     StepResult registerLocalOffer(const FileOffer &offer);
-    // receiver 端缓存远端发来的 offer。
+    // Receiver (接收端) 端缓存远端发出的 FileOffer。
     StepResult onRemoteFileOffer(const FileOffer &offer);
-    // receiver 端显式开始一个会话下载。
+    // Receiver (接收端) 显式通过 Session ID 开始一个对应的下载会话。
     StepResult beginDownload(std::uint64_t sessionId, std::int64_t nowMs, const std::string &downloadRoot);
-    // receiver 端从已缓存的 offer 里挑最新会话开始下载。
+    // Receiver (接收端) 自动从已缓存的 FileOffer 列表中挑最新的开始下载。
     StepResult beginLatestDownload(std::int64_t nowMs, const std::string &downloadRoot);
-    // sender 端处理对方发来的“请给我 offset..offset+length”请求。
+    
+    // Sender (发送端) 处理 Receiver 发来的滑动窗口网络请求 “请发给我 offset 到 offset+length 的数据块”。
     StepResult onRemoteFileRequest(const IncomingFileRequest &request);
-    // receiver 端处理收到的一个数据块。
+    
+    // Receiver (接收端) 处理源源不断的网络数据块 (FileChunk)。
     StepResult onRemoteFileChunk(const IncomingFileChunk &chunk, std::int64_t nowMs);
     StepResult onRemoteFileComplete(const IncomingFileComplete &complete);
     StepResult onRemoteFileAbort(const IncomingFileAbort &abortMessage);
-    // 由外层时钟驱动；超时后决定重试还是终止。
+    
+    // 由外层系统心跳时钟驱动，判断是否有滑动窗口超时，并决定是重启窗口(Retry)还是最终终止并抛出异常。
     StepResult onTimeout(std::int64_t nowMs);
+    
+    // 通知状态机网络已建连或恢复。
     StepResult onPeerConnected(std::int64_t nowMs);
+    // 通知状态机网络断开，让它挂起超时检测。
     StepResult onPeerDisconnected();
 
     const std::optional<DownloadState> &activeDownload() const;
