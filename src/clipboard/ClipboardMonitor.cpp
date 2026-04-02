@@ -16,6 +16,8 @@
 // 内部链接性,防止冲突,替代 static
 namespace
 {
+    const QString kLoopGuardMimeType = QStringLiteral("application/x-clipboard-sync-loop-guard");
+
     QString canonicalClipboardText(QString text)
     {
         text.replace(QStringLiteral("\r\n"), QStringLiteral("\n"));
@@ -207,6 +209,13 @@ void ClipboardMonitor::tryEmitClipboardText()
 
     QClipboard *clipboard = QGuiApplication::clipboard();
     const QMimeData *mime = clipboard->mimeData();
+    if (mime && mime->hasFormat(kLoopGuardMimeType))
+    {
+        m_readRetryBudget = 0;
+        qInfo() << "skip clipboard change because loop-guard tag is present";
+        return;
+    }
+
     if (mime && mime->hasUrls())
     {
         const QStringList paths = canonicalLocalFilePaths(mime->urls());

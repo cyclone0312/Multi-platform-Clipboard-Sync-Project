@@ -28,7 +28,7 @@ private:
     void cleanupExpired() const;
 
     // 哈希 -> 注入时间，用于短时间窗口内抑制回环。
-    mutable QHash<quint32, QDateTime> m_recentInjectedHashes;
+    mutable QHash<quint32, QDateTime> m_recentInjectedHashes; // mutable 即使是在 const 函数里，这个变量依然可以被随意修改
     // 图片哈希 -> 注入时间。
     mutable QHash<quint32, QDateTime> m_recentInjectedImageHashes;
     // 文件列表哈希 -> 注入时间。

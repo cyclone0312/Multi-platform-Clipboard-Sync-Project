@@ -90,6 +90,10 @@ target_compile_features(file_transfer_core PUBLIC cxx_std_17)
 
 add_executable(pure_cpp_file_transfer_demo
     src/demo/pure_cpp_file_transfer_demo.cpp
+    src/demo/demo_harness.h
+    src/demo/demo_harness.cpp
+    src/demo/demo_data_source.h
+    src/demo/demo_data_source.cpp
 )
 
 target_link_libraries(pure_cpp_file_transfer_demo PRIVATE file_transfer_core)

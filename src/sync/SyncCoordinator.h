@@ -90,6 +90,8 @@ private:
         quint64 sessionId = 0;
         // 接收端记录该 Offer 到达本地的时间戳（用于选择“最新 Offer”）。
         qint64 receivedAtMs = 0;
+        // true 表示这批文件来自窗口拖入，希望接收端自动预下载。
+        bool autoPrefetchOnReceive = false;
         // 本次会话携带的文件元信息列表。
         QVector<FileMeta> files;
     };
@@ -118,11 +120,11 @@ private:
     // 按统一协议编码并发送图片（PNG）到对端。
     bool sendImageToPeer(const QByteArray &pngBytes, quint64 sessionId);
     // 发送文件 Offer（仅元信息）。
-    bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId);
+    bool sendFileOfferToPeer(const QStringList &paths, quint64 sessionId, bool autoPrefetchOnReceive);
+    bool startPendingRemoteFilesRequestForSession(quint64 sessionId, bool replayPasteAfterDownload, bool publishClipboardAfterDownload);
     bool startPendingRemoteFilesRequest(bool replayPasteAfterDownload, bool publishClipboardAfterDownload);
     // 启动一个文件下载请求窗口。
     bool requestNextWindow();
-    // 将下一个远端 Offer 排入事件循环，这样窗口拖入场景也能自动连续拉取后续任务。
     void scheduleNextPendingRemoteOfferRequest();
     // 发送文件请求窗口，支持重发同一 requestId。
     bool sendFileRequestWindow(const FileMeta &meta, bool reuseRequestId);

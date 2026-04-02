@@ -14,6 +14,8 @@
 
 namespace
 {
+    const QString kLoopGuardMimeType = QStringLiteral("application/x-clipboard-sync-loop-guard");
+
     struct RecentHashBackup
     {
         quint32 hash = 0;
@@ -114,6 +116,21 @@ namespace
     }
 
     // 为了提前登记 hash 来挡住回环，但又不想在写失败时把状态污染掉
+    QByteArray makeLoopGuardPayload(const quint64 sessionId, const char *contentType)
+    {
+        return QByteArray("session=") + QByteArray::number(sessionId) + ";type=" + contentType;
+    }
+
+    void applyLoopGuardTag(QMimeData *mimeData, const quint64 sessionId, const char *contentType)
+    {
+        if (!mimeData)
+        {
+            return;
+        }
+
+        mimeData->setData(kLoopGuardMimeType, makeLoopGuardPayload(sessionId, contentType));
+    }
+
     void stageRecentHash(QHash<quint32, QDateTime> &hashMap,
                          quint32 hash,
                          const QDateTime &timestamp,
@@ -180,7 +197,6 @@ ClipboardWriter::ClipboardWriter(QObject *parent)
 bool ClipboardWriter::writeRemoteText(const QString &text, quint64 sessionId)
 {
     // Q_UNUSED()，它的作用是告诉编译器这个参数是有意未使用的，从而避免编译器发出未使用参数的警告。
-    Q_UNUSED(sessionId)
     // 清理过期注入记录
     cleanupExpired();
     // 把文本标准化（比如统一换行符），然后算出一段独一无二的 Hash 值（相当于这段文本的“身份证号”）
@@ -203,9 +219,13 @@ bool ClipboardWriter::writeRemoteText(const QString &text, quint64 sessionId)
     // 剪贴板写入重试机制：有时系统剪贴板可能被其他应用暂时锁定，导致写入失败。我们通过多次尝试写入，并在每次失败后稍作等待，来提高成功率。
     for (int attempt = 1; attempt <= m_writeRetryCount; ++attempt)
     {
-        clipboard->setText(text);
+        auto *mimeData = new QMimeData();
+        mimeData->setText(text);
+        applyLoopGuardTag(mimeData, sessionId, "text");
+        clipboard->setMimeData(mimeData);
 
-        const QString actualText = clipboard->text();
+        const QMimeData *actual = clipboard->mimeData();
+        const QString actualText = actual ? actual->text() : QString();
         if (canonicalClipboardText(actualText) == canonicalIncoming)
         {
             if (attempt > 1)
@@ -228,7 +248,6 @@ bool ClipboardWriter::writeRemoteText(const QString &text, quint64 sessionId)
 
 bool ClipboardWriter::writeRemoteImage(const QByteArray &pngBytes, quint64 sessionId)
 {
-    Q_UNUSED(sessionId)
     cleanupExpired();
     if (pngBytes.isEmpty())
     {
@@ -275,6 +294,7 @@ bool ClipboardWriter::writeRemoteImage(const QByteArray &pngBytes, quint64 sessi
         auto *mimeData = new QMimeData();
         mimeData->setData(QStringLiteral("image/png"), pngBytes);
         mimeData->setImageData(image);
+        applyLoopGuardTag(mimeData, sessionId, "image");
         clipboard->setMimeData(mimeData);
 
         // 写进去以后，立刻再读出来核对是否真的写成功
@@ -309,7 +329,6 @@ bool ClipboardWriter::writeRemoteImage(const QByteArray &pngBytes, quint64 sessi
 // 将远端文件列表写入本地剪贴板，并记录防回环指纹。
 bool ClipboardWriter::writeRemoteFileList(const QStringList &paths, quint64 sessionId)
 {
-    Q_UNUSED(sessionId)
     cleanupExpired();
     if (paths.isEmpty())
     {
@@ -331,6 +350,7 @@ bool ClipboardWriter::writeRemoteFileList(const QStringList &paths, quint64 sess
             urls.push_back(QUrl::fromLocalFile(path));
         }
         mimeData->setUrls(urls);
+        applyLoopGuardTag(mimeData, sessionId, "files");
 
         clipboard->setMimeData(mimeData);
 

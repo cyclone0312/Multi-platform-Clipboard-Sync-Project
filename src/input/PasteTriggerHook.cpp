@@ -311,6 +311,7 @@ bool PasteTriggerHook::eventFilter(QObject *watched, QEvent *event)
 
         if (keyEvent->matches(QKeySequence::Paste))
         {
+            // 判断是否应该忽略这个粘贴快捷键事件（比如刚刚自动补发过 Ctrl+V 导致的事件），如果是的话就直接返回，不触发后续逻辑。
             if (shouldIgnorePasteShortcut())
             {
                 return QObject::eventFilter(watched, event);
