@@ -154,27 +154,33 @@ void PasteTriggerHook::setPasteInterceptDecider(PasteInterceptDecider decider, v
 
 bool PasteTriggerHook::replayPasteShortcut()
 {
+    // 【重放原理/注入假按键】：标记接下来的 500ms 内，我们要“无视”捕获到的 Ctrl+V
+    // 因为这是程序“自己”生成的假 Ctrl+V（当我们从远端下完文件刷进剪贴板后，要告诉目标程序去粘出来！）
     markSyntheticPasteWindow();
     m_lastReplayPasteError.clear();
 
 #ifdef Q_OS_WIN
+    // 原理：通过 Windows 的 SendInput API 向系统队列模拟注入按键动作
+    // 逻辑：按顺序压入 "Ctrl按下 -> V按下 -> V弹起 -> Ctrl弹起"
     INPUT inputs[4] = {};
 
-    inputs[0].type = INPUT_KEYBOARD;
+    inputs[0].type = INPUT_KEYBOARD;     // 1. 模拟按下 Ctrl 键
     inputs[0].ki.wVk = VK_CONTROL;
 
-    inputs[1].type = INPUT_KEYBOARD;
+    inputs[1].type = INPUT_KEYBOARD;     // 2. 模拟按下 V 键
     inputs[1].ki.wVk = 'V';
 
-    inputs[2].type = INPUT_KEYBOARD;
+    inputs[2].type = INPUT_KEYBOARD;     // 3. 模拟释放 V 键
     inputs[2].ki.wVk = 'V';
     inputs[2].ki.dwFlags = KEYEVENTF_KEYUP;
 
-    inputs[3].type = INPUT_KEYBOARD;
+    inputs[3].type = INPUT_KEYBOARD;     // 4. 模拟释放 Ctrl 键
     inputs[3].ki.wVk = VK_CONTROL;
     inputs[3].ki.dwFlags = KEYEVENTF_KEYUP;
 
     constexpr UINT inputCount = 4;
+    // 将这 4 个键盘事件直接“塞进”操作系统的消息队列。当前活跃窗口（可能是微信/资源管理器）
+    // 会以为这是用户真正敲击了键盘，此时由于我们有刚下好文件的真数据了，它们提取就会成功！
     const UINT sent = SendInput(inputCount, inputs, sizeof(INPUT));
     if (sent != inputCount)
     {
@@ -296,8 +302,9 @@ QString PasteTriggerHook::lastReplayPasteError() const
 bool PasteTriggerHook::eventFilter(QObject *watched, QEvent *event)
 {
     Q_UNUSED(watched)
-    // 应用内按键兜底：窗口有焦点时可捕获 Ctrl+V / Ctrl+Shift+V。
-    // 注意：这不是系统全局钩子，窗口失焦时不保证触发。
+    // 【兜底原理】：应用级别的按键过滤。
+    // 当我们的应用自己拥有焦点时（即在前台时），不仅可以通过底层 Hook 判断，
+    // Qt 的事件循环也会分发按键事件。作为双保险，这里也做拦截处理。
     if (event->type() == QEvent::KeyPress)
     {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
@@ -306,19 +313,24 @@ bool PasteTriggerHook::eventFilter(QObject *watched, QEvent *event)
         {
             qInfo() << "app-level Ctrl+Shift+V detected";
             emitCtrlShiftPasteTriggeredDebounced();
-            return QObject::eventFilter(watched, event);
+            return QObject::eventFilter(watched, event); // 放行给子组件
         }
 
+        // QKeySequence::Paste 是跨平台的粘贴键位匹配（Windows 是 Ctrl+V，Mac 是 Cmd+V）
         if (keyEvent->matches(QKeySequence::Paste))
         {
-            // 判断是否应该忽略这个粘贴快捷键事件（比如刚刚自动补发过 Ctrl+V 导致的事件），如果是的话就直接返回，不触发后续逻辑。
+            // 判断是否应该忽略这个粘贴快捷键事件（比如刚刚为了真正写剪贴板，程序自己补发过 Ctrl+V 导致的事件），
+            // 如果是的话就直接放行，避免“拦截自己的粘贴动作”，死循环。
             if (shouldIgnorePasteShortcut())
             {
                 return QObject::eventFilter(watched, event);
             }
 
             qInfo() << "app-level paste shortcut detected";
+            // 触发业务层逻辑（如发送请求到远端拉取文件）
             emitPasteTriggeredDebounced();
+            
+            // 如果业务层决定本次拦截生效，返回 true 将阻止该按键事件继续派发到我们应用内部组件（例如输入框）
             if (shouldInterceptPasteShortcut())
             {
                 return true;
@@ -371,37 +383,44 @@ void PasteTriggerHook::markSyntheticPasteWindow()
 #ifdef Q_OS_WIN
 LRESULT CALLBACK PasteTriggerHook::keyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
-    // Windows 全局低级键盘钩子：即便应用不在前台也能捕获组合键。
+    // 【核心原理】：Windows 全局低级键盘钩子 (WH_KEYBOARD_LL) 回调函数。
+    // 操作系统在处理任何键盘输入之前，会先调用这个函数。
+    // 即便我们的剪贴板同步应用在后台（没有焦点），依然能截获所有键盘事件。
     if (nCode == HC_ACTION && (wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN))
     {
         auto *kbd = reinterpret_cast<KBDLLHOOKSTRUCT *>(lParam);
+        // 核心检测逻辑：当前按下的物理键位是 'V'，且同时检测到系统状态中 'Ctrl' 键被按下 (最高位置 1 即 0x8000 表示按下)
         if (kbd && kbd->vkCode == 'V' && (GetAsyncKeyState(VK_CONTROL) & 0x8000))
         {
             if (s_instance)
             {
                 const bool shiftDown = (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0;
+                
+                // 【情况A】：如果是程序自己模拟出来的“假” Ctrl+V（比如我们刚从远端拉取完文件，并且写进剪贴板了准备释放），
+                // 那么 shouldIgnorePasteShortcut() 会返回 true，此时直接放行，避免死循环拦截。
                 if (!shiftDown && s_instance->shouldIgnorePasteShortcut())
                 {
                     return CallNextHookEx(nullptr, nCode, wParam, lParam);
                 }
 
+                // 【情况B】：程序决定在这个时候吃掉用户的按键事件（比如发现确实有远端传来的offer）
                 const bool interceptPaste = !shiftDown && s_instance->shouldInterceptPasteShortcut();
+                
+                // 将拦截事件抛到 Qt 主线程去处理，因为 Hook 是在系统线程/非界面线程回调的
                 QMetaObject::invokeMethod(s_instance, [inst = s_instance, shiftDown]()
                                           {
-                                              if (!inst)
-                                              {
-                                                  return;
-                                              }
-
-                                              if (shiftDown)
-                                              {
+                                              if (!inst) return;
+                                              if (shiftDown) {
+                                                  // 处理 Ctrl + Shift + V (如纯文本粘贴等辅助功能)
                                                   inst->emitCtrlShiftPasteTriggeredDebounced();
-                                              }
-                                              else
-                                              {
+                                              } else {
+                                                  // 发出信号，通知上层业务网络状态机 "检测到粘贴动作啦，开始拉请求！"
                                                   inst->emitPasteTriggeredDebounced();
                                               } }, Qt::QueuedConnection);
 
+                // 【最关键的一步】：如果 interceptPaste 为 true，直接 `return 1;` 
+                // 返回非 0 值会告诉 Windows 操作系统：“不要把这个按键传给其它程序了，在此彻底终止！”
+                // 这就是为什么目标程序（如记事本、微信）会收不到这个 Ctrl+V 按键。
                 if (interceptPaste)
                 {
                     return 1;
@@ -410,6 +429,7 @@ LRESULT CALLBACK PasteTriggerHook::keyboardProc(int nCode, WPARAM wParam, LPARAM
         }
     }
 
+    // 如果我们不关心这个按键，或者不想拦截，调用 CallNextHookEx 将按键原样传给下一个程序和操作系统
     return CallNextHookEx(nullptr, nCode, wParam, lParam);
 }
 
@@ -421,6 +441,8 @@ bool PasteTriggerHook::installWindowsGlobalHook()
     }
 
     s_instance = this;
+    // 【注册原理】：调用 Win32 API 注册全局低级键盘钩子 (WH_KEYBOARD_LL)。
+    // 这会将上面定义的 keyboardProc 注册到系统的 Hook 链条中最前端，拦截所有键盘输入消息。
     m_keyboardHook = SetWindowsHookExW(WH_KEYBOARD_LL, &PasteTriggerHook::keyboardProc, GetModuleHandleW(nullptr), 0);
     if (!m_keyboardHook)
     {
