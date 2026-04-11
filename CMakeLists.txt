@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 
 find_package(Qt5 5.15.2 REQUIRED COMPONENTS Core Gui Network Widgets)
 find_package(Threads REQUIRED)
@@ -75,3 +77,25 @@ if(UNIX AND NOT APPLE)
         endif()
     endif()
 endif()
+
+add_library(file_transfer_core
+    src/core/file_transfer_types.h
+    src/core/file_transfer_actions.h
+    src/core/file_transfer_hash.h
+    src/core/file_transfer_hash.cpp
+    src/core/file_transfer_state_machine.h
+    src/core/file_transfer_state_machine.cpp
+)
+
+target_include_directories(file_transfer_core PUBLIC src)
+target_compile_features(file_transfer_core PUBLIC cxx_std_17)
+
+add_executable(pure_cpp_file_transfer_demo
+    src/demo/pure_cpp_file_transfer_demo.cpp
+    src/demo/demo_harness.h
+    src/demo/demo_harness.cpp
+    src/demo/demo_data_source.h
+    src/demo/demo_data_source.cpp
+)
+
+target_link_libraries(pure_cpp_file_transfer_demo PRIVATE file_transfer_core)

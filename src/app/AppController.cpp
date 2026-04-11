@@ -80,11 +80,19 @@ bool AppController::initialize()
                      &SyncCoordinator::fileTransferStatus,
                      m_debugWindow.get(),
                      &SyncDebugWindow::appendFileTransferStatus);
+    QObject::connect(m_coordinator.get(),
+                     &SyncCoordinator::remoteFilesDownloaded,
+                     m_debugWindow.get(),
+                     &SyncDebugWindow::appendDownloadedFiles);
     // 调试窗口“手动写入并发送”按钮 -> 协调器文本注入入口。
     QObject::connect(m_debugWindow.get(),
                      &SyncDebugWindow::manualInjectRequested,
                      m_coordinator.get(),
                      &SyncCoordinator::manualInjectAndSend);
+    QObject::connect(m_debugWindow.get(),
+                     &SyncDebugWindow::localFilesDropped,
+                     m_coordinator.get(),
+                     &SyncCoordinator::manualSendFiles);
     // 调试窗口“请求远端文件”按钮 -> 复用 Ctrl+Shift+V 的请求入口。
     QObject::connect(m_debugWindow.get(),
                      &SyncDebugWindow::requestRemoteFilesTriggered,

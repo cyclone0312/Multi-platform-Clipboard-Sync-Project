@@ -1,12 +1,154 @@
 #include "ui/SyncDebugWindow.h"
 
+#include <QAbstractItemView>
 #include <QDateTime>
+#include <QDrag>
+#include <QDragEnterEvent>
+#include <QDropEvent>
+#include <QFileInfo>
+#include <QFrame>
 #include <QGroupBox>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QListWidget>
+#include <QMimeData>
 #include <QPlainTextEdit>
 #include <QPushButton>
+#include <QUrl>
 #include <QVBoxLayout>
+
+namespace
+{
+    // 从 Qt 的拖放负载里提取本地文件路径。这里只接收真实本地文件，
+    // 因为当前传输层只知道怎样读取并发送本地文件内容。
+    QStringList extractLocalPaths(const QMimeData *mimeData)
+    {
+        QStringList paths;
+        if (!mimeData || !mimeData->hasUrls())
+        {
+            return paths;
+        }
+
+        const QList<QUrl> urls = mimeData->urls();
+        paths.reserve(urls.size());
+        for (const QUrl &url : urls)
+        {
+            if (!url.isLocalFile())
+            {
+                continue;
+            }
+
+            const QString path = QFileInfo(url.toLocalFile()).absoluteFilePath();
+            if (!path.isEmpty())
+            {
+                paths.push_back(path);
+            }
+        }
+
+        return paths;
+    }
+
+    class FileDropLabel final : public QLabel
+    {
+        Q_OBJECT
+
+    public:
+        explicit FileDropLabel(QWidget *parent = nullptr)
+            : QLabel(parent)
+        {
+            // 这个控件就是新增“拖入窗口传输”功能的明确入口。
+            setAcceptDrops(true); // 允许该控件接收“拖放”（Drag and Drop）事件
+            setAlignment(Qt::AlignCenter);
+            setWordWrap(true); // 允许自动换行
+            setMinimumHeight(84);
+            setFrameStyle(QFrame::StyledPanel | QFrame::Plain);
+            setText(QStringLiteral("将文件拖到这里，直接发送到对端窗口"));
+            setStyleSheet(QStringLiteral("QLabel { border: 1px dashed #6b7280; padding: 12px; background: #f8fafc; }"));
+        }
+
+    signals:
+        void filesDropped(const QStringList &paths);
+
+    protected:
+        void dragEnterEvent(QDragEnterEvent *event) override
+        {
+            const QStringList paths = extractLocalPaths(event ? event->mimeData() : nullptr);
+            if (paths.isEmpty())
+            {
+                event->ignore();
+                return;
+            }
+
+            event->acceptProposedAction(); // 告诉系统：“这个东西我要了，请把鼠标指针变成‘复制’或‘移动’的状态
+        }
+
+        void dropEvent(QDropEvent *event) override
+        {
+            const QStringList paths = extractLocalPaths(event ? event->mimeData() : nullptr);
+            if (paths.isEmpty())
+            {
+                event->ignore();
+                return;
+            }
+
+            emit filesDropped(paths);
+            event->acceptProposedAction();
+        }
+    };
+
+    class ReadyFileListWidget final : public QListWidget
+    {
+    public:
+        explicit ReadyFileListWidget(QWidget *parent = nullptr)
+            : QListWidget(parent)
+        {
+            setSelectionMode(QAbstractItemView::ExtendedSelection);
+            setDragEnabled(true);
+            setAlternatingRowColors(true);
+            setDefaultDropAction(Qt::CopyAction);
+        }
+
+    protected:
+        void startDrag(Qt::DropActions supportedActions) override
+        {
+            Q_UNUSED(supportedActions)
+
+            // 这里只对外声明已经真实存在于本地磁盘的文件，
+            // 这样拖到资源管理器等目标时不需要再等待网络下载。
+            QList<QUrl> urls;
+            const QList<QListWidgetItem *> items = selectedItems(); // 从列表里拿到当前选中的条目 selectedItems()
+            urls.reserve(items.size());
+            for (QListWidgetItem *item : items)
+            {
+                if (!item)
+                {
+                    continue;
+                }
+
+                const QString path = item->data(Qt::UserRole).toString(); // 每个条目从 Qt::UserRole 取出真实本地路径
+                if (!QFileInfo::exists(path))
+                {
+                    continue;
+                }
+
+                urls.push_back(QUrl::fromLocalFile(path));
+            }
+
+            if (urls.isEmpty())
+            {
+                return;
+            }
+
+            auto *mimeData = new QMimeData();
+            mimeData->setUrls(urls); // 把这些 QUrl 放进 QMimeData
+
+            auto *drag = new QDrag(this);
+            drag->setMimeData(mimeData);
+            drag->exec(Qt::CopyAction); // drag->exec(Qt::CopyAction) 发起拖拽，告诉系统这是一个“复制”操作，
+            //                             系统会根据这个信息来决定拖拽的效果和目标应用的响应
+        }
+    };
+}
 
 SyncDebugWindow::SyncDebugWindow(QWidget *parent)
     : QWidget(parent)
@@ -31,8 +173,12 @@ SyncDebugWindow::SyncDebugWindow(QWidget *parent)
     manualLayout->addWidget(m_manualInput);
     manualLayout->addWidget(m_manualSendButton);
     manualLayout->addWidget(m_requestRemoteFilesButton);
+    auto *dropLabel = new FileDropLabel(manualGroup);
+    m_dropZone = dropLabel;
+    manualLayout->addWidget(dropLabel);
     QObject::connect(m_manualSendButton, &QPushButton::clicked, this, &SyncDebugWindow::onManualSendClicked);
     QObject::connect(m_requestRemoteFilesButton, &QPushButton::clicked, this, &SyncDebugWindow::onRequestRemoteFilesClicked);
+    QObject::connect(dropLabel, &FileDropLabel::filesDropped, this, &SyncDebugWindow::localFilesDropped);
     root->addWidget(manualGroup);
 
     auto *localGroup = new QGroupBox(QStringLiteral("本地复制（发送侧）"), this);
@@ -42,6 +188,12 @@ SyncDebugWindow::SyncDebugWindow(QWidget *parent)
     m_localView->setMaximumBlockCount(m_maxBlocks);
     localLayout->addWidget(m_localView);
 
+    auto *readyGroup = new QGroupBox(QStringLiteral("已下载完成（可拖出）"), this);
+    auto *readyLayout = new QVBoxLayout(readyGroup);
+    m_readyFileList = new ReadyFileListWidget(readyGroup);
+    m_readyFileList->setToolTip(QStringLiteral("将已完成下载的文件从这里拖到桌面、资源管理器或其他应用。"));
+    readyLayout->addWidget(m_readyFileList);
+
     auto *remoteGroup = new QGroupBox(QStringLiteral("远端接收（接收侧）"), this);
     auto *remoteLayout = new QVBoxLayout(remoteGroup);
     m_remoteView = new QPlainTextEdit(remoteGroup);
@@ -49,8 +201,13 @@ SyncDebugWindow::SyncDebugWindow(QWidget *parent)
     m_remoteView->setMaximumBlockCount(m_maxBlocks);
     remoteLayout->addWidget(m_remoteView);
 
-    root->addWidget(localGroup, 1);
-    root->addWidget(remoteGroup, 1);
+    auto *contentLayout = new QHBoxLayout();
+    auto *rightColumn = new QVBoxLayout();
+    rightColumn->addWidget(readyGroup, 1);
+    rightColumn->addWidget(remoteGroup, 1);
+    contentLayout->addWidget(localGroup, 1);
+    contentLayout->addLayout(rightColumn, 1);
+    root->addLayout(contentLayout, 1);
 }
 
 void SyncDebugWindow::appendLocalText(const QString &text)
@@ -66,6 +223,26 @@ void SyncDebugWindow::appendRemoteText(const QString &text)
 void SyncDebugWindow::appendFileTransferStatus(const QString &status)
 {
     appendEntry(m_remoteView, QStringLiteral("[File] %1").arg(status));
+}
+
+void SyncDebugWindow::appendDownloadedFiles(const QStringList &paths)
+{
+    if (!m_readyFileList || paths.isEmpty())
+    {
+        return;
+    }
+
+    for (const QString &path : paths)
+    {
+        // 把绝对路径放进 UserRole，后续 startDrag() 就能直接重建标准的
+        // text/uri-list 负载，而不用再从显示文本里反解析路径。
+        const QFileInfo info(path); // 通过它可以轻松提取出纯文件名
+        //                                  绑定父容器：第二个参数 m_readyFileList 直接将该项添加到了界面上的列表中
+        auto *item = new QListWidgetItem(info.fileName().isEmpty() ? path : info.fileName(), m_readyFileList);
+        // 把完整的绝对路径保存在了该项的“后台”
+        item->setData(Qt::UserRole, path);
+        item->setToolTip(path); // 当用户的鼠标悬停在这个列表项上时，弹出一个小气泡显示完整的绝对路径
+    }
 }
 
 void SyncDebugWindow::onManualSendClicked()
@@ -103,3 +280,5 @@ void SyncDebugWindow::appendEntry(QPlainTextEdit *target, const QString &text)
     }
     target->appendPlainText(QStringLiteral("[%1] %2").arg(timestamp, text));
 }
+
+#include "SyncDebugWindow.moc"
